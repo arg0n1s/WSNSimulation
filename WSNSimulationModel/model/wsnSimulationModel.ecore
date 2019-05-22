@@ -15,6 +15,7 @@
         upperBound="-1" eType="#//TransmitterType" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="batteryTypes" lowerBound="1"
         upperBound="-1" eType="#//BatteryType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NetworkContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="wsnNodes" upperBound="-1"
@@ -75,6 +76,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="probabilisticRange" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Link">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cost" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
@@ -86,6 +88,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Obstacle" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EReference" name="pose" lowerBound="1" eType="#//Pose"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleGeometricShape" abstract="true"
       eSuperTypes="#//Obstacle"/>
@@ -101,6 +105,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="BatteryType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Battery">
     <eStructuralFeatures xsi:type="ecore:EReference" name="batteryType" lowerBound="1"
