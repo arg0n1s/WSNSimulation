@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/WSNSimulationModel/src-gen" creationIcons="false"
+    editDirectory="/WSNSimulationModel.edit/src-gen" editorDirectory="/WSNSimulationModel.editor/src-gen"
+    modelPluginID="WSNSimulationModel" modelName="WsnSimulationModel" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0"
+    copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>wsnSimulationModel.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="WsnSimulationModel" disposableProviderFactory="true" ecorePackage="wsnSimulationModel.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="wsnSimulationModel.ecore#//LinkState">
+      <genEnumLiterals ecoreEnumLiteral="wsnSimulationModel.ecore#//LinkState/UNKNOWN"/>
+      <genEnumLiterals ecoreEnumLiteral="wsnSimulationModel.ecore#//LinkState/INACTIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="wsnSimulationModel.ecore#//LinkState/ACTIVE"/>
+    </genEnums>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//WSNSimulationContainer">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//WSNSimulationContainer/timeStep"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//WSNSimulationContainer/deterministic"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WSNSimulationContainer/networkcontainer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WSNSimulationContainer/worldcontainer"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WSNSimulationContainer/transmitterTypes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WSNSimulationContainer/batteryTypes"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//NetworkContainer">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//NetworkContainer/wsnNodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//NetworkContainer/links"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//WorldContainer">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WorldContainer/wsnNodes"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WorldContainer/obstacles"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//Pose">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//Pose/position"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//Pose/velocity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//Pose/angularVelocity"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//Pose/orientation"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//RealVector">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//RealVector/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//RealVector/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//RealVector/z"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//Quaternion">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Quaternion/x"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Quaternion/y"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Quaternion/z"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Quaternion/w"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//WSNNode">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//WSNNode/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WSNNode/pose"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WSNNode/transmitterType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WSNNode/canReach"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WSNNode/inReachFrom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WSNNode/links"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WSNNode/battery"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//TransmitterType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//TransmitterType/deterministicRange"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//TransmitterType/probabilisticRange"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//Link">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Link/cost"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Link/linkState"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//Link/wsnNodes"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//Obstacle">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//Obstacle/pose"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//SimpleGeometricShape"/>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//Circle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Circle/radius"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//Rectangle">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Rectangle/width"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Rectangle/length"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//BatteryType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//BatteryType/capacity"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//Battery">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//Battery/batteryType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Battery/charge"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>

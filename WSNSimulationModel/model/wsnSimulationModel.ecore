@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="wsnSimulationModel" nsURI="http://www.wsnsimulation.org/wsnSimulationModel"
+    nsPrefix="wsnSimulationModel">
+  <eClassifiers xsi:type="ecore:EClass" name="WSNSimulationContainer">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="timeStep" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble" defaultValueLiteral="0.1"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deterministic" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean" defaultValueLiteral="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="networkcontainer" lowerBound="1"
+        eType="#//NetworkContainer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="worldcontainer" lowerBound="1"
+        eType="#//WorldContainer" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transmitterTypes" lowerBound="1"
+        upperBound="-1" eType="#//TransmitterType" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="batteryTypes" lowerBound="1"
+        upperBound="-1" eType="#//BatteryType" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="NetworkContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wsnNodes" upperBound="-1"
+        eType="#//WSNNode" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
+        eType="#//Link" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WorldContainer">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wsnNodes" upperBound="-1"
+        eType="#//WSNNode"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="obstacles" upperBound="-1"
+        eType="#//Obstacle" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LinkState">
+    <eLiterals name="UNKNOWN"/>
+    <eLiterals name="INACTIVE" value="1"/>
+    <eLiterals name="ACTIVE" value="2"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Pose">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
+        eType="#//RealVector" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="velocity" lowerBound="1"
+        eType="#//RealVector" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="angularVelocity" lowerBound="1"
+        eType="#//RealVector" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="orientation" lowerBound="1"
+        eType="#//Quaternion" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="RealVector">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Quaternion">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="x" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="y" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="w" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="WSNNode">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        defaultValueLiteral="NODE"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pose" lowerBound="1" eType="#//Pose"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="transmitterType" lowerBound="1"
+        eType="#//TransmitterType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="canReach" upperBound="-1"
+        eType="#//WSNNode" eOpposite="#//WSNNode/inReachFrom"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="inReachFrom" upperBound="-1"
+        eType="#//WSNNode" eOpposite="#//WSNNode/canReach"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
+        eType="#//Link" eOpposite="#//Link/wsnNodes"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="battery" lowerBound="1"
+        eType="#//Battery" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TransmitterType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="deterministicRange" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="probabilisticRange" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Link">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cost" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="linkState" lowerBound="1"
+        eType="#//LinkState"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="wsnNodes" lowerBound="2"
+        upperBound="2" eType="#//WSNNode" eOpposite="#//WSNNode/links"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Obstacle" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pose" lowerBound="1" eType="#//Pose"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SimpleGeometricShape" abstract="true"
+      eSuperTypes="#//Obstacle"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Circle" eSuperTypes="#//SimpleGeometricShape">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="radius" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Rectangle" eSuperTypes="#//SimpleGeometricShape">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="width" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="length" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BatteryType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="capacity" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Battery">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="batteryType" lowerBound="1"
+        eType="#//BatteryType"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="charge" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+</ecore:EPackage>
