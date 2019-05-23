@@ -1,5 +1,6 @@
 package wsnsimulation.core.ui;
 
+import java.awt.Color;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -11,6 +12,7 @@ import org.graphstream.graph.Edge;
 import org.graphstream.graph.Graph;
 import org.graphstream.graph.Node;
 import org.graphstream.graph.implementations.MultiGraph;
+import org.graphstream.stream.file.FileSourceGEXF.GEXFConstants.COLORAttribute;
 import org.graphstream.ui.view.Viewer;
 
 import wsnSimulationModel.Link;
@@ -54,6 +56,7 @@ public class WSNSimulationUI {
 					wNode.getPose().getPosition().getX(),
 					wNode.getPose().getPosition().getY(),
 					wNode.getPose().getPosition().getZ());
+			gsNode.addAttribute("ui.style", "fill-color: rgb(25,195,15); text-size: 12; size: 20px; text-style: bold;");
 			vertices.put(wNode, gsNode);
 		});
 	}
@@ -72,7 +75,8 @@ public class WSNSimulationUI {
 			edge = graph.addEdge(n1.getId()+"<->"+n2.getId(), n1, n2);
 			edges.put(link, edge);
 			
-			edge.addAttribute("ui.label", link.getCost());
+			//edge.addAttribute("ui.label", link.getCost());
+			edge.addAttribute("ui.style", "fill-color: rgb(55,55,55); text-size: 12; size: 1px; text-style: bold;");
 		}
 	}
 	
@@ -89,7 +93,8 @@ public class WSNSimulationUI {
 		if(notification.getNotifier() instanceof Link) {
 			Link link = (Link) notification.getNotifier();
 			Edge edge = edges.get(link);
-			edge.setAttribute("ui.label", link.getCost());
+			//edge.setAttribute("ui.label", link.getCost());
+			edge.addAttribute("ui.style", "fill-color: rgb(55,55,55); text-size: 12; size: 1px; text-style: bold;");
 		}
 		else if(notification.getNotifier() instanceof RealVector) {
 			RealVector position = (RealVector) notification.getNotifier();
