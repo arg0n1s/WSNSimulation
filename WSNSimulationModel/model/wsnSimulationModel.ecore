@@ -28,11 +28,14 @@
         eType="#//WSNNode"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="obstacles" upperBound="-1"
         eType="#//Obstacle" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="bounds" lowerBound="1"
+        eType="#//Bounds" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="LinkState">
     <eLiterals name="UNKNOWN"/>
     <eLiterals name="INACTIVE" value="1"/>
     <eLiterals name="ACTIVE" value="2"/>
+    <eLiterals name="DELETED" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Pose">
     <eStructuralFeatures xsi:type="ecore:EReference" name="position" lowerBound="1"
@@ -112,5 +115,13 @@
         eType="#//BatteryType"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="charge" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Bounds">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="minZ" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxZ" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
 </ecore:EPackage>

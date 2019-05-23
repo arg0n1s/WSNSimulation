@@ -13,6 +13,7 @@
       <genEnumLiterals ecoreEnumLiteral="wsnSimulationModel.ecore#//LinkState/UNKNOWN"/>
       <genEnumLiterals ecoreEnumLiteral="wsnSimulationModel.ecore#//LinkState/INACTIVE"/>
       <genEnumLiterals ecoreEnumLiteral="wsnSimulationModel.ecore#//LinkState/ACTIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="wsnSimulationModel.ecore#//LinkState/DELETED"/>
     </genEnums>
     <genClasses ecoreClass="wsnSimulationModel.ecore#//WSNSimulationContainer">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//WSNSimulationContainer/timeStep"/>
@@ -30,6 +31,7 @@
     <genClasses ecoreClass="wsnSimulationModel.ecore#//WorldContainer">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WorldContainer/wsnNodes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WorldContainer/obstacles"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WorldContainer/bounds"/>
     </genClasses>
     <genClasses ecoreClass="wsnSimulationModel.ecore#//Pose">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//Pose/position"/>
@@ -86,6 +88,14 @@
     <genClasses ecoreClass="wsnSimulationModel.ecore#//Battery">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//Battery/batteryType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Battery/charge"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//Bounds">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Bounds/minX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Bounds/minY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Bounds/minZ"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Bounds/maxX"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Bounds/maxY"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Bounds/maxZ"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

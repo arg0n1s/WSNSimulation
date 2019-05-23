@@ -5,3 +5,5 @@ Bundle-SymbolicName: wsnsimulation.test
 Bundle-Version: 1.0.0.qualifier
 Automatic-Module-Name: wsnsimulation.test
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: WSNSimulationModel,
+ wsnsimulation.core

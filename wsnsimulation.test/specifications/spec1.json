@@ -2,14 +2,19 @@
 	"SimulationParameters" : {
 		"name" : "spec1",
 		"timeStep" : 0.1,
-		"deterministic" : true
+		"deterministic" : true,
+		"bounds" : {
+			"x" : {"max" : 50.0, "min" : -50.0},
+			"y" : {"max" : 50.0, "min" : -50.0},
+			"z" : {"max" : 50.0, "min" : -50.0}
+		}
 	},
 	
 	"TransmitterTypes" : [
 		{
 			"name" : "tx1",
-			"deterministicRange" : 50.0,
-			"probabilistcRange" : 100.0
+			"deterministicRange" : 15.0,
+			"probabilistcRange" : 25.0
 		}
 	],
 	
@@ -20,109 +25,121 @@
 		}
 	],
 	
-	"Nodes" : [
-		{
-			"name" : "n1",
-			"transmitterType" : "tx1",
-			"batteryType" : "bat1",
-			"position" : {"x":0, "y":0, "z":0},
-			"orientation" : {"x":0, "y":0, "z":0, "w":1},
-			"velocity" : {"x":0, "y":0, "z":0},
-			"angularVelocity" : {"x":0, "y":0, "z":0}
-		},
-		{
-			"name" : "n2",
-			"transmitterType" : "tx1",
-			"batteryType" : "bat1",
-			"position" : {"x":5, "y":0, "z":0},
-			"orientation" : {"x":0, "y":0, "z":0, "w":1},
-			"velocity" : {"x":0, "y":0, "z":0},
-			"angularVelocity" : {"x":0, "y":0, "z":0}
-		},
-		{
-			"name" : "n3",
-			"transmitterType" : "tx1",
-			"batteryType" : "bat1",
-			"position" : {"x":5, "y":5, "z":0},
-			"orientation" : {"x":0, "y":0, "z":0, "w":1},
-			"velocity" : {"x":0, "y":0, "z":0},
-			"angularVelocity" : {"x":0, "y":0, "z":0}
-		},
-		{
-			"name" : "n4",
-			"transmitterType" : "tx1",
-			"batteryType" : "bat1",
-			"position" : {"x":-5, "y":5, "z":0},
-			"orientation" : {"x":0, "y":0, "z":0, "w":1},
-			"velocity" : {"x":0, "y":0, "z":0},
-			"angularVelocity" : {"x":0, "y":0, "z":0}
-		},
-		{
-			"name" : "n5",
-			"transmitterType" : "tx1",
-			"batteryType" : "bat1",
-			"position" : {"x":-5, "y":-5, "z":0},
-			"orientation" : {"x":0, "y":0, "z":0, "w":1},
-			"velocity" : {"x":0, "y":0, "z":0},
-			"angularVelocity" : {"x":0, "y":0, "z":0}
-		},
-		{
-			"name" : "n6",
-			"transmitterType" : "tx1",
-			"batteryType" : "bat1",
-			"position" : {"x":0, "y":5, "z":0},
-			"orientation" : {"x":0, "y":0, "z":0, "w":1},
-			"velocity" : {"x":0, "y":0, "z":0},
-			"angularVelocity" : {"x":0, "y":0, "z":0}
-		},
-		{
-			"name" : "n7",
-			"transmitterType" : "tx1",
-			"batteryType" : "bat1",
-			"position" : {"x":0, "y":-5, "z":0},
-			"orientation" : {"x":0, "y":0, "z":0, "w":1},
-			"velocity" : {"x":0, "y":0, "z":0},
-			"angularVelocity" : {"x":0, "y":0, "z":0}
-		},
-		{
-			"name" : "n8",
-			"transmitterType" : "tx1",
-			"batteryType" : "bat1",
-			"position" : {"x":-5, "y":0, "z":0},
-			"orientation" : {"x":0, "y":0, "z":0, "w":1},
-			"velocity" : {"x":0, "y":0, "z":0},
-			"angularVelocity" : {"x":0, "y":0, "z":0}
-		},
-		{
-			"name" : "n9",
-			"transmitterType" : "tx1",
-			"batteryType" : "bat1",
-			"position" : {"x":10, "y":10, "z":0},
-			"orientation" : {"x":0, "y":0, "z":0, "w":1},
-			"velocity" : {"x":0, "y":0, "z":0},
-			"angularVelocity" : {"x":0, "y":0, "z":0}
-		},
-		{
-			"name" : "n10",
-			"transmitterType" : "tx1",
-			"batteryType" : "bat1",
-			"position" : {"x":-10, "y":10, "z":0},
-			"orientation" : {"x":0, "y":0, "z":0, "w":1},
-			"velocity" : {"x":0, "y":0, "z":0},
-			"angularVelocity" : {"x":0, "y":0, "z":0}
-		}
-	],
+	"Nodes" : {
+	
+		"generated" : [
+		 	{
+		 		"namePrefix" : "rndNode",
+		 		"transmitterType" : "tx1",
+		 		"batteryType" : "bat1",
+		 		"amount" : 5
+		 	}
+		],
+	
+		"specified" : [
+			{
+				"name" : "n1",
+				"transmitterType" : "tx1",
+				"batteryType" : "bat1",
+				"position" : {"x":0.0, "y":0.0, "z":0.0},
+				"orientation" : {"x":0.0, "y":0.0, "z":0.0, "w":1.0},
+				"velocity" : {"x":0.0, "y":0.0, "z":0.0},
+				"angularVelocity" : {"x":0.0, "y":0.0, "z":0.0}
+			},
+			{
+				"name" : "n2",
+				"transmitterType" : "tx1",
+				"batteryType" : "bat1",
+				"position" : {"x":5.0, "y":0.0, "z":0.0},
+				"orientation" : {"x":0.0, "y":0.0, "z":0.0, "w":1.0},
+				"velocity" : {"x":0.0, "y":0.0, "z":0.0},
+				"angularVelocity" : {"x":0.0, "y":0.0, "z":0.0}
+			},
+			{
+				"name" : "n3",
+				"transmitterType" : "tx1",
+				"batteryType" : "bat1",
+				"position" : {"x":5.0, "y":5.0, "z":0.0},
+				"orientation" : {"x":0.0, "y":0.0, "z":0.0, "w":1.0},
+				"velocity" : {"x":0.0, "y":0.0, "z":0.0},
+				"angularVelocity" : {"x":0.0, "y":0.0, "z":0.0}
+			},
+			{
+				"name" : "n4",
+				"transmitterType" : "tx1",
+				"batteryType" : "bat1",
+				"position" : {"x":-5.0, "y":5.0, "z":0.0},
+				"orientation" : {"x":0.0, "y":0.0, "z":0.0, "w":1.0},
+				"velocity" : {"x":0.0, "y":0.0, "z":0.0},
+				"angularVelocity" : {"x":0.0, "y":0.0, "z":0.0}
+			},
+			{
+				"name" : "n5",
+				"transmitterType" : "tx1",
+				"batteryType" : "bat1",
+				"position" : {"x":-5.0, "y":-5.0, "z":0.0},
+				"orientation" : {"x":0.0, "y":0.0, "z":0.0, "w":1.0},
+				"velocity" : {"x":0.0, "y":0.0, "z":0.0},
+				"angularVelocity" : {"x":0.0, "y":0.0, "z":0.0}
+			},
+			{
+				"name" : "n6",
+				"transmitterType" : "tx1",
+				"batteryType" : "bat1",
+				"position" : {"x":0.0, "y":5.0, "z":0.0},
+				"orientation" : {"x":0.0, "y":0.0, "z":0.0, "w":1.0},
+				"velocity" : {"x":0.0, "y":0.0, "z":0.0},
+				"angularVelocity" : {"x":0.0, "y":0.0, "z":0.0}
+			},
+			{
+				"name" : "n7",
+				"transmitterType" : "tx1",
+				"batteryType" : "bat1",
+				"position" : {"x":0.0, "y":-5.0, "z":0.0},
+				"orientation" : {"x":0.0, "y":0.0, "z":0.0, "w":1.0},
+				"velocity" : {"x":0.0, "y":0.0, "z":0.0},
+				"angularVelocity" : {"x":0.0, "y":0.0, "z":0.0}
+			},
+			{
+				"name" : "n8",
+				"transmitterType" : "tx1",
+				"batteryType" : "bat1",
+				"position" : {"x":-5.0, "y":0.0, "z":0.0},
+				"orientation" : {"x":0.0, "y":0.0, "z":0.0, "w":1.0},
+				"velocity" : {"x":0.0, "y":0.0, "z":0.0},
+				"angularVelocity" : {"x":0.0, "y":0.0, "z":0.0}
+			},
+			{
+				"name" : "n9",
+				"transmitterType" : "tx1",
+				"batteryType" : "bat1",
+				"position" : {"x":10.0, "y":10.0, "z":0.0},
+				"orientation" : {"x":0.0, "y":0.0, "z":0.0, "w":1.0},
+				"velocity" : {"x":0.0, "y":0.0, "z":0.0},
+				"angularVelocity" : {"x":0.0, "y":0.0, "z":0.0}
+			},
+			{
+				"name" : "n10",
+				"transmitterType" : "tx1",
+				"batteryType" : "bat1",
+				"position" : {"x":-10.0, "y":10.0, "z":0.0},
+				"orientation" : {"x":0.0, "y":0.0, "z":0.0, "w":1.0},
+				"velocity" : {"x":0.0, "y":0.0, "z":0.0},
+				"angularVelocity" : {"x":0.0, "y":0.0, "z":0.0}
+			}
+		] 
+	},
 	
 	"Obstacles" : [
 		{
 			"name" : "o1",
 			"type": "Rectangle",
-			"widht": 15,
-			"length": 10,
-			"position" : {"x":25, "y":5, "z":0},
-			"orientation" : {"x":0, "y":0, "z":0, "w":1},
-			"velocity" : {"x":0, "y":0, "z":0},
-			"angularVelocity" : {"x":0, "y":0, "z":0}
+			"width": 15.0,
+			"length": 10.0,
+			"position" : {"x":25.0, "y":5.0, "z":0.0},
+			"orientation" : {"x":0.0, "y":0.0, "z":0.0, "w":1.0},
+			"velocity" : {"x":0.0, "y":0.0, "z":0.0},
+			"angularVelocity" : {"x":0.0, "y":0.0, "z":0.0}
 		}
 	]
 	
