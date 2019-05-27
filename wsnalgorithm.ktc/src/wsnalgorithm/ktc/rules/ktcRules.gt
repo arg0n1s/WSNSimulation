@@ -1,0 +1,79 @@
+import "platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore"
+import "http://www.eclipse.org/emf/2002/Ecore"
+
+abstract pattern findTriangle() {
+	l1 : Link {
+		-wsnNodes->n1
+		-wsnNodes->n2
+	}
+	
+	l2 : Link {
+		-wsnNodes->n2
+		-wsnNodes->n3
+	}
+	
+	l3 : Link {
+		-wsnNodes->n1
+		-wsnNodes->n3
+	}
+	
+	n1 : WSNNode {
+		
+	}
+	
+	n2 : WSNNode {
+		
+	}
+	
+	n3 : WSNNode {
+		
+	}
+}
+
+pattern findWeightMinimal() refines findTriangle{
+	l1 : Link {
+	}
+	
+	l2 : Link {
+	}
+	
+	l3 : Link {
+		.cost >= l1.cost
+		.cost >= l2.cost
+	}
+}
+
+condition isWeightMinimal = enforce findWeightMinimal
+
+rule shutdown(k : EDouble) refines findTriangle {
+	l1 : Link {
+		.linkState == enum::ACTIVE
+	}
+	
+	l2 : Link {
+		.linkState == enum::ACTIVE
+	}
+	
+	l3 : Link {
+		.linkState := enum::INACTIVE
+		.cost > param::k
+	}
+} when isWeightMinimal
+
+rule powerup(k : EDouble) refines findTriangle {
+	l1 : Link {
+		.linkState == enum::ACTIVE
+	}
+	
+	l2 : Link {
+		.linkState == enum::ACTIVE
+	}
+	
+	l3 : Link {
+		.linkState := enum::ACTIVE
+		.linkState == enum::INACTIVE
+		.cost <= l1.cost
+		.cost <= l2.cost
+		.cost < param::k
+	}
+}

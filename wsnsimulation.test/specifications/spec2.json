@@ -1,7 +1,7 @@
 {
 	"SimulationParameters" : {
 		"name" : "spec1",
-		"timeStep" : 0.1,
+		"timeStep" : 0.01,
 		"deterministic" : true,
 		"bounds" : {
 			"x" : {"max" : 50.0, "min" : -50.0},

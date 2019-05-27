@@ -197,15 +197,19 @@ public class WSNSimulation {
 		RealVector position = pose.getPosition();
 		RealVector velocity = pose.getVelocity();
 		if(Math.abs(velocity.getX()) <= meanVelocity*0.3) {
-			velocity.setX(rnd.nextGaussian()*meanVelocity);
+			//velocity.setX(rnd.nextGaussian()*meanVelocity);
 		} else {
-			velocity.setX(velocity.getX() + rnd.nextGaussian()*stdDevVelocity);
+			
 		}
+		velocity.setX(velocity.getX() + rnd.nextGaussian()*stdDevVelocity);
+		
 		if(Math.abs(velocity.getY()) <= meanVelocity*0.3) {
-			velocity.setY(rnd.nextGaussian()*meanVelocity);
+			//velocity.setY(rnd.nextGaussian()*meanVelocity);
 		} else {
-			velocity.setY(velocity.getY() + rnd.nextGaussian()*stdDevVelocity);
+			
 		}
+		velocity.setY(velocity.getY() + rnd.nextGaussian()*stdDevVelocity);
+		
 		if(velocity.getZ() == 0.0) {
 			//velocity.setZ(rnd.nextGaussian()*meanVelocity);
 		} else {
