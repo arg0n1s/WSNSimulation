@@ -5,7 +5,7 @@ import "http://www.eclipse.org/emf/2002/Ecore"
 rule markUnknownLinks() {
 	l : Link {
 		.linkState == enum::UNKNOWN
-		.linkState := enum::INACTIVE
+		.linkState := enum::ACTIVE
 	}
 }
 

@@ -13,7 +13,7 @@ public class Sandkasten {
 		sim.loadModel("models/spec2.xmi");
 		sim.setStochasticMotion(5.0, 1.5);
 		
-		ExternalActor ea = new KTCAlgorithm();
+		ExternalActor ea = new KTCAlgorithm(0.5);
 		sim.registerExternalActor(ea);
 		
 		sim.runUntil(20.0, true);
