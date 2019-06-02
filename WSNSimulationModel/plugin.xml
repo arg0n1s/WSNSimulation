@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated wsnSimulationModel -->
       <package
-            uri="http://www.wsnsimulation.org/wsnSimulationModel"
+            uri="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore"
             class="wsnSimulationModel.WsnSimulationModelPackage"
             genModel="model/wsnSimulationModel.genmodel"/>
    </extension>

@@ -38,7 +38,7 @@ public class WSNSimulation {
 	private Random rnd = new Random();
 	
 	private Map<WSNNode, Map<WSNNode, Link>> adjacencyMap = new HashMap<>();
-	private List<Link> removedLinks = new LinkedList<>();
+	//private List<Link> removedLinks = new LinkedList<>();
 	
 	public void setLinearMotion() {
 		linearMotion = true;
@@ -48,6 +48,10 @@ public class WSNSimulation {
 		this.meanVelocity = meanVelocity;
 		this.stdDevVelocity = stdDevVelocity;
 		linearMotion = false;
+	}
+	
+	public WSNSimulationContainer getContainer() {
+		return container;
 	}
 	
 	public Resource loadModel(String path) {
@@ -64,9 +68,14 @@ public class WSNSimulation {
 		return model;
 	}
 	
+	public void loadModel(Resource model) {
+		container = (WSNSimulationContainer)model.getContents().get(0);
+		ui = new WSNSimulationUI(model);
+	}
+	
 	public void registerExternalActor(ExternalActor actor) {
 		externalActors.add(actor);
-		actor.setContainer(container);
+		actor.setSimulation(this);
 		actor.initialize();
 	}
 	
@@ -78,7 +87,7 @@ public class WSNSimulation {
 			simulateSignalReach();
 			simulateBatteryDrain();
 			runExternalActors();
-			cleanRemovedLinks();
+			//cleanRemovedLinks();
 			time += container.getTimeStep();
 			if(inRealTime) {
 				try {
@@ -138,11 +147,12 @@ public class WSNSimulation {
 					Link link = currentAdjecency.get(node2);
 					if(link == null) {
 						link = factory.createLink();
-						link.setLinkState(LinkState.UNKNOWN);
-						link.getWsnNodes().add(node);
-						link.getWsnNodes().add(node2);
-						node.getCanReach().add(node2);
 						container.getNetworkcontainer().getLinks().add(link);
+						
+						link.setLinkState(LinkState.UNKNOWN);
+						node.getLinks().add(link);
+						node2.getLinks().add(link);
+						node.getCanReach().add(node2);
 						
 						currentAdjecency.put(node2, link);
 						currentAdjecency2.put(node, link);
@@ -158,7 +168,7 @@ public class WSNSimulation {
 						
 						currentAdjecency.remove(node2);
 						currentAdjecency2.remove(node);
-						removedLinks.add(link);
+						//removedLinks.add(link);
 					}
 				}
 			}
@@ -177,12 +187,14 @@ public class WSNSimulation {
 		}
 	}
 	
+	/*
 	private void cleanRemovedLinks() {
 		for(Link link : removedLinks) {
 			EcoreUtil.remove(link);
 		}
 		removedLinks = new LinkedList<>();
 	}
+	*/
 	
 	private void simulateLinearMotion(Pose pose) {
 		RealVector position = pose.getPosition();

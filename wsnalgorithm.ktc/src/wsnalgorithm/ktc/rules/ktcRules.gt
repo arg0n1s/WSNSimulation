@@ -1,7 +1,21 @@
 import "platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore"
 import "http://www.eclipse.org/emf/2002/Ecore"
 
-abstract pattern findTriangle() {
+
+rule markUnknownLinks() {
+	l : Link {
+		.linkState == enum::UNKNOWN
+		.linkState := enum::INACTIVE
+	}
+}
+
+rule deleteLinks() {
+	-- l : Link {
+		.linkState == enum::DELETED
+	}
+}
+
+abstract pattern findTriangle(currentNode : EString ) {
 	l1 : Link {
 		-wsnNodes->n1
 		-wsnNodes->n2
@@ -18,7 +32,7 @@ abstract pattern findTriangle() {
 	}
 	
 	n1 : WSNNode {
-		
+		.name == param::currentNode
 	}
 	
 	n2 : WSNNode {
@@ -30,7 +44,53 @@ abstract pattern findTriangle() {
 	}
 }
 
-pattern findWeightMinimal() refines findTriangle{
+rule repair() refines findTriangle{
+	l1 : Link {
+		.linkState == enum::INACTIVE
+		.linkState := enum::ACTIVE
+	}
+	
+	l2 : Link {
+		.linkState == enum::INACTIVE
+		.linkState := enum::ACTIVE
+	}
+	
+	l3 : Link {
+		.linkState == enum::DELETED
+	}
+}
+
+rule repair2() refines findTriangle{
+	l1 : Link {
+		.linkState == enum::ACTIVE
+	}
+	
+	l2 : Link {
+		.linkState == enum::INACTIVE
+		.linkState := enum::ACTIVE
+	}
+	
+	l3 : Link {
+		.linkState == enum::DELETED
+	}
+}
+
+rule repair3() refines findTriangle{
+	l1 : Link {
+		.linkState == enum::INACTIVE
+		.linkState := enum::ACTIVE
+	}
+	
+	l2 : Link {
+		.linkState == enum::ACTIVE
+	}
+	
+	l3 : Link {
+		.linkState == enum::DELETED
+	}
+}
+
+pattern findWeightMaximal() refines findTriangle{
 	l1 : Link {
 	}
 	
@@ -43,9 +103,10 @@ pattern findWeightMinimal() refines findTriangle{
 	}
 }
 
-condition isWeightMinimal = enforce findWeightMinimal
+condition isWeightMaximal = enforce findWeightMaximal
+condition isNotWeightMaximal = forbid findWeightMaximal
 
-rule shutdown(k : EDouble) refines findTriangle {
+rule shutdownIsMaximal() refines findTriangle {
 	l1 : Link {
 		.linkState == enum::ACTIVE
 	}
@@ -55,12 +116,12 @@ rule shutdown(k : EDouble) refines findTriangle {
 	}
 	
 	l3 : Link {
+		.linkState == enum::ACTIVE
 		.linkState := enum::INACTIVE
-		.cost > param::k
 	}
-} when isWeightMinimal
+} when isWeightMaximal
 
-rule powerup(k : EDouble) refines findTriangle {
+rule powerupNotMaximal() refines findTriangle {
 	l1 : Link {
 		.linkState == enum::ACTIVE
 	}
@@ -72,8 +133,20 @@ rule powerup(k : EDouble) refines findTriangle {
 	l3 : Link {
 		.linkState := enum::ACTIVE
 		.linkState == enum::INACTIVE
-		.cost <= l1.cost
-		.cost <= l2.cost
-		.cost < param::k
 	}
-}
+} when isNotWeightMaximal
+
+rule powerupIsMaximalButK() refines findTriangle {
+	l1 : Link {
+		.linkState == enum::ACTIVE
+	}
+	
+	l2 : Link {
+		.linkState == enum::ACTIVE
+	}
+	
+	l3 : Link {
+		.linkState := enum::ACTIVE
+		.linkState == enum::INACTIVE
+	}
+} when isWeightMaximal

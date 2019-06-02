@@ -1,7 +1,8 @@
 Manifest-Version: 1.0
 Automatic-Module-Name: wsnalgorithm.ktc
 Bundle-SymbolicName: wsnalgorithm.ktc
-Export-Package: wsnalgorithm.ktc.rules.api,
+Export-Package: wsnalgorithm.ktc.core,
+ wsnalgorithm.ktc.rules.api,
  wsnalgorithm.ktc.rules.api.matches,
  wsnalgorithm.ktc.rules.api.rules
 Bundle-Name: Ktc
@@ -9,7 +10,9 @@ Bundle-Version: 1.0.0.qualifier
 Require-Bundle: org.emoflon.ibex.common,
  org.emoflon.ibex.gt,
  org.emoflon.ibex.gt.democles,
- WSNSimulationModel;bundle-version="0.1.0"
+ WSNSimulationModel;bundle-version="0.1.0",
+ wsnsimulation.core,
+ org.eclipse.emf.ecore
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Bundle-ActivationPolicy: lazy

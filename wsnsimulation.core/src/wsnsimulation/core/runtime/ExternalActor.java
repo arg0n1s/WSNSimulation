@@ -1,13 +1,12 @@
 package wsnsimulation.core.runtime;
 
-import wsnSimulationModel.WSNSimulationContainer;
 
 public abstract class ExternalActor {
 	
-	protected WSNSimulationContainer container;
+	protected WSNSimulation simulation;
 	
-	public void setContainer(WSNSimulationContainer container) {
-		this.container = container;
+	public void setSimulation(WSNSimulation simulation) {
+		this.simulation = simulation;
 	}
 	
 	abstract public void initialize();

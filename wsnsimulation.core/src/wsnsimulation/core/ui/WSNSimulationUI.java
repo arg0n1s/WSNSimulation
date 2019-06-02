@@ -1,7 +1,10 @@
 package wsnsimulation.core.ui;
 
 import java.awt.Color;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
@@ -34,8 +37,8 @@ public class WSNSimulationUI {
 	private Graph graph;
 	
 	private Map<WSNNode, Node> vertices = new HashMap<>();
-	//private Map<WSNNode, Set<Edge>> edges = new HashMap<>();
 	private Map<Link, Edge> edges = new HashMap<>();
+	private Map<Set<Node>, Edge> node2edge = new HashMap<>();
 	
 	public WSNSimulationUI(Resource model) {
 		this.model = model;
@@ -68,24 +71,85 @@ public class WSNSimulationUI {
 	public void addEdge(Notification notification) {
 		if(notification.getNotifier() instanceof NetworkContainer && notification.getNewValue() instanceof Link) {
 			Link link = (Link) notification.getNewValue();
+			
+			if(!edges.containsKey(link)) {
+				edges.put(link, null);
+			}
+		}
+		
+		if(notification.getNotifier() instanceof WSNNode && notification.getNewValue() instanceof Link) {
+			Link link = (Link) notification.getNewValue();
+			
+			if(!edges.containsKey(link)) {
+				edges.put(link, null);
+			}
+			
+			if(link.getWsnNodes().size() != 2) {
+				return;
+			}
+			
 			Node n1 = vertices.get(link.getWsnNodes().get(0));
 			Node n2 = vertices.get(link.getWsnNodes().get(1));
+			Set<Node> nodeSet = new HashSet<>();
+			nodeSet.add(n1);
+			nodeSet.add(n2);
+			
 			Edge edge = edges.get(link);
+			Edge other = node2edge.get(nodeSet);
 			
-			edge = graph.addEdge(n1.getId()+"<->"+n2.getId(), n1, n2);
-			edges.put(link, edge);
+			if(other == null) {
+				other = graph.addEdge(n1.getId()+"<->"+n2.getId(), n1, n2);
+				node2edge.put(nodeSet, other);
+			}
 			
-			//edge.addAttribute("ui.label", link.getCost());
-			edge.addAttribute("ui.style", "fill-color: rgb(55,55,55); text-size: 12; size: 1px; text-style: bold;");
+			if(edge == null) {
+				edge = other;
+				edges.put(link, edge);
+			}
+			
+			if(edge != other) {
+				graph.removeEdge(edge);
+				edge = other;
+				edges.replace(link, edge);
+			}
+			 
+			setEdgeColor(edge, link);
 		}
+		
 	}
 	
 	public void removeEdge(Notification notification) {
 		if(notification.getNotifier() instanceof Link) {
 			Link link = (Link) notification.getNotifier();
+			
+			if(link.getWsnNodes().size() == 2) {
+				Node n1 = vertices.get(link.getWsnNodes().get(0));
+				Node n2 = vertices.get(link.getWsnNodes().get(1));
+				Set<Node> nodeSet = new HashSet<>();
+				nodeSet.add(n1);
+				nodeSet.add(n2);
+				
+				Edge other = node2edge.get(nodeSet);
+				if(graph.getEdgeSet().contains(other)) {
+					graph.removeEdge(other);
+				}
+				
+				node2edge.remove(nodeSet);
+			}
+			
+			
 			Edge edge = edges.get(link);
-			graph.removeEdge(edge);	
+			
+			if(graph.getEdgeSet().contains(edge)) {
+				graph.removeEdge(edge);
+			}
+			
 			edges.remove(link);
+			
+			if(node2edge.containsValue(edge)) {
+				node2edge.values().remove(edge);
+			}
+			
 		}
 	}
 	
@@ -93,8 +157,10 @@ public class WSNSimulationUI {
 		if(notification.getNotifier() instanceof Link) {
 			Link link = (Link) notification.getNotifier();
 			Edge edge = edges.get(link);
-			//edge.setAttribute("ui.label", link.getCost());
-			edge.addAttribute("ui.style", "fill-color: rgb(55,55,55); text-size: 12; size: 1px; text-style: bold;");
+			if(edge == null) {
+				return;
+			}
+			setEdgeColor(edge, link);
 		}
 		else if(notification.getNotifier() instanceof RealVector) {
 			RealVector position = (RealVector) notification.getNotifier();
@@ -107,6 +173,27 @@ public class WSNSimulationUI {
 			}
 		}else if(notification.getNotifier() instanceof Battery) {
 			
+		}
+	}
+	
+	public void setEdgeColor(Edge edge, Link link) {
+		switch(link.getLinkState()) {
+			case ACTIVE : {
+				edge.addAttribute("ui.style", "fill-color: rgb(55,155,55); text-size: 12; size: 1px; text-style: bold;");
+				return;
+			}
+			case INACTIVE : {
+				edge.addAttribute("ui.style", "fill-color: rgb(55,55,155); text-size: 12; size: 1px; text-style: bold;");
+				return;
+			}
+			case UNKNOWN : {
+				edge.addAttribute("ui.style", "fill-color: rgb(55,55,55); text-size: 12; size: 1px; text-style: bold;");
+				return;
+			}
+			case DELETED : {
+				edge.addAttribute("ui.style", "fill-color: rgb(155,55,55); text-size: 12; size: 1px; text-style: bold;");
+				return;
+			}
 		}
 	}
 
