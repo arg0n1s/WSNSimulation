@@ -25,6 +25,7 @@ import wsnSimulationModel.WSNNode;
 import wsnSimulationModel.WSNSimulationContainer;
 import wsnSimulationModel.WorldContainer;
 import wsnSimulationModel.Battery;
+import wsnSimulationModel.Bounds;
 
 public class WSNSimulationUI {
 	
@@ -62,6 +63,30 @@ public class WSNSimulationUI {
 			gsNode.addAttribute("ui.style", "fill-color: rgb(25,195,15); text-size: 12; size: 20px; text-style: bold;");
 			vertices.put(wNode, gsNode);
 		});
+		
+		addBoundaries();
+	}
+	
+	private void addBoundaries() {
+		Bounds bounds = wc.getBounds();
+		Node b1 = graph.addNode("bound1");
+		b1.setAttribute("xyz", bounds.getMaxX(), bounds.getMaxY(), 0.0);
+		Node b2 = graph.addNode("bound2");
+		b2.setAttribute("xyz", bounds.getMinX(), bounds.getMaxY(), 0.0);
+		Node b3 = graph.addNode("bound3");
+		b3.setAttribute("xyz", bounds.getMinX(), bounds.getMinY(), 0.0);
+		Node b4 = graph.addNode("bound4");
+		b4.setAttribute("xyz", bounds.getMaxX(), bounds.getMinY(), 0.0);
+		
+		Edge e1 = graph.addEdge("b1-b2", b1, b2);
+		e1.addAttribute("ui.style", "fill-color: rgb(100,100,100); text-size: 12; size: 3px; text-style: bold;");
+		Edge e2 = graph.addEdge("b2-b3", b2, b3);
+		e2.addAttribute("ui.style", "fill-color: rgb(100,100,100); text-size: 12; size: 3px; text-style: bold;");
+		Edge e3 = graph.addEdge("b3-b4", b3, b4);
+		e3.addAttribute("ui.style", "fill-color: rgb(100,100,100); text-size: 12; size: 3px; text-style: bold;");
+		Edge e4 = graph.addEdge("b4-b1", b4, b1);
+		e4.addAttribute("ui.style", "fill-color: rgb(100,100,100); text-size: 12; size: 3px; text-style: bold;");
+		
 	}
 	
 	public void display() {
