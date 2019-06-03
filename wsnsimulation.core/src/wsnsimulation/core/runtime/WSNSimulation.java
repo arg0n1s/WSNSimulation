@@ -160,7 +160,7 @@ public class WSNSimulation {
 				boolean inReach = (container.isDeterministic()) ? 
 						checkReachableDeterministic(node, node2) : 
 							checkReachableProbabilistic(node, node2);
-				double cost = calculateDistance(node, node2);
+				double cost = calculateCost(node, node2);
 				
 				if(inReach) {	
 					Link link = currentAdjecency.get(node2);
@@ -241,6 +241,14 @@ public class WSNSimulation {
 			reflectAtBound(node);
 		}
 		
+	}
+	
+	private double calculateCost(WSNNode node1, WSNNode node2) {
+		double distance = calculateDistance(node1, node2);
+		double loss = 20.0 * Math.log10(node1.getTransmitterType().getFrequency()) + 
+				20.0 * Math.log10(distance) + 
+				20.0 * Math.log10(4.0*Math.PI / 299792458.0);
+		return loss;
 	}
 	
 	private double calculateDistance(WSNNode node1, WSNNode node2) {

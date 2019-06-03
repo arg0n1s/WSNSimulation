@@ -209,6 +209,10 @@
               <styles xmi:type="notation:FontStyle" xmi:id="_RtO6EXyLEemPKYXThyZX7g" fontName="Segoe UI" fontHeight="8" bold="true"/>
               <layoutConstraint xmi:type="notation:Location" xmi:id="_RtO6EnyLEemPKYXThyZX7g"/>
             </children>
+            <children xmi:type="notation:Node" xmi:id="_JgL6kIYXEemjxKEWqBPdbg" type="3010" element="_JfsLUIYXEemjxKEWqBPdbg">
+              <styles xmi:type="notation:FontStyle" xmi:id="_JgL6kYYXEemjxKEWqBPdbg" fontColor="2697711" fontName="Segoe UI" fontHeight="8"/>
+              <layoutConstraint xmi:type="notation:Location" xmi:id="_JgL6koYXEemjxKEWqBPdbg"/>
+            </children>
             <styles xmi:type="notation:SortingStyle" xmi:id="_8w_25XxtEemPDdamgX2xWg"/>
             <styles xmi:type="notation:FilteringStyle" xmi:id="_8w_25nxtEemPDdamgX2xWg"/>
           </children>
@@ -1035,7 +1039,7 @@
     <ownedDiagramElements xmi:type="diagram:DNodeList" uid="_8w4iIHxtEemPDdamgX2xWg" name="TransmitterType" tooltipText="" incomingEdges="_AIYpiHxuEemPDdamgX2xWg _L3n3w3xuEemPDdamgX2xWg" width="12" height="10">
       <target xmi:type="ecore:EClass" href="wsnSimulationModel.ecore#//TransmitterType"/>
       <semanticElements xmi:type="ecore:EClass" href="wsnSimulationModel.ecore#//TransmitterType"/>
-      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_KaS-LnxuEemPDdamgX2xWg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" uid="_NIrrQ4YXEemjxKEWqBPdbg" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
         <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
@@ -1059,6 +1063,14 @@
         <target xmi:type="ecore:EAttribute" href="wsnSimulationModel.ecore#//TransmitterType/name"/>
         <semanticElements xmi:type="ecore:EAttribute" href="wsnSimulationModel.ecore#//TransmitterType/name"/>
         <ownedStyle xmi:type="diagram:BundledImage" uid="_RszcQHyLEemPKYXThyZX7g" labelAlignment="LEFT" description="_Cn7f8HxsEemPDdamgX2xWg">
+          <labelFormat>bold</labelFormat>
+        </ownedStyle>
+        <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>
+      </ownedElements>
+      <ownedElements xmi:type="diagram:DNodeListElement" uid="_JfsLUIYXEemjxKEWqBPdbg" name="frequency : EDouble = 0.0" tooltipText="">
+        <target xmi:type="ecore:EAttribute" href="wsnSimulationModel.ecore#//TransmitterType/frequency"/>
+        <semanticElements xmi:type="ecore:EAttribute" href="wsnSimulationModel.ecore#//TransmitterType/frequency"/>
+        <ownedStyle xmi:type="diagram:BundledImage" uid="_NIuHhIYXEemjxKEWqBPdbg" labelAlignment="LEFT" description="_Cn7f8HxsEemPDdamgX2xWg">
           <labelFormat>bold</labelFormat>
         </ownedStyle>
         <actualMapping xmi:type="description_1:NodeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@subNodeMappings[name='EC%20EAttribute']"/>

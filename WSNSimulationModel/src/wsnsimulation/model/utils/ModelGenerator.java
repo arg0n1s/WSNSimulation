@@ -43,6 +43,7 @@ public class ModelGenerator {
 	public static final String JSON_TRANSMITTER_TYPES = "TransmitterTypes";
 	public static final String JSON_DETERMINISTIC_RANGE_ATR = "deterministicRange";
 	public static final String JSON_PROBABILISTIC_RANGE_ATR = "deterministicRange";
+	public static final String JSON_FREQUENCY_ATR = "frequency";
 	
 	public static final String JSON_BATTERY_TYPES = "BatteryTypes";
 	public static final String JSON_CAPACITY_ATR = "capacity";
@@ -204,6 +205,7 @@ public class ModelGenerator {
 			trType.setName(this.<String>getAttributeByName(jObj, JSON_NAME_ATR));
 			trType.setDeterministicRange(this.<Double>getAttributeByName(jObj, JSON_DETERMINISTIC_RANGE_ATR));
 			trType.setProbabilisticRange(this.<Double>getAttributeByName(jObj, JSON_PROBABILISTIC_RANGE_ATR));
+			trType.setFrequency(this.<Double>getAttributeByName(jObj, JSON_FREQUENCY_ATR));
 			trTypes.put(trType.getName(), trType);
 		});
 		

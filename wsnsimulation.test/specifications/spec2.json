@@ -14,7 +14,8 @@
 		{
 			"name" : "tx1",
 			"deterministicRange" : 50.0,
-			"probabilistcRange" : 25.0
+			"probabilistcRange" : 25.0,
+			"frequency" : 5000000000.0
 		}
 	],
 	

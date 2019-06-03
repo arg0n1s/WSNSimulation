@@ -13,8 +13,8 @@ public class Sandkasten {
 		WSNSimulation sim = new WSNSimulation();
 		sim.loadModel("models/spec2.xmi");
 		
-		///ExternalActor ea = new KTCAlgorithm(0.5);
-		ExternalActor ea = new StochasticKTCAlgorithm(1.0);
+		ExternalActor ea = new KTCAlgorithm(1.0);
+		//ExternalActor ea = new StochasticKTCAlgorithm(1.0);
 		sim.registerExternalActor(ea);
 		ea.setPeriodic(true, 0.5);
 		sim.initRandomVelocity(0.0, 10.0);

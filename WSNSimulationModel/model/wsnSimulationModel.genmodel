@@ -64,6 +64,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//TransmitterType/deterministicRange"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//TransmitterType/probabilisticRange"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//TransmitterType/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//TransmitterType/frequency"/>
     </genClasses>
     <genClasses ecoreClass="wsnSimulationModel.ecore#//Link">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Link/cost"/>
