@@ -52,6 +52,7 @@ public class ModelGenerator {
 	public static final String JSON_NODES_AMOUNT_ATR = "amount";
 	public static final String JSON_NODES_GENERATED_ATR = "generated";
 	public static final String JSON_NODES_SPECIFIED_ATR = "specified";
+	public static final String JSON_NODES_GATEWAY_ATR = "gateway";
 	public static final String JSON_TRANSMITTER_ATR = "transmitterType";
 	public static final String JSON_BATTERY_ATR = "batteryType";
 	public static final String JSON_POSITION_ATR = "position";
@@ -118,6 +119,8 @@ public class ModelGenerator {
 		
 		netContainer.getWsnNodes().addAll(createNodes());
 		worldContainer.getObstacles().addAll(createObstacles());
+		
+		setGatewayNode(netContainer);
 		
 		resource.getContents().add(simContainer);
 		
@@ -271,6 +274,17 @@ public class ModelGenerator {
 		});
 		
 		return nodes;
+	}
+	
+	private void setGatewayNode(NetworkContainer container) {
+		JSONObject jNodes = getJObject(specification, JSON_NODES);
+		String gatewayName = this.<String>getAttributeByName(jNodes, JSON_NODES_GATEWAY_ATR);
+		for(WSNNode node : container.getWsnNodes()) {
+			if(node.getName().equals(gatewayName)) {
+				container.setGateway(node);
+				return;
+			}
+		}
 	}
 	
 	@SuppressWarnings("unchecked")

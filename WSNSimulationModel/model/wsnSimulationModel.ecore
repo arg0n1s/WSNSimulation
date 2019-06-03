@@ -22,6 +22,7 @@
         eType="#//WSNNode" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="links" upperBound="-1"
         eType="#//Link" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gateway" eType="#//WSNNode"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WorldContainer">
     <eStructuralFeatures xsi:type="ecore:EReference" name="wsnNodes" upperBound="-1"

@@ -17,10 +17,10 @@ import wsnsimulation.core.runtime.ExternalActor;
 
 public class KTCAlgorithm  extends ExternalActor{
 
-		private Map<String, WSNNode> nodes = new LinkedHashMap<String, WSNNode>();
-		private RulesApp app;
-		private RulesAPI api;
-		private double k;
+		protected Map<String, WSNNode> nodes = new LinkedHashMap<String, WSNNode>();
+		protected RulesApp app;
+		protected RulesAPI api;
+		protected double k;
 		
 		public KTCAlgorithm(double k) {
 			this.k = k;
@@ -63,7 +63,7 @@ public class KTCAlgorithm  extends ExternalActor{
 		}	
 
 		
-		private void markUnmarked() {
+		protected void markUnmarked() {
 			api.updateMatches();
 			
 			while(api.markUnknownLinks().hasMatches()) {
@@ -72,7 +72,7 @@ public class KTCAlgorithm  extends ExternalActor{
 			}
 		}
 		
-		private void cleanDeleted() {
+		protected void cleanDeleted() {
 			api.updateMatches();
 			
 			while(api.deleteLinks().hasMatches()) {
@@ -81,7 +81,7 @@ public class KTCAlgorithm  extends ExternalActor{
 			}
 		}
 		
-		private void repair1(String node) {
+		protected void repair1(String node) {
 			api.updateMatches();
 			
 			while(api.repair(node).hasMatches()) {
@@ -92,7 +92,7 @@ public class KTCAlgorithm  extends ExternalActor{
 			
 		}
 		
-		private void repair2(String node) {
+		protected void repair2(String node) {
 			api.updateMatches();
 			
 			while(api.repair2(node).hasMatches()) {
@@ -103,7 +103,7 @@ public class KTCAlgorithm  extends ExternalActor{
 			
 		}
 		
-		private void repair3(String node) {
+		protected void repair3(String node) {
 			api.updateMatches();
 			
 			while(api.repair3(node).hasMatches()) {
@@ -114,7 +114,7 @@ public class KTCAlgorithm  extends ExternalActor{
 			
 		}
 		
-		private void powerUp(String node) {
+		protected void powerUp(String node) {
 			api.updateMatches();
 			
 			while(api.powerupNotMaximal(node).hasMatches()) {
@@ -143,7 +143,7 @@ public class KTCAlgorithm  extends ExternalActor{
 			}
 		}
 		
-		private void powerDown(String node) {
+		protected void powerDown(String node) {
 			api.updateMatches();
 			
 			Collection<ShutdownIsMaximalMatch> matches = new LinkedList<>();

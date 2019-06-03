@@ -60,7 +60,11 @@ public class WSNSimulationUI {
 					wNode.getPose().getPosition().getX(),
 					wNode.getPose().getPosition().getY(),
 					wNode.getPose().getPosition().getZ());
-			gsNode.addAttribute("ui.style", "fill-color: rgb(25,195,15); text-size: 12; size: 20px; text-style: bold;");
+			if(wNode.equals(nc.getGateway())) {
+				gsNode.addAttribute("ui.style", "fill-color: rgb(155,25,155); text-size: 12; size: 24px; text-style: bold;");
+			}else {
+				gsNode.addAttribute("ui.style", "fill-color: rgb(25,195,15); text-size: 12; size: 16px; text-style: bold;");
+			}
 			vertices.put(wNode, gsNode);
 		});
 		

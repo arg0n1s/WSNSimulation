@@ -27,6 +27,7 @@
     <genClasses ecoreClass="wsnSimulationModel.ecore#//NetworkContainer">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//NetworkContainer/wsnNodes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//NetworkContainer/links"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//NetworkContainer/gateway"/>
     </genClasses>
     <genClasses ecoreClass="wsnSimulationModel.ecore#//WorldContainer">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WorldContainer/wsnNodes"/>
