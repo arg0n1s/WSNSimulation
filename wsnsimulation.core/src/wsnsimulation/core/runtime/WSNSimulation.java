@@ -54,6 +54,10 @@ public class WSNSimulation {
 		linearMotion = false;
 	}
 	
+	public double getTime() {
+		return time;
+	}
+	
 	public WSNSimulationContainer getContainer() {
 		return container;
 	}
@@ -192,7 +196,11 @@ public class WSNSimulation {
 	
 	private void runExternalActors() {
 		for(ExternalActor actor : externalActors) {
-			actor.actOnModel();
+			if(actor.isPeriodic()) {
+				actor.actPeriodic();
+			}else {
+				actor.actOnModel();
+			}
 		}
 	}
 	
@@ -310,9 +318,9 @@ class Boundary{
 		corners.put("b7", new Vector3D(bounds.getMinX(), bounds.getMinY(), minZ));
 		corners.put("b8", new Vector3D(bounds.getMaxX(), bounds.getMinY(), minZ));
 		
-		planes.put("p1", new Plane(corners.get("b1"), corners.get("b2"), corners.get("b3"), precision));
+		//planes.put("p1", new Plane(corners.get("b1"), corners.get("b2"), corners.get("b3"), precision));
 		planes.put("p2", new Plane(corners.get("b1"), corners.get("b2"), corners.get("b5"), precision));
-		planes.put("p3", new Plane(corners.get("b5"), corners.get("b6"), corners.get("b7"), precision));
+		//planes.put("p3", new Plane(corners.get("b5"), corners.get("b6"), corners.get("b7"), precision));
 		planes.put("p4", new Plane(corners.get("b3"), corners.get("b4"), corners.get("b7"), precision));
 		planes.put("p5", new Plane(corners.get("b1"), corners.get("b4"), corners.get("b5"), precision));
 		planes.put("p6", new Plane(corners.get("b2"), corners.get("b3"), corners.get("b6"), precision));

@@ -7,7 +7,7 @@ rule markUnknownLinks() {
 		.linkState == enum::UNKNOWN
 		.linkState := enum::ACTIVE
 	}
-}
+} 
 
 rule deleteLinks() {
 	-- l : Link {
