@@ -42,7 +42,6 @@ public class WSNSimulation {
 	private Random rnd = new Random();
 	
 	private Map<WSNNode, Map<WSNNode, Link>> adjacencyMap = new HashMap<>();
-	//private List<Link> removedLinks = new LinkedList<>();
 	
 	public void setLinearMotion() {
 		linearMotion = true;
@@ -52,6 +51,14 @@ public class WSNSimulation {
 		this.meanVelocity = meanVelocity;
 		this.stdDevVelocity = stdDevVelocity;
 		linearMotion = false;
+	}
+	
+	public void initRandomVelocity(double meanVelocity, double stdDevVelocity) {
+		for(WSNNode node : container.getNetworkcontainer().getWsnNodes()) {
+			node.getPose().getVelocity().setX(meanVelocity + rnd.nextGaussian()*stdDevVelocity);
+			node.getPose().getVelocity().setY(meanVelocity + rnd.nextGaussian()*stdDevVelocity);
+			//node.getPose().getVelocity().setZ(meanVelocity + rnd.nextGaussian()*stdDevVelocity);
+		}
 	}
 	
 	public double getTime() {
@@ -98,7 +105,6 @@ public class WSNSimulation {
 			simulateSignalReach();
 			simulateBatteryDrain();
 			runExternalActors();
-			//cleanRemovedLinks();
 			time += container.getTimeStep();
 			if(inRealTime) {
 				try {
@@ -115,9 +121,9 @@ public class WSNSimulation {
 	private void simulateMotion() {
 		for(WSNNode node : container.getNetworkcontainer().getWsnNodes()) {
 			if(linearMotion) {
-				simulateLinearMotion(node.getPose());
+				simulateLinearMotion(node);
 			} else {
-				simulateBrownianMotion(node.getPose());
+				simulateBrownianMotion(node);
 			}
 			
 		}
@@ -154,7 +160,7 @@ public class WSNSimulation {
 				boolean inReach = (container.isDeterministic()) ? 
 						checkReachableDeterministic(node, node2) : 
 							checkReachableProbabilistic(node, node2);
-				double cost = calculateDistance(node.getPose(), node2.getPose());
+				double cost = calculateDistance(node, node2);
 				
 				if(inReach) {	
 					Link link = currentAdjecency.get(node2);
@@ -204,59 +210,47 @@ public class WSNSimulation {
 		}
 	}
 	
-	/*
-	private void cleanRemovedLinks() {
-		for(Link link : removedLinks) {
-			EcoreUtil.remove(link);
-		}
-		removedLinks = new LinkedList<>();
-	}
-	*/
-	
-	private void simulateLinearMotion(Pose pose) {
-		RealVector position = pose.getPosition();
-		RealVector velocity = pose.getVelocity();
+	private void simulateLinearMotion(WSNNode node) {
+		Vector3D position = realVec2Vec3D(node.getPose().getPosition());
+		Vector3D velocity = realVec2Vec3D(node.getPose().getVelocity());
 		
-		position.setX(position.getX() + velocity.getX()*container.getTimeStep());
-		position.setY(position.getY() + velocity.getY()*container.getTimeStep());
-		//position.setZ(position.getZ() + velocity.getZ()*container.getTimeStep());
-	}
-	
-	private void simulateBrownianMotion(Pose pose) {
-		RealVector position = pose.getPosition();
-		RealVector velocity = pose.getVelocity();
-		if(velocity.getX() == velocity.getY() && velocity.getX() == 0) {
-			velocity.setX(meanVelocity + rnd.nextGaussian()*stdDevVelocity);
-			velocity.setY(meanVelocity + rnd.nextGaussian()*stdDevVelocity);
-			//velocity.setZ(meanVelocity + rnd.nextGaussian()*stdDevVelocity);
-		}
-
-		double newX = position.getX() + velocity.getX()*container.getTimeStep();
-		double newY = position.getY() + velocity.getY()*container.getTimeStep();
-		//double newZ = position.getZ() + velocity.getZ()*container.getTimeStep();
-		if(bound.isInBounds(newX, newY, 0.0)) {
-			position.setX(newX);
-			position.setY(newY);
-			//position.setZ();
+		position = position.add(velocity.scalarMultiply(container.getTimeStep()));
+		
+		if(bound.isInBounds(position)) {
+			vec3dToRealVec(position, node.getPose().getPosition());
 		}else {
-			reflectAtBound(pose);
+			reflectAtBound(node);
+		}
+	}
+	
+	private void simulateBrownianMotion(WSNNode node) {
+		Vector3D position = realVec2Vec3D(node.getPose().getPosition());
+		Vector3D velocity = realVec2Vec3D(node.getPose().getVelocity());
+
+		velocity = velocity.scalarMultiply(0);
+		velocity = velocity.add(Vector3D.PLUS_I.scalarMultiply(meanVelocity+rnd.nextGaussian()*stdDevVelocity));
+		velocity = velocity.add(Vector3D.PLUS_J.scalarMultiply(meanVelocity+rnd.nextGaussian()*stdDevVelocity));
+		//velocity = velocity.add(Vector3D.PLUS_K.scalarMultiply(meanVelocity+rnd.nextGaussian()*stdDevVelocity));
+		
+		position = position.add(velocity.scalarMultiply(container.getTimeStep()));
+		
+		if(bound.isInBounds(position)) {
+			vec3dToRealVec(position, node.getPose().getPosition());
+			vec3dToRealVec(velocity, node.getPose().getVelocity());
+		}else {
+			reflectAtBound(node);
 		}
 		
 	}
 	
-	private double calculateDistance(Pose p1, Pose p2) {
-		RealVector pos1 = p1.getPosition();
-		RealVector pos2 = p2.getPosition();
-		
-		double dx = pos1.getX()-pos2.getX();
-		double dy = pos1.getY()-pos2.getY();
-		double dz = pos1.getZ()-pos2.getZ();
-		
-		return Math.sqrt(dx*dx + dy*dy + dz*dz);
+	private double calculateDistance(WSNNode node1, WSNNode node2) {
+		Vector3D p1 = realVec2Vec3D(node1.getPose().getPosition());
+		Vector3D p2 = realVec2Vec3D(node2.getPose().getPosition());
+		return p1.subtract(p2).getNormInf();
 	}
 	
 	private boolean checkReachableDeterministic(WSNNode n1, WSNNode n2) {
-		double distance = calculateDistance(n1.getPose(), n2.getPose());
+		double distance = calculateDistance(n1, n2);
 		double reach = Math.min(n1.getTransmitterType().getDeterministicRange(), 
 				n2.getTransmitterType().getDeterministicRange());
 		return distance <= reach;
@@ -266,21 +260,16 @@ public class WSNSimulation {
 		//TODO
 		return false;
 	}
-	
-	
-	
-	private void reflectAtBound(Pose pose) {
-		Vector3D position = realVec2Vec3D(pose.getPosition());
-		Vector3D velocity = realVec2Vec3D(pose.getVelocity());
+
+	private void reflectAtBound(WSNNode node) {
+		Vector3D position = realVec2Vec3D(node.getPose().getPosition());
+		Vector3D velocity = realVec2Vec3D(node.getPose().getVelocity());
 		
 		Vector3D reflection = bound.calculateReflection(position, velocity, container.getTimeStep());
-		
-		RealVector v = pose.getVelocity();
-		vec3dToRealVec(reflection, v);
-		
 		Vector3D p2 = position.add(reflection.scalarMultiply(container.getTimeStep()));
-		RealVector p = pose.getPosition();
-		vec3dToRealVec(p2, p);
+		
+		vec3dToRealVec(reflection, node.getPose().getVelocity());
+		vec3dToRealVec(p2, node.getPose().getPosition());
 	}
 	
 
@@ -328,12 +317,12 @@ class Boundary{
 		this.bounds = bounds;
 	}
 	
-	public boolean isInBounds(double x, double y, double z) {
-		if(x>bounds.getMaxX() || x<bounds.getMinX())
+	public boolean isInBounds(Vector3D position) {
+		if(position.getX()>bounds.getMaxX() || position.getX()<bounds.getMinX())
 			return false;
-		if(y>bounds.getMaxY() || y<bounds.getMinY())
+		if(position.getY()>bounds.getMaxY() || position.getY()<bounds.getMinY())
 			return false;
-		if(z>bounds.getMaxY() || z<bounds.getMinY())
+		if(position.getZ()>bounds.getMaxY() || position.getZ()<bounds.getMinY())
 			return false;
 		
 		return true;

@@ -12,12 +12,13 @@ public class Sandkasten {
 		//gen.generateAndSaveModelFromFile("specifications/spec2.json", "models/spec2.xmi");
 		WSNSimulation sim = new WSNSimulation();
 		sim.loadModel("models/spec2.xmi");
-		sim.setStochasticMotion(0.0, 10.0);
 		
 		///ExternalActor ea = new KTCAlgorithm(0.5);
 		ExternalActor ea = new StochasticKTCAlgorithm(1.0);
 		sim.registerExternalActor(ea);
 		ea.setPeriodic(true, 0.5);
+		sim.initRandomVelocity(0.0, 10.0);
+		//sim.setStochasticMotion(0.0, 35.0);
 		
 		sim.runUntil(20.0, true);
 	}
