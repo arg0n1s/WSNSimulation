@@ -30,13 +30,14 @@ public class KTCAlgorithm  extends ExternalActor{
 		public void initialize() {	
 			app = new RulesDemoclesApp();
 			
-			Resource r = app.loadModel(simulation.getContainer().eResource().getURI());
+			Resource r = app.loadModel(simulation.getModel().getURI());
 			app.registerMetaModels();
 			
 			api = app.initAPI();
 			api.updateMatches();
 			
 			simulation.loadModel(r);
+			simulation.initialize();
 			simulation.getContainer().getNetworkcontainer().getWsnNodes().forEach(node -> nodes.put(node.getName(), node));
 		}
 

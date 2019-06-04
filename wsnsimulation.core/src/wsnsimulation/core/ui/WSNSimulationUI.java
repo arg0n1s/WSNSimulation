@@ -1,13 +1,16 @@
 package wsnsimulation.core.ui;
 
-import java.awt.Color;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.util.EContentAdapter;
@@ -15,15 +18,20 @@ import org.graphstream.graph.Edge;
 import org.graphstream.graph.Graph;
 import org.graphstream.graph.Node;
 import org.graphstream.graph.implementations.MultiGraph;
-import org.graphstream.stream.file.FileSourceGEXF.GEXFConstants.COLORAttribute;
 import org.graphstream.ui.view.Viewer;
 
 import wsnSimulationModel.Link;
 import wsnSimulationModel.NetworkContainer;
+import wsnSimulationModel.Obstacle;
 import wsnSimulationModel.RealVector;
+import wsnSimulationModel.Rectangle;
 import wsnSimulationModel.WSNNode;
 import wsnSimulationModel.WSNSimulationContainer;
 import wsnSimulationModel.WorldContainer;
+import wsnsimulation.core.geometry.GeometryUtils;
+import wsnsimulation.core.geometry.VectorObstacle;
+import wsnsimulation.core.geometry.VectorRectangle;
+import wsnsimulation.core.geometry.VectorShape;
 import wsnSimulationModel.Battery;
 import wsnSimulationModel.Bounds;
 
@@ -40,6 +48,9 @@ public class WSNSimulationUI {
 	private Map<WSNNode, Node> vertices = new HashMap<>();
 	private Map<Link, Edge> edges = new HashMap<>();
 	private Map<Set<Node>, Edge> node2edge = new HashMap<>();
+	private Map<Obstacle, VectorObstacle> obstacles = new HashMap<>();
+	private Map<VectorObstacle, Set<Node>> obstaclePoints = new HashMap<>();
+	
 	
 	public WSNSimulationUI(Resource model) {
 		this.model = model;
@@ -47,6 +58,16 @@ public class WSNSimulationUI {
 		wc = sc.getWorldcontainer();
 		nc = sc.getNetworkcontainer();
 		adapter = new UIContenAdapter(model, this);
+		init();
+	}
+	
+	public WSNSimulationUI(Resource model, Map<Obstacle, VectorObstacle> obstacles) {
+		this.model = model;
+		WSNSimulationContainer sc = (WSNSimulationContainer)model.getContents().get(0);
+		wc = sc.getWorldcontainer();
+		nc = sc.getNetworkcontainer();
+		adapter = new UIContenAdapter(model, this);
+		this.obstacles = obstacles;
 		init();
 	}
 	
@@ -68,7 +89,37 @@ public class WSNSimulationUI {
 			vertices.put(wNode, gsNode);
 		});
 		
+		obstacles.forEach((obstacle, shape) -> buildShape(obstacle, shape));
+		
 		addBoundaries();
+	}
+	
+	private void buildShape(Obstacle obstacle, VectorObstacle shape) {
+		List<Node> nodes = new LinkedList<>();
+		shape.getPointsOnHull().forEach(p -> {
+			Node gsNode = graph.addNode(obstacle.getName()+"@"+p.hashCode());
+			gsNode.setAttribute("xyz", 
+					p.getX(),
+					p.getY(),
+					p.getZ());
+			nodes.add(gsNode);
+		});
+		obstaclePoints.put(shape, new LinkedHashSet<Node>(nodes));
+		
+		Node[] nArray = new Node[nodes.size()];
+		nArray = nodes.toArray(nArray);
+		
+		for(int i=0; i<nodes.size()-1; i++) {
+			Node n1 = nArray[i];
+			Node n2 = nArray[i+1];
+			Edge e = graph.addEdge(n1.getId()+"-"+n2.getId(), n1, n2);
+			e.addAttribute("ui.style", "fill-color: rgb(155,155,155); text-size: 12; size: 4px; text-style: bold;");
+		}
+		
+		Node n1 = nArray[nodes.size()-1];
+		Node n2 = nArray[0];
+		Edge e = graph.addEdge(n1.getId()+"-"+n2.getId(), n1, n2);
+		e.addAttribute("ui.style", "fill-color: rgb(155,155,155); text-size: 12; size: 4px; text-style: bold;");
 	}
 	
 	private void addBoundaries() {
@@ -196,9 +247,25 @@ public class WSNSimulationUI {
 
 			if(position.eContainer().eContainer() instanceof WSNNode && 
 					position.eContainmentFeature().getName().equals("position")) {
+				
 				WSNNode wNode = (WSNNode)position.eContainer().eContainer();
 				Node node = vertices.get(wNode);
 				node.setAttribute("xyz", position.getX(), position.getY(), position.getZ());
+			}
+			
+			if(position.eContainer().eContainer() instanceof Obstacle && 
+					position.eContainmentFeature().getName().equals("position")) {
+				
+				Obstacle obstacle = (Obstacle)position.eContainer().eContainer();
+				VectorObstacle vo = obstacles.get(obstacle);
+				ArrayList<Node> points = new ArrayList<>(obstaclePoints.get(vo));
+				ArrayList<Vector3D> vsPoints = new ArrayList<>(vo.getPointsOnHull());
+				
+				for(int i = 0; i<points.size(); i++) {
+					Node n = points.get(i);
+					Vector3D p = vsPoints.get(i);
+					n.setAttribute("xyz", p.getX(), p.getY(), p.getZ());
+				}
 			}
 		}else if(notification.getNotifier() instanceof Battery) {
 			

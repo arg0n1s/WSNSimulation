@@ -52,8 +52,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Quaternion/w"/>
     </genClasses>
     <genClasses ecoreClass="wsnSimulationModel.ecore#//WSNNode">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//WSNNode/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WSNNode/pose"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WSNNode/transmitterType"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WSNNode/canReach"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//WSNNode/inReachFrom"/>
@@ -71,10 +69,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Link/linkState"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//Link/wsnNodes"/>
     </genClasses>
-    <genClasses ecoreClass="wsnSimulationModel.ecore#//Obstacle">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//Obstacle/pose"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Obstacle/name"/>
-    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//Obstacle"/>
     <genClasses ecoreClass="wsnSimulationModel.ecore#//SimpleGeometricShape"/>
     <genClasses ecoreClass="wsnSimulationModel.ecore#//Circle">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Circle/radius"/>
@@ -98,6 +93,10 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Bounds/maxX"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Bounds/maxY"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//Bounds/maxZ"/>
+    </genClasses>
+    <genClasses ecoreClass="wsnSimulationModel.ecore#//SimulationObject">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference wsnSimulationModel.ecore#//SimulationObject/pose"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute wsnSimulationModel.ecore#//SimulationObject/name"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

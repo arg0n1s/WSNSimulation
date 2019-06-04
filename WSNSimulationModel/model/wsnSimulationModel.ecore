@@ -59,11 +59,7 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="z" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="w" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="WSNNode">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        defaultValueLiteral="NODE"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pose" lowerBound="1" eType="#//Pose"
-        containment="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="WSNNode" eSuperTypes="#//SimulationObject">
     <eStructuralFeatures xsi:type="ecore:EReference" name="transmitterType" lowerBound="1"
         eType="#//TransmitterType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="canReach" upperBound="-1"
@@ -91,12 +87,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="wsnNodes" lowerBound="2"
         upperBound="2" eType="#//WSNNode" eOpposite="#//WSNNode/links"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Obstacle" abstract="true">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pose" lowerBound="1" eType="#//Pose"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
-        iD="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Obstacle" abstract="true" eSuperTypes="#//SimulationObject"/>
   <eClassifiers xsi:type="ecore:EClass" name="SimpleGeometricShape" abstract="true"
       eSuperTypes="#//Obstacle"/>
   <eClassifiers xsi:type="ecore:EClass" name="Circle" eSuperTypes="#//SimpleGeometricShape">
@@ -126,5 +117,11 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxX" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxY" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxZ" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SimulationObject" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pose" lowerBound="1" eType="#//Pose"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+        iD="true"/>
   </eClassifiers>
 </ecore:EPackage>
