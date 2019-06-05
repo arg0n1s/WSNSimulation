@@ -16,6 +16,10 @@ public class VectorSimulationObject extends VectorObject {
 		orientation = GeometryUtils.quaternion2Rotation(object.getPose().getOrientation());
 	}
 	
+	public <T extends SimulationObject> T getSimulationObjectAs(Class<T> type) {
+		return type.cast(object);
+	}
+	
 	@Override
 	public void setPosition(Vector3D position) {
 		super.setPosition(position);

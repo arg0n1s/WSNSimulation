@@ -7,6 +7,8 @@ import wsnSimulationModel.Quaternion;
 import wsnSimulationModel.RealVector;
 
 public class GeometryUtils {
+	
+	public static final double precision = 0.000001;
 
 	public static Vector3D realVec2Vec3D(RealVector vec) {
 		return new Vector3D(vec.getX(), vec.getY(), vec.getZ());

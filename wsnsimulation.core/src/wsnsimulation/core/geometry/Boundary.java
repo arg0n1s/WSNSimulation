@@ -10,13 +10,8 @@ import org.apache.commons.math3.geometry.euclidean.threed.Plane;
 import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
 
 import wsnSimulationModel.Bounds;
-import wsnSimulationModel.Obstacle;
-import wsnSimulationModel.SimulationObject;
-import wsnSimulationModel.WSNNode;
 
 public class Boundary {
-	
-	public static final double precision = 0.000001;
 	
 	private Map<String, Vector3D> corners = new LinkedHashMap<>();
 	private Map<String, Plane> planes = new LinkedHashMap<>();
@@ -39,16 +34,16 @@ public class Boundary {
 		corners.put("b8", new Vector3D(bounds.getMaxX(), bounds.getMinY(), minZ));
 		
 		//planes.put("p1", new Plane(corners.get("b1"), corners.get("b2"), corners.get("b3"), precision));
-		planes.put("p2", new Plane(corners.get("b1"), corners.get("b2"), corners.get("b5"), precision));
+		planes.put("p2", new Plane(corners.get("b1"), corners.get("b2"), corners.get("b5"), GeometryUtils.precision));
 		//planes.put("p3", new Plane(corners.get("b5"), corners.get("b6"), corners.get("b7"), precision));
-		planes.put("p4", new Plane(corners.get("b3"), corners.get("b4"), corners.get("b7"), precision));
-		planes.put("p5", new Plane(corners.get("b1"), corners.get("b4"), corners.get("b5"), precision));
-		planes.put("p6", new Plane(corners.get("b2"), corners.get("b3"), corners.get("b6"), precision));
+		planes.put("p4", new Plane(corners.get("b3"), corners.get("b4"), corners.get("b7"), GeometryUtils.precision));
+		planes.put("p5", new Plane(corners.get("b1"), corners.get("b4"), corners.get("b5"), GeometryUtils.precision));
+		planes.put("p6", new Plane(corners.get("b2"), corners.get("b3"), corners.get("b6"), GeometryUtils.precision));
 		
 		this.bounds = bounds;
 	}
 	
-	public boolean isInBounds(VectorObject object, Vector3D position) {
+	public boolean isInBounds(VectorObject object) {
 		if(object instanceof VectorObstacle) {
 			VectorObstacle vo = (VectorObstacle) object;
 			for(Vector3D point : vo.getPointsOnHull()) {
@@ -58,7 +53,7 @@ public class Boundary {
 			}
 			return true;
 		}else{
-			return isInBounds(position);
+			return isInBounds(object.getPosition());
 		}
 	}
 	
@@ -106,6 +101,6 @@ public class Boundary {
 	
 	public Line trajectoryLine(Vector3D position, Vector3D velocity, double timeStep) {
 		Vector3D p2 = velocity.scalarMultiply(timeStep).add(position);
-		return new Line(position, p2, precision);
+		return new Line(position, p2, GeometryUtils.precision);
 	}
 }

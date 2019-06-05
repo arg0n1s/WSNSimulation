@@ -60,7 +60,7 @@ public class WSNSimulation {
 		linearMotion = false;
 	}
 	
-	public void initRandomVelocity(double meanVelocity, double stdDevVelocity) {
+	public void initRandomNodeVelocity(double meanVelocity, double stdDevVelocity) {
 		for(VectorObject node : nodes.values()) {
 			Vector3D velocity = Vector3D.PLUS_I.scalarMultiply(meanVelocity + rnd.nextGaussian()*stdDevVelocity);
 			velocity = velocity.add(Vector3D.PLUS_J.scalarMultiply(meanVelocity + rnd.nextGaussian()*stdDevVelocity));
@@ -68,6 +68,9 @@ public class WSNSimulation {
 			node.setVelocity(velocity);
 		}
 		
+	}
+	
+	public void initRandomObstacleVelocity(double meanVelocity, double stdDevVelocity) {
 		for(VectorObject obstacle : obstacles.values()) {
 			Vector3D velocity = Vector3D.PLUS_I.scalarMultiply(meanVelocity + rnd.nextGaussian()*stdDevVelocity);
 			velocity = velocity.add(Vector3D.PLUS_J.scalarMultiply(meanVelocity + rnd.nextGaussian()*stdDevVelocity));
@@ -194,12 +197,16 @@ public class WSNSimulation {
 					adjacencyMap.put(node2, currentAdjecency2);
 				}
 				
-				boolean inReach = (container.isDeterministic()) ? 
-						checkReachableDeterministic(node, node2) : 
-							checkReachableProbabilistic(node, node2);
-				double cost = calculateCost(node, node2);
+				VectorSimulationObject object1 = nodes.get(node);
+				VectorSimulationObject object2 = nodes.get(node2);
 				
-				if(inReach) {	
+				boolean inReach = (container.isDeterministic()) ? 
+						checkReachableDeterministic(object1, object2) : 
+							checkReachableProbabilistic(object1, object2);
+				boolean haveLOS = haveLineOfSight(object1, object2);
+				double cost = calculateCost(object1, object2);
+				
+				if(inReach && haveLOS) {	
 					Link link = currentAdjecency.get(node2);
 					if(link == null) {
 						link = factory.createLink();
@@ -249,9 +256,10 @@ public class WSNSimulation {
 	
 	private void simulateLinearMotion(VectorObject object) {
 		Vector3D position = object.getPosition().add(object.getVelocity().scalarMultiply(container.getTimeStep()));
-		if(bound.isInBounds(object, position)) {
-			object.setPosition(position);
-		}else {
+		Vector3D oldPosition = object.getPosition();
+		object.setPosition(position);
+		if(!bound.isInBounds(object)) {
+			object.setPosition(oldPosition);
 			reflectAtBound(object);
 		}
 	}
@@ -267,37 +275,51 @@ public class WSNSimulation {
 		
 		position = position.add(velocity.scalarMultiply(container.getTimeStep()));
 		
-		if(bound.isInBounds(object, position)) {
-			object.setPosition(position);
-			object.setVelocity(velocity);
-		}else {
+		Vector3D oldPosition = object.getPosition();
+		object.setPosition(position);
+		
+		Vector3D oldVelocity = object.getVelocity();
+		object.setVelocity(velocity);
+		
+		if(!bound.isInBounds(object)) {
+			object.setPosition(oldPosition);
+			object.setVelocity(oldVelocity);
 			reflectAtBound(object);
 		}
 		
 	}
 	
-	private double calculateCost(WSNNode node1, WSNNode node2) {
-		double distance = calculateDistance(node1, node2);
-		double loss = 20.0 * Math.log10(node1.getTransmitterType().getFrequency()) + 
+	private boolean haveLineOfSight(VectorSimulationObject object1, VectorSimulationObject object2) {
+		Line los = new Line(object1.getPosition(), object2.getPosition(), GeometryUtils.precision);
+		for(VectorObstacle obstacle : obstacles.values()) {
+			if(obstacle.lineIntersectsShape(los)) {
+				return false;
+			}
+		}
+		
+		return true;
+	}
+	
+	private double calculateCost(VectorSimulationObject object1, VectorSimulationObject object2) {
+		double distance = calculateDistance(object1, object2);
+		double loss = 20.0 * Math.log10(object1.getSimulationObjectAs(WSNNode.class).getTransmitterType().getFrequency()) + 
 				20.0 * Math.log10(distance) + 
 				20.0 * Math.log10(4.0*Math.PI / 299792458.0);
 		return loss;
 	}
 	
-	private double calculateDistance(WSNNode node1, WSNNode node2) {
-		Vector3D p1 = GeometryUtils.realVec2Vec3D(node1.getPose().getPosition());
-		Vector3D p2 = GeometryUtils.realVec2Vec3D(node2.getPose().getPosition());
-		return p1.subtract(p2).getNormInf();
+	private double calculateDistance(VectorSimulationObject object1, VectorSimulationObject object2) {
+		return object1.getPosition().subtract(object2.getPosition()).getNormInf();
 	}
 	
-	private boolean checkReachableDeterministic(WSNNode n1, WSNNode n2) {
+	private boolean checkReachableDeterministic(VectorSimulationObject n1, VectorSimulationObject n2) {
 		double distance = calculateDistance(n1, n2);
-		double reach = Math.min(n1.getTransmitterType().getDeterministicRange(), 
-				n2.getTransmitterType().getDeterministicRange());
+		double reach = Math.min(n1.getSimulationObjectAs(WSNNode.class).getTransmitterType().getDeterministicRange(), 
+				n2.getSimulationObjectAs(WSNNode.class).getTransmitterType().getDeterministicRange());
 		return distance <= reach;
 	}
 	
-	private boolean checkReachableProbabilistic(WSNNode n1, WSNNode n2) {
+	private boolean checkReachableProbabilistic(VectorSimulationObject n1, VectorSimulationObject n2) {
 		//TODO
 		return false;
 	}
