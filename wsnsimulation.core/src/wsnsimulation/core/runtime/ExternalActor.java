@@ -20,7 +20,10 @@ public abstract class ExternalActor {
 	public void actPeriodic() {
 		if(simulation.getTime() >= lastActed+period) {
 			lastActed = simulation.getTime();
+			double tic = System.currentTimeMillis();
 			actOnModel();
+			double toc = System.currentTimeMillis();
+			System.out.println("TC algorithm took: "+(toc-tic)+"ms");
 		}
 	}
 	

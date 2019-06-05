@@ -36,7 +36,7 @@ public class VectorRectangle extends VectorObstacle{
 	}
 	
 	@Override
-	public boolean lineIntersectsShape(Line line) {
+	public Vector3D lineIntersectsShape(Line line) {
 		Vector3D[] points = new Vector3D[4];
 		points = this.points.toArray(points);
 		Vector3D c5 = points[0].add(Vector3D.PLUS_K);
@@ -69,12 +69,12 @@ public class VectorRectangle extends VectorObstacle{
 			Vector3D intersection = plane.intersection(line);
 			if(intersection != null) {
 				if(pointInLocalBounds(intersection, planes.get(plane))) {
-					return true;
+					return intersection;
 				}
 			}
 		}
 		
-		return false;
+		return null;
 	}
 	
 	public boolean pointInLocalBounds(Vector3D point, Collection<Vector3D> points) {
@@ -83,11 +83,33 @@ public class VectorRectangle extends VectorObstacle{
 		double maxX = findMaxX(points);
 		double maxY = findMaxY(points);
 		
-		if(point.getX()>maxX || point.getX()<minX)
-			return false;
-		if(point.getY()>maxY || point.getY()<minY)
-			return false;
+		if(minX != maxX) {
+			if(point.getX()>maxX || point.getX()<minX)
+				return false;
+		}
+		if(minY != maxY) {
+			if(point.getY()>maxY || point.getY()<minY)
+				return false;
+		}
 		
+		return true;
+	}
+	
+	public boolean pointInBounds(Vector3D point) {
+		double minX = findMinX(points);
+		double minY = findMinY(points);
+		double maxX = findMaxX(points);
+		double maxY = findMaxY(points);
+		
+		if(minX != maxX) {
+			if(point.getX()>maxX || point.getX()<minX)
+				return false;
+		}		
+		if(minY != maxY) {
+			if(point.getY()>maxY || point.getY()<minY)
+				return false;
+		}
+
 		return true;
 	}
 	
@@ -145,11 +167,27 @@ public class VectorRectangle extends VectorObstacle{
 
 	@Override
 	public boolean lineSegmentIntersectsShape(Line line, Vector3D start, Vector3D end) {
-		if(!lineIntersectsShape(line)) {
+		if(pointInBounds(start) || pointInBounds(end)) {
+			return true;
+		}
+		
+		Vector3D intersection = lineIntersectsShape(line);
+		if(intersection == null) {
 			return false;
 		}
 		
+		Vector3D start2i = intersection.subtract(start);
+		Vector3D start2end = end.subtract(start);
 		
-		return false;
+		double diff = Vector3D.angle(start2i, start2end);
+		if(diff > 0.1) {
+			return false;
+		}
+		
+		if(start2i.getNormInf() > start2end.getNormInf()) {
+			return false;
+		}
+		
+		return true;
 	}
 }

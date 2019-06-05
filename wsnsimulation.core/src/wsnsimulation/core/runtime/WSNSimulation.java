@@ -5,7 +5,10 @@ import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Random;
+import java.util.stream.Collectors;
+
 import org.eclipse.emf.ecore.resource.Resource;
 import org.graphstream.graph.Edge;
 import org.graphstream.graph.Node;
@@ -120,9 +123,12 @@ public class WSNSimulation {
 		ui.display();
 		
 		while(timeLimit>=time) {
+			//double tic = System.currentTimeMillis();
 			simulateMotion();
 			simulateSignalReach();
 			simulateBatteryDrain();
+			//double toc = System.currentTimeMillis();
+			//System.out.println("Core simulation took: "+(toc-tic)+"ms");
 			runExternalActors();
 			time += container.getTimeStep();
 			if(inRealTime) {
@@ -180,22 +186,10 @@ public class WSNSimulation {
 	}
 	
 	private void simulateSignalReach() {
-		for(WSNNode node : container.getNetworkcontainer().getWsnNodes()) {
-			Map<WSNNode, Link> currentAdjecency = adjacencyMap.get(node);
-			if(currentAdjecency == null) {
-				currentAdjecency = new HashMap<>();
-				adjacencyMap.put(node, currentAdjecency);
-			}
-			
+		for(WSNNode node : container.getNetworkcontainer().getWsnNodes()) {		
 			for(WSNNode node2 : container.getNetworkcontainer().getWsnNodes()) {
 				if(node == node2)
-					continue;
-				
-				Map<WSNNode, Link> currentAdjecency2 = adjacencyMap.get(node2);
-				if(currentAdjecency2 == null) {
-					currentAdjecency2 = new HashMap<>();
-					adjacencyMap.put(node2, currentAdjecency2);
-				}
+					continue;	
 				
 				VectorSimulationObject object1 = nodes.get(node);
 				VectorSimulationObject object2 = nodes.get(node2);
@@ -206,8 +200,9 @@ public class WSNSimulation {
 				boolean haveLOS = haveLineOfSight(object1, object2);
 				double cost = calculateCost(object1, object2);
 				
+				Link link = node.getLinks().stream().filter(l -> l.getWsnNodes().contains(node) && l.getWsnNodes().contains(node2)).findAny().orElse(null);
+				
 				if(inReach && haveLOS) {	
-					Link link = currentAdjecency.get(node2);
 					if(link == null) {
 						link = factory.createLink();
 						container.getNetworkcontainer().getLinks().add(link);
@@ -215,23 +210,19 @@ public class WSNSimulation {
 						link.setLinkState(LinkState.UNKNOWN);
 						node.getLinks().add(link);
 						node2.getLinks().add(link);
-						node.getCanReach().add(node2);
-						
-						currentAdjecency.put(node2, link);
-						currentAdjecency2.put(node, link);
 					}
 					
 					if(link.getCost() != cost) {
 						link.setCost(cost);
 					}
+					
+					if(link.getLinkState() == LinkState.DELETED) {
+						link.setLinkState(LinkState.UNKNOWN);
+					}				
 				}else {
-					Link link = currentAdjecency.get(node2);
-					if(link != null) {
+					if(link != null ) {
+						link.setCost(Double.MAX_VALUE);
 						link.setLinkState(LinkState.DELETED);
-						
-						currentAdjecency.remove(node2);
-						currentAdjecency2.remove(node);
-						//removedLinks.add(link);
 					}
 				}
 			}
@@ -292,7 +283,7 @@ public class WSNSimulation {
 	private boolean haveLineOfSight(VectorSimulationObject object1, VectorSimulationObject object2) {
 		Line los = new Line(object1.getPosition(), object2.getPosition(), GeometryUtils.precision);
 		for(VectorObstacle obstacle : obstacles.values()) {
-			if(obstacle.lineIntersectsShape(los)) {
+			if(obstacle.lineSegmentIntersectsShape(los, object1.getPosition(), object2.getPosition())) {
 				return false;
 			}
 		}

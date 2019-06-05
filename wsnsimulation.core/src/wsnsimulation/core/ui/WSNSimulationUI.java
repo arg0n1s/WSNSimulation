@@ -283,11 +283,11 @@ public class WSNSimulationUI {
 				return;
 			}
 			case UNKNOWN : {
-				edge.addAttribute("ui.style", "fill-color: rgb(55,55,55); text-size: 12; size: 1px; text-style: bold;");
+				edge.addAttribute("ui.style", "fill-color: rgb(55,55,55); text-size: 12; size: 2px; text-style: bold;");
 				return;
 			}
 			case DELETED : {
-				edge.addAttribute("ui.style", "fill-color: rgb(155,55,55); text-size: 12; size: 1px; text-style: bold;");
+				edge.addAttribute("ui.style", "fill-color: rgb(155,55,55); text-size: 12; size: 2px; text-style: bold;");
 				return;
 			}
 		}

@@ -11,7 +11,7 @@ public interface VectorShape {
 
 	public void createHullPoints();
 	
-	public boolean lineIntersectsShape(Line line);
+	public Vector3D lineIntersectsShape(Line line);
 	
 	public boolean lineSegmentIntersectsShape(Line line, Vector3D start, Vector3D end);
 	
