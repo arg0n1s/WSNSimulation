@@ -1,24 +1,17 @@
 package wsnsimulation.core.runtime;
 
 import java.util.HashMap;
-import java.util.LinkedHashSet;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.Random;
-import java.util.stream.Collectors;
-
 import org.eclipse.emf.ecore.resource.Resource;
-import org.graphstream.graph.Edge;
-import org.graphstream.graph.Node;
 import org.apache.commons.math3.geometry.euclidean.threed.*;
 
 import wsnSimulationModel.Link;
 import wsnSimulationModel.LinkState;
 import wsnSimulationModel.Obstacle;
 import wsnSimulationModel.Rectangle;
-import wsnSimulationModel.SimulationObject;
 import wsnSimulationModel.WSNNode;
 import wsnSimulationModel.WSNSimulationContainer;
 import wsnSimulationModel.WsnSimulationModelFactory;
@@ -27,7 +20,6 @@ import wsnsimulation.core.geometry.GeometryUtils;
 import wsnsimulation.core.geometry.VectorObject;
 import wsnsimulation.core.geometry.VectorObstacle;
 import wsnsimulation.core.geometry.VectorRectangle;
-import wsnsimulation.core.geometry.VectorShape;
 import wsnsimulation.core.geometry.VectorSimulationObject;
 import wsnsimulation.core.statistics.ComplexWSNNode;
 import wsnsimulation.core.ui.WSNSimulationUI;
@@ -276,8 +268,22 @@ public class WSNSimulation {
 	
 	private void updateRoutingTable() {
 		for(ComplexWSNNode node : nodes.values()) {
+			node.resetRoutingTable();
+		}
+		
+		for(ComplexWSNNode node : nodes.values()) {
 			node.exploreNetwork();
 		}
+		
+		
+		/*
+		for(ComplexWSNNode node : nodes.values()) {
+			System.out.println("## Node: "+node+" - complete routing table: ");
+			for(ComplexWSNNode other : node.getRoutingTable().keySet()) {
+				System.out.println("\t From: "+this+" -via-> "+ node.getRoutingTable().get(other)+" -to-> "+other+" ("+node.getHopTable().get(other)+" hops)");
+			}
+		}
+		*/
 	}
 	
 	private void simulateLinearMotion(VectorObject object) {

@@ -58,6 +58,11 @@ public class ComplexWSNNode extends VectorSimulationObject {
 		adjacentNodes.remove(other);
 	}
 	
+	public void resetRoutingTable() {
+		routingTable = new HashMap<>();
+		hopTable = new HashMap<>();
+	}
+	
 	public void exploreNetwork( ) {
 		for(ComplexWSNNode other : adjacentNodes.keySet()) {
 			if(adjacentNodes.get(other).getLinkState() == LinkState.ACTIVE) {
@@ -67,8 +72,16 @@ public class ComplexWSNNode extends VectorSimulationObject {
 		}
 	}
 	
+	public Map<ComplexWSNNode, ComplexWSNNode> getRoutingTable() {
+		return routingTable;
+	}
+	
+	public Map<ComplexWSNNode, Integer> getHopTable() {
+		return hopTable;
+	}
+	
 	public void receiveDiscoveryMessage(DiscoveryMessage msg) {
-		if(!msg.isInPath(this)) {
+		if(!msg.isInPath(this) && msg.origin != this) {
 			msg.hopCount++;
 			ComplexWSNNode last = msg.getLastHop();
 			
@@ -100,32 +113,8 @@ public class ComplexWSNNode extends VectorSimulationObject {
 					}
 				}
 				
-				routingTable.get(msg.origin).returnDiscoveryMessage(new DiscoveryMessage(msg));
 			}
 		}
-	}
-	
-	public void returnDiscoveryMessage(DiscoveryMessage msg) {
-		if(msg.origin != this) {
-			routingTable.get(msg.origin).returnDiscoveryMessage(msg);
-		}
-		
-		Set<ComplexWSNNode> path = msg.getPath();
-		ComplexWSNNode first = path.iterator().next();
-		int count = 0;
-		for(ComplexWSNNode hop : path) {
-			count++;
-			if(routingTable.containsKey(hop)) {
-				if(hopTable.get(hop)> count) {
-					routingTable.replace(hop, first);
-					hopTable.replace(hop, count);
-				}
-			}else {
-				routingTable.put(hop, first);
-				hopTable.put(hop, count);
-			}
-		}
-		
 		
 	}
 	
