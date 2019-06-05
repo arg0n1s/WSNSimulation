@@ -18,9 +18,10 @@ public class Sandkasten {
 		sim.registerExternalActor(ea);
 		//ea.setPeriodic(true, 5.0);
 		//sim.initRandomNodeVelocity(0.0, 10.0);
-		sim.initRandomObstacleVelocity(0.0, 20.0);
+		//sim.initRandomObstacleVelocity(0.0, 20.0);
 		//sim.setStochasticMotion(0.0, 35.0);
 		
-		sim.runUntil(30.0, true);
+		sim.runUntil(1.0, true);
+		System.out.println("Done..");
 	}
 }

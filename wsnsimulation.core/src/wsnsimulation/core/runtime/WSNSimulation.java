@@ -29,6 +29,7 @@ import wsnsimulation.core.geometry.VectorObstacle;
 import wsnsimulation.core.geometry.VectorRectangle;
 import wsnsimulation.core.geometry.VectorShape;
 import wsnsimulation.core.geometry.VectorSimulationObject;
+import wsnsimulation.core.statistics.ComplexWSNNode;
 import wsnsimulation.core.ui.WSNSimulationUI;
 import wsnsimulation.model.utils.GeneratorUtils;
 
@@ -49,8 +50,7 @@ public class WSNSimulation {
 	private WSNSimulationUI ui;
 	private Random rnd = new Random();
 	
-	private Map<WSNNode, VectorSimulationObject> nodes = new HashMap<>();
-	private Map<WSNNode, Map<WSNNode, Link>> adjacencyMap = new HashMap<>();
+	private Map<WSNNode, ComplexWSNNode> nodes = new HashMap<>();
 	private Map<Obstacle, VectorObstacle> obstacles = new HashMap<>();
 	
 	public void setLinearMotion() {
@@ -130,6 +130,7 @@ public class WSNSimulation {
 			//double toc = System.currentTimeMillis();
 			//System.out.println("Core simulation took: "+(toc-tic)+"ms");
 			runExternalActors();
+			updateRoutingTable();
 			time += container.getTimeStep();
 			if(inRealTime) {
 				try {
@@ -141,6 +142,8 @@ public class WSNSimulation {
 			}
 			
 		}
+		
+		System.out.println("Simulation complete..");
 	}
 	
 	public void initialize() {
@@ -148,7 +151,7 @@ public class WSNSimulation {
 		bound = new Boundary(container.getWorldcontainer().getBounds());
 		
 		container.getNetworkcontainer().getWsnNodes().forEach(node -> {
-			nodes.put(node, new VectorSimulationObject(node));
+			nodes.put(node, new ComplexWSNNode(node));
 		});
 		
 		container.getWorldcontainer().getObstacles().forEach(o -> {
@@ -191,8 +194,8 @@ public class WSNSimulation {
 				if(node == node2)
 					continue;	
 				
-				VectorSimulationObject object1 = nodes.get(node);
-				VectorSimulationObject object2 = nodes.get(node2);
+				ComplexWSNNode object1 = nodes.get(node);
+				ComplexWSNNode object2 = nodes.get(node2);
 				
 				boolean inReach = (container.isDeterministic()) ? 
 						checkReachableDeterministic(object1, object2) : 
@@ -202,7 +205,23 @@ public class WSNSimulation {
 				
 				Link link = node.getLinks().stream().filter(l -> l.getWsnNodes().contains(node) && l.getWsnNodes().contains(node2)).findAny().orElse(null);
 				
-				if(inReach && haveLOS) {	
+				if(inReach && haveLOS) {
+					if(link == null) {
+						link = factory.createLink();
+						container.getNetworkcontainer().getLinks().add(link);
+						
+						ComplexWSNNode.connect(link, object1, object2);
+					}
+					
+					ComplexWSNNode.updateCost(link, object1, object2, cost);
+					
+					if(link.getLinkState() == LinkState.DELETED) {
+						ComplexWSNNode.updateLinkState(link, object1, object2, LinkState.UNKNOWN);
+					}
+					
+					ComplexWSNNode.updateLink(link, object1, object2);
+					
+					/*
 					if(link == null) {
 						link = factory.createLink();
 						container.getNetworkcontainer().getLinks().add(link);
@@ -218,12 +237,22 @@ public class WSNSimulation {
 					
 					if(link.getLinkState() == LinkState.DELETED) {
 						link.setLinkState(LinkState.UNKNOWN);
-					}				
+					}
+					*/				
 				}else {
 					if(link != null ) {
-						link.setCost(Double.MAX_VALUE);
-						link.setLinkState(LinkState.DELETED);
+						//link.setCost(Double.MAX_VALUE);
+						//link.setLinkState(LinkState.DELETED);
+						ComplexWSNNode.updateCost(link, object1, object2, Double.MAX_VALUE);
+						ComplexWSNNode.updateLinkState(link, object1, object2, LinkState.DELETED);
+						ComplexWSNNode.updateLink(link, object1, object2);
+					} else {
+						ComplexWSNNode.disconnect(object1, object2);
 					}
+				}
+				
+				if(link == null) {
+					ComplexWSNNode.disconnect(object1, object2);
 				}
 			}
 		}
@@ -242,6 +271,12 @@ public class WSNSimulation {
 			}else {
 				actor.actOnModel();
 			}
+		}
+	}
+	
+	private void updateRoutingTable() {
+		for(ComplexWSNNode node : nodes.values()) {
+			node.exploreNetwork();
 		}
 	}
 	
