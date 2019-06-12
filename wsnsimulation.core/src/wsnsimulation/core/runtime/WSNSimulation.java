@@ -22,6 +22,7 @@ import wsnsimulation.core.geometry.VectorObstacle;
 import wsnsimulation.core.geometry.VectorRectangle;
 import wsnsimulation.core.geometry.VectorSimulationObject;
 import wsnsimulation.core.statistics.ComplexWSNNode;
+import wsnsimulation.core.statistics.StatisticModule;
 import wsnsimulation.core.ui.WSNSimulationUI;
 import wsnsimulation.model.utils.GeneratorUtils;
 
@@ -34,6 +35,7 @@ public class WSNSimulation {
 	private WSNSimulationContainer container;
 	private Boundary bound;
 	private List<ExternalActor> externalActors = new LinkedList<>();
+	private List<StatisticModule> statisticModules = new LinkedList<>();
 	
 	private boolean linearMotion = true;
 	private double meanVelocity = 0;
@@ -86,6 +88,10 @@ public class WSNSimulation {
 		return container;
 	}
 	
+	public Map<WSNNode, ComplexWSNNode> getNodes() {
+		return nodes;
+	}
+	
 	public Resource loadModel(String path) {
 		Resource model;
 		try {
@@ -103,39 +109,6 @@ public class WSNSimulation {
 	
 	public void loadModel(Resource model) {
 		this.model = model;
-	}
-	
-	public void registerExternalActor(ExternalActor actor) {
-		externalActors.add(actor);
-		actor.setSimulation(this);
-		actor.initialize();
-	}
-	
-	public void runUntil(double timeLimit, boolean inRealTime) {
-		ui.display();
-		
-		while(timeLimit>=time) {
-			//double tic = System.currentTimeMillis();
-			simulateMotion();
-			simulateSignalReach();
-			simulateBatteryDrain();
-			//double toc = System.currentTimeMillis();
-			//System.out.println("Core simulation took: "+(toc-tic)+"ms");
-			runExternalActors();
-			updateRoutingTable();
-			time += container.getTimeStep();
-			if(inRealTime) {
-				try {
-					Thread.sleep((long) (container.getTimeStep()*1000.0));
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-			
-		}
-		
-		System.out.println("Simulation complete..");
 	}
 	
 	public void initialize() {
@@ -157,6 +130,61 @@ public class WSNSimulation {
 		});
 		
 		ui = new WSNSimulationUI(model, obstacles);
+	}
+	
+	public void registerExternalActor(ExternalActor actor) {
+		externalActors.add(actor);
+		actor.setSimulation(this);
+		actor.initialize();
+	}
+	
+	public void registerStatisticModule(StatisticModule statistic) {
+		statisticModules.add(statistic);
+		statistic.setSimulation(this);
+		statistic.initialize();
+	}
+	
+	public void runUntil(double timeLimit, boolean inRealTime) {
+		ui.display();
+		
+		while(timeLimit>=time) {
+			simulateMotion();
+			simulateSignalReach();
+			simulateBatteryDrain();
+			runExternalActors();
+			updateRoutingTable();
+			updateStatisticModules();
+			time += container.getTimeStep();
+			if(inRealTime) {
+				try {
+					Thread.sleep((long) (container.getTimeStep()*1000.0));
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
+		}
+		
+		System.out.println("Simulation complete..");
+	}
+	
+	public void printStatistics() {
+		for(StatisticModule statistic : statisticModules) {
+			statistic.printStatistics();
+		}
+	}
+	
+	public void displayStatistics() {
+		for(StatisticModule statistic : statisticModules) {
+			statistic.displayGraph();
+		}
+	}
+	
+	public void saveStatistics(String outputFolder) {
+		for(StatisticModule statistic : statisticModules) {
+			statistic.saveToCSV(outputFolder);
+		}
 	}
 	
 	private void simulateMotion() {
@@ -263,6 +291,12 @@ public class WSNSimulation {
 			}else {
 				actor.actOnModel();
 			}
+		}
+	}
+	
+	private void updateStatisticModules() {
+		for(StatisticModule statistic : statisticModules) {
+			statistic.update();
 		}
 	}
 	

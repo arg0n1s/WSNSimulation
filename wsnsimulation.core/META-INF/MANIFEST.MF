@@ -9,4 +9,5 @@ Require-Bundle: WSNSimulationModel,
  org.eclipse.emf.ecore
 Bundle-ClassPath: jars/,
  .
-Export-Package: wsnsimulation.core.runtime
+Export-Package: wsnsimulation.core.runtime,
+ wsnsimulation.core.statistics

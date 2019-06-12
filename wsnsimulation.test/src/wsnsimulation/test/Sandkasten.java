@@ -4,6 +4,7 @@ import wsnalgorithm.ktc.core.KTCAlgorithm;
 import wsnalgorithm.ktc.core.StochasticKTCAlgorithm;
 import wsnsimulation.core.runtime.ExternalActor;
 import wsnsimulation.core.runtime.WSNSimulation;
+import wsnsimulation.core.statistics.HopsToGateway;
 import wsnsimulation.model.utils.ModelGenerator;
 
 public class Sandkasten {
@@ -16,12 +17,17 @@ public class Sandkasten {
 		ExternalActor ea = new KTCAlgorithm(1.0);
 		//ExternalActor ea = new StochasticKTCAlgorithm(1.0);
 		sim.registerExternalActor(ea);
+		sim.registerStatisticModule(new HopsToGateway());
 		//ea.setPeriodic(true, 5.0);
 		sim.initRandomNodeVelocity(0.0, 10.0);
 		sim.initRandomObstacleVelocity(0.0, 20.0);
 		//sim.setStochasticMotion(0.0, 35.0);
 		
-		sim.runUntil(20.0, true);
+		sim.displayStatistics();
+		sim.runUntil(5.0, false);
 		System.out.println("Done..");
+		
+		sim.printStatistics();
+		sim.saveStatistics("output");
 	}
 }
