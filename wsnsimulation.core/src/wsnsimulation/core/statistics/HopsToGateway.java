@@ -1,8 +1,5 @@
 package wsnsimulation.core.statistics;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.LinkedList;
@@ -147,31 +144,4 @@ public class HopsToGateway extends StatisticModule {
 		writeToFile(sb2.toString(), outputFolder+"/Hops2Gateway_"+simulation.getContainer().getName()+"_nodes.csv");
 	}
 	
-	public static boolean allHaveNext(List<Iterator<DataPoint<Integer>>> iterators) {
-		for(Iterator<DataPoint<Integer>> iterator : iterators) {
-			if(!iterator.hasNext()) {
-				return false;
-			}
-		}
-		return true;
-	}
-	
-	public static void createFolderIfNotExist(String path) {
-		File dir = new File(path);
-		if(dir.isDirectory() && dir.exists())
-			return;
-		dir.mkdir();
-	}
-	
-	public static void writeToFile(String data, String path) {
-		try {
-			FileWriter csvWriter = new FileWriter(path);
-			csvWriter.append(data);
-			csvWriter.flush();
-			csvWriter.close();
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-	}
-
 }

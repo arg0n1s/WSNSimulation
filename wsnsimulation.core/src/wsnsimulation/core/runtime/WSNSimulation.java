@@ -176,15 +176,11 @@ public class WSNSimulation {
 	}
 	
 	public void displayStatistics() {
-		for(StatisticModule statistic : statisticModules) {
-			statistic.displayGraph();
-		}
+		statisticModules.parallelStream().forEach(s -> s.displayGraph());
 	}
 	
 	public void saveStatistics(String outputFolder) {
-		for(StatisticModule statistic : statisticModules) {
-			statistic.saveToCSV(outputFolder);
-		}
+		statisticModules.parallelStream().forEach(s -> s.saveToCSV(outputFolder));
 	}
 	
 	private void simulateMotion() {
@@ -295,9 +291,7 @@ public class WSNSimulation {
 	}
 	
 	private void updateStatisticModules() {
-		for(StatisticModule statistic : statisticModules) {
-			statistic.update();
-		}
+		statisticModules.parallelStream().forEach(s -> s.update());
 	}
 	
 	private void updateRoutingTable() {
@@ -308,16 +302,6 @@ public class WSNSimulation {
 		for(ComplexWSNNode node : nodes.values()) {
 			node.exploreNetwork();
 		}
-		
-		
-		/*
-		for(ComplexWSNNode node : nodes.values()) {
-			System.out.println("## Node: "+node+" - complete routing table: ");
-			for(ComplexWSNNode other : node.getRoutingTable().keySet()) {
-				System.out.println("\t From: "+this+" -via-> "+ node.getRoutingTable().get(other)+" -to-> "+other+" ("+node.getHopTable().get(other)+" hops)");
-			}
-		}
-		*/
 	}
 	
 	private void simulateLinearMotion(VectorObject object) {

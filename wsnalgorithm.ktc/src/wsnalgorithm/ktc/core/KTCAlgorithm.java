@@ -129,7 +129,7 @@ public class KTCAlgorithm  extends ExternalActor{
 				
 				Optional<PowerupIsMaximalButKMatch> match = api.powerupIsMaximalButK(node).findAnyMatch();
 				match.ifPresent(m -> {
-					double currentK = (m.getL1().getCost() > m.getL2().getCost()) ? 
+					double currentK = (m.getL1().getCost() < m.getL2().getCost()) ? 
 							m.getL1().getCost()  : m.getL2().getCost();
 							
 					currentK *= k;
@@ -153,7 +153,7 @@ public class KTCAlgorithm  extends ExternalActor{
 				
 				Optional<ShutdownIsMaximalMatch> match = api.shutdownIsMaximal(node).findAnyMatch();
 				match.ifPresent(m -> {
-					double currentK = (m.getL1().getCost() > m.getL2().getCost()) ? 
+					double currentK = (m.getL1().getCost() < m.getL2().getCost()) ? 
 							m.getL1().getCost()  : m.getL2().getCost();
 							
 					currentK *= k;

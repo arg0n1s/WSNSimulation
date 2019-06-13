@@ -53,7 +53,6 @@ public class StatisticModuleUi extends ApplicationFrame {
 		         dataset ,
 		         PlotOrientation.VERTICAL ,
 		         true , true , false);
-		
 		frame = new ChartFrame(super.getName(), xylineChart);
 		setContentPane(frame.getContentPane());
 		

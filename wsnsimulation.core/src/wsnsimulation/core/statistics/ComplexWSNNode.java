@@ -80,6 +80,10 @@ public class ComplexWSNNode extends VectorSimulationObject {
 		return hopTable;
 	}
 	
+	public Map<ComplexWSNNode, Link> getLinkTable() {
+		return adjacentNodes;
+	}
+	
 	public void receiveDiscoveryMessage(DiscoveryMessage msg) {
 		if(!msg.isInPath(this) && msg.origin != this) {
 			msg.hopCount++;

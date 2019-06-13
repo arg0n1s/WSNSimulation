@@ -53,7 +53,7 @@ public class StochasticKTCAlgorithm extends KTCAlgorithm {
 			
 			Optional<PowerupIsMaximalButKMatch> match = api.powerupIsMaximalButK(node).findAnyMatch();
 			match.ifPresent(m -> {
-				double currentK = (m.getL1().getCost() > m.getL2().getCost()) ? 
+				double currentK = (m.getL1().getCost() < m.getL2().getCost()) ? 
 						m.getL1().getCost()  : m.getL2().getCost();
 						
 				currentK *= k;
@@ -78,7 +78,7 @@ public class StochasticKTCAlgorithm extends KTCAlgorithm {
 			
 			Optional<ShutdownIsMaximalMatch> match = api.shutdownIsMaximal(node).findAnyMatch();
 			match.ifPresent(m -> {
-				double currentK = (m.getL1().getCost() > m.getL2().getCost()) ? 
+				double currentK = (m.getL1().getCost() < m.getL2().getCost()) ? 
 						m.getL1().getCost()  : m.getL2().getCost();
 						
 				currentK *= k;
