@@ -28,7 +28,7 @@ public class HopsToGateway extends StatisticModule {
 			if(wNode.equals(container.getNetworkcontainer().getGateway())) {
 				gateWay = cNode;
 			}
-			ui.addDataSeries(wNode.getName(), node2HopCount.get(cNode));
+			//ui.addDataSeries(wNode.getName(), node2HopCount.get(cNode));
 		});
 		ui.addDataSeries("global", avgHops);
 	}
@@ -57,7 +57,7 @@ public class HopsToGateway extends StatisticModule {
 			if(series.getMin() != null && series.getMin().data < min) {
 				min = series.getMin().data;
 			}
-			ui.addDataPoint(node.getWSNNode().getName(), dataPoint);
+			//ui.addDataPoint(node.getWSNNode().getName(), dataPoint);
 		}
 		
 		avg /= node2HopCount.size();

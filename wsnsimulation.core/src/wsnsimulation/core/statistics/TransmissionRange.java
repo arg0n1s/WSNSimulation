@@ -24,11 +24,11 @@ public class TransmissionRange extends StatisticModule {
 	public void initialize() {
 		simulation.getNodes().forEach((wNode, cNode) -> {
 			node2avgRange.put(cNode, new DoubleDataSeries());
-			ui.addDataSeries(wNode.getName()+"_avg", node2avgRange.get(cNode));
+			//ui.addDataSeries(wNode.getName()+"_avg", node2avgRange.get(cNode));
 			node2minRange.put(cNode, new DoubleDataSeries());
-			ui.addDataSeries(wNode.getName()+"_max", node2minRange.get(cNode));
+			//ui.addDataSeries(wNode.getName()+"_max", node2minRange.get(cNode));
 			node2maxRange.put(cNode, new DoubleDataSeries());
-			ui.addDataSeries(wNode.getName()+"_min", node2maxRange.get(cNode));
+			//ui.addDataSeries(wNode.getName()+"_min", node2maxRange.get(cNode));
 		});
 		
 		ui.addDataSeries("global_avg", avgRange);
@@ -86,9 +86,9 @@ public class TransmissionRange extends StatisticModule {
 				validMeasurements--;
 			}
 			
-			ui.addDataPoint(node.getWSNNode().getName()+"_avg", dataPointAvg);
-			ui.addDataPoint(node.getWSNNode().getName()+"_max", dataPointMax);
-			ui.addDataPoint(node.getWSNNode().getName()+"_min", dataPointMin);
+			//ui.addDataPoint(node.getWSNNode().getName()+"_avg", dataPointAvg);
+			//ui.addDataPoint(node.getWSNNode().getName()+"_max", dataPointMax);
+			//ui.addDataPoint(node.getWSNNode().getName()+"_min", dataPointMin);
 		}
 		
 		boolean valid = validMeasurements > 0;
