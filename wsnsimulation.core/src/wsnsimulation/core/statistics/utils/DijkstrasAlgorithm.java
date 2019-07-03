@@ -3,13 +3,14 @@ package wsnsimulation.core.statistics.utils;
 import java.util.AbstractMap;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.stream.Collectors;
 import java.util.PriorityQueue;
-import java.util.Queue;
-import java.util.concurrent.LinkedBlockingQueue;
+import java.util.Set;
+import java.util.function.Function;
 
 import wsnSimulationModel.Link;
 import wsnSimulationModel.LinkState;
@@ -17,15 +18,19 @@ import wsnSimulationModel.WSNNode;
 
 public class DijkstrasAlgorithm {
 	
-	protected final List<WSNNode> nodes;
-	protected final List<Link> links;
+	protected final Set<WSNNode> nodes;
+	protected final Set<Link> links;
 	protected Map<Entry<WSNNode, WSNNode>, Link> node2link = new HashMap<>();
 	protected Map<WSNNode, Entry<WSNNode, Double>> distance2Src;
 	protected Map<WSNNode, WSNNode> previous; 
 	
-	public DijkstrasAlgorithm(List<WSNNode> nodes, List<Link> links) {
+	public DijkstrasAlgorithm(Set<WSNNode> nodes) {
 		this.nodes = nodes;
-		this.links = links;
+		links = new HashSet<>();
+		for(WSNNode node : nodes) {
+			links.addAll(node.getLinks());
+		}
+		
 		for(Link link : links) {
 			WSNNode n1 = link.getWsnNodes().get(0);
 			WSNNode n2 = link.getWsnNodes().get(1);
@@ -33,17 +38,17 @@ public class DijkstrasAlgorithm {
 		}
 	}
 	
-	public Path findPath(WSNNode src, WSNNode trg) {
-		return findAllPaths(src).get(trg);
+	public Path findPath(WSNNode src, WSNNode trg, Function<LinkState, Boolean> valid) {
+		return findAllPaths(src, valid).get(trg);
 	}
 	
-	public Map<WSNNode, Path> findAllPaths(WSNNode src) {
+	public Map<WSNNode, Path> findAllPaths(WSNNode src, Function<LinkState, Boolean> valid) {
 		PriorityQueue<Entry<WSNNode, Double>> queue = init(src);
 		while(!queue.isEmpty()) {
 			Entry<WSNNode, Double> current = queue.poll();
 			WSNNode u = current.getKey();
 			for(Link link : u.getLinks()) {
-				if(link.getLinkState() != LinkState.ACTIVE) {
+				if(!valid.apply(link.getLinkState())) {
 					continue;
 				}
 				
@@ -57,21 +62,24 @@ public class DijkstrasAlgorithm {
 				double alternative = distance2Src.get(u).getValue() + link.getCost();
 				if(alternative < distance2Src.get(v).getValue()) {
 					distance2Src.get(v).setValue(alternative);
-					previous.replace(v, u);
+					previous.put(v, u);
 				}
 			}
 		}
 		Map<WSNNode, Path> paths = new HashMap<>();
 		for(WSNNode node : nodes) {
 			if(node != src) {
-				paths.put(node, constructPath(src, node));
+				Path p = constructPath(src, node);
+				if(p != null) {
+					paths.put(node, p);
+				}
 			}
 		}
 		return paths;
 	}
 	
 	private PriorityQueue<Entry<WSNNode, Double>> init(WSNNode src) {
-		PriorityQueue<Entry<WSNNode, Double>> queue = new PriorityQueue<>(0, new MyComp() );
+		PriorityQueue<Entry<WSNNode, Double>> queue = new PriorityQueue<>(1, new MyComp() );
 		queue.add(new AbstractMap.SimpleEntry<WSNNode, Double>(src, 0.0));
 		for(WSNNode node : nodes) {
 			if(node != src) {
@@ -95,16 +103,20 @@ public class DijkstrasAlgorithm {
 		
 		LinkedList<WSNNode> pN = new LinkedList<>();
 		LinkedList<Link> pL = new LinkedList<>();
+		pL.addFirst(getLink(prev, trg));
 		pN.add(trg);
+		
 		while(prev != src) {
-			pL.addFirst(getLink(prev, trg));
-			pN.addFirst(prev);
-			prev = previous.get(prev);
-			if(prev == null) {
+			WSNNode next = previous.get(prev);
+			if(next == null) {
 				return null;
 			}
+			pL.addFirst(getLink(next, prev));
+			pN.addFirst(prev);
+			prev = previous.get(prev);
+			prev = next;
 		}
-		pL.addFirst(getLink(src, prev));
+		
 		pN.addFirst(src);
 		return new Path(src, trg, pN, pL);
 	}
