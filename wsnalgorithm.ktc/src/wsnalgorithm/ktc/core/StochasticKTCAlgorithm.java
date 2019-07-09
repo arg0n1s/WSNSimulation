@@ -53,11 +53,10 @@ public class StochasticKTCAlgorithm extends KTCAlgorithm {
 			
 			Optional<PowerupIsMaximalButKMatch> match = api.powerupIsMaximalButK(node).findAnyMatch();
 			match.ifPresent(m -> {
-				double currentK = (m.getL1().getCost() < m.getL2().getCost()) ? 
+				double minCost = (m.getL1().getCost() < m.getL2().getCost()) ? 
 						m.getL1().getCost()  : m.getL2().getCost();
-						
-				currentK *= k;
-				double powerUp = 1.0 - probability(m.getL3().getCost(), currentK);
+				double kPrime = k * minCost;
+				double powerUp = 1.0 - probability(m.getL3().getCost(), minCost, kPrime);
 				
 				if(rnd.nextDouble() <= powerUp) {
 					api.powerupIsMaximalButK(node).apply(m);
@@ -78,11 +77,10 @@ public class StochasticKTCAlgorithm extends KTCAlgorithm {
 			
 			Optional<ShutdownIsMaximalMatch> match = api.shutdownIsMaximal(node).findAnyMatch();
 			match.ifPresent(m -> {
-				double currentK = (m.getL1().getCost() < m.getL2().getCost()) ? 
+				double minCost = (m.getL1().getCost() < m.getL2().getCost()) ? 
 						m.getL1().getCost()  : m.getL2().getCost();
-						
-				currentK *= k;
-				double pShutdown = probability(m.getL3().getCost(), currentK);
+				double kPrime = k * minCost;
+				double pShutdown = probability(m.getL3().getCost(), minCost, kPrime);
 				
 				if(rnd.nextDouble() <= pShutdown) {
 					api.shutdownIsMaximal(node).apply(m);
@@ -94,8 +92,8 @@ public class StochasticKTCAlgorithm extends KTCAlgorithm {
 		}
 	}
 	
-	private double probability(double cost, double kPrime) {
-		return (cost>=kPrime) ? 
+	private double probability(double cost, double minCost, double kPrime) {
+		return (cost>=minCost) ? 
 				(1.0 - Math.pow(Math.E, -(cost/kPrime))) : 
 					0.0;
 	}

@@ -144,6 +144,20 @@ public class WSNSimulation {
 		statistic.initialize();
 	}
 	
+	public void runOnce() {
+		ui.display();
+		
+		simulateSignalReach();
+		runExternalActors();
+		updateRoutingTable();
+		
+		updateStatisticModules();
+		time += container.getTimeStep();
+		updateStatisticModules();
+		
+		System.out.println("Simulation complete..");
+	}
+	
 	public void runUntil(double timeLimit, boolean inRealTime) {
 		ui.display();
 		
@@ -236,29 +250,9 @@ public class WSNSimulation {
 					}
 					
 					ComplexWSNNode.updateLink(link, object1, object2);
-					
-					/*
-					if(link == null) {
-						link = factory.createLink();
-						container.getNetworkcontainer().getLinks().add(link);
-						
-						link.setLinkState(LinkState.UNKNOWN);
-						node.getLinks().add(link);
-						node2.getLinks().add(link);
-					}
-					
-					if(link.getCost() != cost) {
-						link.setCost(cost);
-					}
-					
-					if(link.getLinkState() == LinkState.DELETED) {
-						link.setLinkState(LinkState.UNKNOWN);
-					}
-					*/				
+								
 				}else {
 					if(link != null ) {
-						//link.setCost(Double.MAX_VALUE);
-						//link.setLinkState(LinkState.DELETED);
 						ComplexWSNNode.updateCost(link, object1, object2, Double.MAX_VALUE);
 						ComplexWSNNode.updateLinkState(link, object1, object2, LinkState.DELETED);
 						ComplexWSNNode.updateLink(link, object1, object2);

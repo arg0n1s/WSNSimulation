@@ -10,7 +10,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import wsnSimulationModel.WSNNode;
 import wsnalgorithm.ktc.rules.api.RulesAPI;
 import wsnalgorithm.ktc.rules.api.RulesApp;
-import wsnalgorithm.ktc.rules.api.RulesDemoclesApp;
+import wsnalgorithm.ktc.rules.api.RulesHiPEApp;
 import wsnalgorithm.ktc.rules.api.matches.PowerupIsMaximalButKMatch;
 import wsnalgorithm.ktc.rules.api.matches.ShutdownIsMaximalMatch;
 import wsnsimulation.core.runtime.ExternalActor;
@@ -28,14 +28,15 @@ public class KTCAlgorithm  extends ExternalActor{
 		
 		@Override
 		public void initialize() {	
-			app = new RulesDemoclesApp();
-			
+			app = new RulesHiPEApp();
 			Resource r = app.loadModel(simulation.getModel().getURI());
 			app.registerMetaModels();
 			
 			api = app.initAPI();
+			double tic = System.currentTimeMillis();
 			api.updateMatches();
-			
+			double toc = System.currentTimeMillis();
+			System.out.println("batch: "+(toc-tic)+"ms");
 			simulation.loadModel(r);
 			simulation.initialize();
 			simulation.getContainer().getNetworkcontainer().getWsnNodes().forEach(node -> nodes.put(node.getName(), node));
@@ -43,6 +44,7 @@ public class KTCAlgorithm  extends ExternalActor{
 
 		@Override
 		public void actOnModel() {
+			double tic = System.currentTimeMillis();
 			// discover mark unknown links
 			markUnmarked();
 			
@@ -61,25 +63,38 @@ public class KTCAlgorithm  extends ExternalActor{
 			
 			// delete marked links
 			cleanDeleted();
+			
+			double toc = System.currentTimeMillis();
+			System.out.println("TC algorithm took: "+(toc-tic)+"ms");
 		}	
 
 		
 		protected void markUnmarked() {
+			double tic = System.currentTimeMillis();
 			api.updateMatches();
+			double toc = System.currentTimeMillis();
+			System.out.println("batch: "+(toc-tic)+"ms");
+			
+			System.out.println("Number of Links: "+api.findLinks().countMatches());
+			int triangles = 0;
+			for(String node : nodes.keySet()) {
+				triangles += api.findTriangle(node).countMatches();
+			}
+			System.out.println("Number of Triangles: " + triangles);
 			
 			while(api.markUnknownLinks().hasMatches()) {
 				api.markUnknownLinks().apply();
-				api.updateMatches();
 			}
+			api.updateMatches();
 		}
 		
 		protected void cleanDeleted() {
 			api.updateMatches();
 			
 			while(api.deleteLinks().hasMatches()) {
-				api.deleteLinks().apply();
-				api.updateMatches();
+				api.deleteLinks().apply();	
 			}
+			api.updateMatches();
 		}
 		
 		protected void repair1(String node) {
@@ -88,7 +103,6 @@ public class KTCAlgorithm  extends ExternalActor{
 			while(api.repair(node).hasMatches()) {
 				api.repair(node).apply();
 				api.updateMatches();
-				
 			}
 			
 		}
@@ -167,5 +181,5 @@ public class KTCAlgorithm  extends ExternalActor{
 				
 			}
 		}
-		
+	
 }

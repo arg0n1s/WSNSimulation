@@ -4,8 +4,8 @@
 		"timeStep" : 0.01,
 		"deterministic" : true,
 		"bounds" : {
-			"x" : {"max" : 50.0, "min" : -50.0},
-			"y" : {"max" : 50.0, "min" : -50.0},
+			"x" : {"max" : 2000.0, "min" : -2000.0},
+			"y" : {"max" : 2000.0, "min" : -2000.0},
 			"z" : {"max" : 0.0, "min" : 0.0}
 		}
 	},
@@ -13,7 +13,7 @@
 	"TransmitterTypes" : [
 		{
 			"name" : "tx1",
-			"deterministicRange" : 50.0,
+			"deterministicRange" : 627.0,
 			"probabilistcRange" : 25.0,
 			"frequency" : 5000000000.0
 		}
@@ -33,7 +33,7 @@
 		 		"namePrefix" : "rndNode",
 		 		"transmitterType" : "tx1",
 		 		"batteryType" : "bat1",
-		 		"amount" : 100
+		 		"amount" : 200
 		 	}
 		],
 	

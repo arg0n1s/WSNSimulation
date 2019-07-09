@@ -7,9 +7,9 @@ Export-Package: wsnalgorithm.ktc.core,
  wsnalgorithm.ktc.rules.api.rules
 Bundle-Name: Ktc
 Bundle-Version: 1.0.0.qualifier
-Require-Bundle: org.emoflon.ibex.common,
+Require-Bundle: org.emoflon.ibex.gt.hipe;visibility:=reexport,
+ org.emoflon.ibex.common,
  org.emoflon.ibex.gt,
- org.emoflon.ibex.gt.democles,
  WSNSimulationModel;bundle-version="0.1.0",
  wsnsimulation.core,
  org.eclipse.emf.ecore

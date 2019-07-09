@@ -6,15 +6,16 @@ import wsnsimulation.core.runtime.ExternalActor;
 import wsnsimulation.core.runtime.WSNSimulation;
 import wsnsimulation.core.statistics.HopsToGateway;
 import wsnsimulation.core.statistics.LinkStatistics;
+import wsnsimulation.core.statistics.StretchFactor;
 import wsnsimulation.core.statistics.TransmissionRange;
 import wsnsimulation.model.utils.ModelGenerator;
 
 public class Sandkasten {
 	public static void main(String args[]) {
 		//ModelGenerator gen = new ModelGenerator();
-		//gen.generateAndSaveModelFromFile("specifications/spec6.json", "models/spec6.xmi");
+		//gen.generateAndSaveModelFromFile("specifications/spec7.json", "models/spec7.xmi");
 		WSNSimulation sim = new WSNSimulation();
-		sim.loadModel("models/spec6.xmi");
+		sim.loadModel("models/spec7.xmi");
 		//sim.initialize();
 		ExternalActor ea = new KTCAlgorithm(1.0);
 		//ExternalActor ea = new StochasticKTCAlgorithm(1.0);
@@ -22,13 +23,15 @@ public class Sandkasten {
 		sim.registerStatisticModule(new HopsToGateway());
 		sim.registerStatisticModule(new TransmissionRange());
 		sim.registerStatisticModule(new LinkStatistics());
-		ea.setPeriodic(true, 0.5);
-		sim.initRandomNodeVelocity(0.0, 5.0);
+		sim.registerStatisticModule(new StretchFactor());
+		//ea.setPeriodic(true, 0.5);
+		//sim.initRandomNodeVelocity(0.0, 5.0);
 		//sim.initRandomObstacleVelocity(0.0, 20.0);
 		//sim.setStochasticMotion(0.0, 35.0);
 		
 		sim.displayStatistics();
-		sim.runUntil(5.0, false);
+		//sim.runUntil(5.0, false);
+		sim.runOnce();
 		System.out.println("Done..");
 		
 		//sim.printStatistics();

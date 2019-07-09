@@ -2,6 +2,12 @@ import "platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore"
 import "http://www.eclipse.org/emf/2002/Ecore"
 
 
+pattern findLinks() {
+	l : Link {
+		
+	}
+}
+
 rule markUnknownLinks() {
 	l : Link {
 		.linkState == enum::UNKNOWN
@@ -15,7 +21,7 @@ rule deleteLinks() {
 	}
 }
 
-abstract pattern findTriangle(currentNode : EString ) {
+pattern findTriangle(currentNode : EString ) {
 	l1 : Link {
 		-wsnNodes->n1
 		-wsnNodes->n2
