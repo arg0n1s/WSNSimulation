@@ -13,7 +13,7 @@ import wsnsimulation.model.utils.ModelGenerator;
 public class Sandkasten {
 	public static void main(String args[]) {
 		//ModelGenerator gen = new ModelGenerator();
-		//gen.generateAndSaveModelFromFile("specifications/spec1.json", "models/spec1.xmi");
+		//gen.generateAndSaveModelFromFile("specifications/spec7.json", "models/spec7.xmi");
 		WSNSimulation sim = new WSNSimulation();
 		sim.loadModel("models/spec7.xmi");
 		//sim.initialize();
