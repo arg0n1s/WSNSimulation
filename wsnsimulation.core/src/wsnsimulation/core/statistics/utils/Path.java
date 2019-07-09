@@ -18,6 +18,10 @@ public class Path {
 		this.pathLinks = pathLinks;
 	}
 	
+	public WSNNode getFirstHop() {
+		return pathNodes.get(1);
+	}
+	
 	public int length() {
 		return pathNodes.size();
 	}

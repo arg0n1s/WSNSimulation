@@ -13,12 +13,12 @@ import wsnsimulation.model.utils.ModelGenerator;
 public class Sandkasten {
 	public static void main(String args[]) {
 		//ModelGenerator gen = new ModelGenerator();
-		//gen.generateAndSaveModelFromFile("specifications/spec7.json", "models/spec7.xmi");
+		//gen.generateAndSaveModelFromFile("specifications/spec1.json", "models/spec1.xmi");
 		WSNSimulation sim = new WSNSimulation();
 		sim.loadModel("models/spec7.xmi");
 		//sim.initialize();
 		ExternalActor ea = new KTCAlgorithm(1.0);
-		//ExternalActor ea = new StochasticKTCAlgorithm(1.0);
+		//ExternalActor ea = new StochasticKTCAlgorithm(0.1);
 		sim.registerExternalActor(ea);
 		sim.registerStatisticModule(new HopsToGateway());
 		sim.registerStatisticModule(new TransmissionRange());

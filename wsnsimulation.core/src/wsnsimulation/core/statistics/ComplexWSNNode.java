@@ -1,20 +1,24 @@
 package wsnsimulation.core.statistics;
 
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
 
 import wsnSimulationModel.Link;
 import wsnSimulationModel.LinkState;
 import wsnSimulationModel.WSNNode;
 import wsnsimulation.core.geometry.VectorSimulationObject;
+import wsnsimulation.core.statistics.utils.DijkstrasAlgorithm;
+import wsnsimulation.core.statistics.utils.Path;
 
 public class ComplexWSNNode extends VectorSimulationObject {
 
-	protected Map<ComplexWSNNode, Link> adjacentNodes = new HashMap<>();
-	protected Map<ComplexWSNNode, ComplexWSNNode> routingTable = new HashMap<>();
-	protected Map<ComplexWSNNode, Integer> hopTable = new HashMap<>();
+	protected Map<ComplexWSNNode, Link> adjacentNodes = new ConcurrentHashMap<>();
+	protected Map<ComplexWSNNode, ComplexWSNNode> routingTable = new ConcurrentHashMap<>();
+	protected Map<ComplexWSNNode, Integer> hopTable = new ConcurrentHashMap<>();
 	
 	private static int discoveryMsgID = 0;
 	private Set<Integer> relayedDiscoveryMsgs = new HashSet<>();
@@ -63,12 +67,21 @@ public class ComplexWSNNode extends VectorSimulationObject {
 		hopTable = new HashMap<>();
 	}
 	
-	public void exploreNetwork( ) {
+	public void exploreNetwork(Map<WSNNode, ComplexWSNNode> network) {
+		/*
 		for(ComplexWSNNode other : adjacentNodes.keySet()) {
 			if(adjacentNodes.get(other).getLinkState() == LinkState.ACTIVE) {
 				other.receiveDiscoveryMessage(new DiscoveryMessage(this, discoveryMsgID));
 				discoveryMsgID++;
 			}
+		}
+		*/
+		DijkstrasAlgorithm da = new DijkstrasAlgorithm(network.keySet(), DijkstrasAlgorithm::hopCostFunction);
+		Map<WSNNode, Path> paths = da.findAllPaths(getWSNNode(), DijkstrasAlgorithm::isLinkActive);
+		for(WSNNode node : paths.keySet()) {
+			Path p = paths.get(node);
+			hopTable.put(network.get(p.trg), p.length());
+			routingTable.put(network.get(p.trg), network.get(p.getFirstHop()));
 		}
 	}
 	
@@ -84,7 +97,7 @@ public class ComplexWSNNode extends VectorSimulationObject {
 		return adjacentNodes;
 	}
 	
-	public void receiveDiscoveryMessage(DiscoveryMessage msg) {
+	public synchronized void receiveDiscoveryMessage(DiscoveryMessage msg) {
 		if(!msg.isInPath(this) && msg.origin != this) {
 			msg.hopCount++;
 			ComplexWSNNode last = msg.getLastHop();

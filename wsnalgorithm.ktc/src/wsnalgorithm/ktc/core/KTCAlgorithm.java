@@ -44,7 +44,6 @@ public class KTCAlgorithm  extends ExternalActor{
 
 		@Override
 		public void actOnModel() {
-			double tic = System.currentTimeMillis();
 			// discover mark unknown links
 			markUnmarked();
 			
@@ -63,9 +62,6 @@ public class KTCAlgorithm  extends ExternalActor{
 			
 			// delete marked links
 			cleanDeleted();
-			
-			double toc = System.currentTimeMillis();
-			System.out.println("TC algorithm took: "+(toc-tic)+"ms");
 		}	
 
 		

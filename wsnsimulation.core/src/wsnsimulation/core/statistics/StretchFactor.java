@@ -1,9 +1,7 @@
 package wsnsimulation.core.statistics;
 
-import java.util.LinkedHashMap;
 import java.util.Map;
 
-import wsnSimulationModel.LinkState;
 import wsnSimulationModel.WSNNode;
 import wsnsimulation.core.statistics.utils.DataPoint;
 import wsnsimulation.core.statistics.utils.DijkstrasAlgorithm;
@@ -47,11 +45,11 @@ public class StretchFactor extends StatisticModule {
 		double costAll = 0;
 		double hopsAll = 0;
 		
-		DijkstrasAlgorithm alg = new DijkstrasAlgorithm(simulation.getNodes().keySet());
+		DijkstrasAlgorithm alg = new DijkstrasAlgorithm(simulation.getNodes().keySet(), DijkstrasAlgorithm::linkCostFunction);
 		
 		for(WSNNode node : simulation.getNodes().keySet()) {
-			Map<WSNNode, Path> activePaths = alg.findAllPaths(node, this::isLinkActive);
-			Map<WSNNode, Path> allPaths = alg.findAllPaths(node, this::isLinkMarked);
+			Map<WSNNode, Path> activePaths = alg.findAllPaths(node, DijkstrasAlgorithm::isLinkActive);
+			Map<WSNNode, Path> allPaths = alg.findAllPaths(node, DijkstrasAlgorithm::isLinkMarked);
 			nPathsActive += activePaths.size();
 			nPathsAll += allPaths.size();
 			
@@ -86,14 +84,6 @@ public class StretchFactor extends StatisticModule {
 		uiStrech.addDataPoint("costStretchFactor", dp);
 		dp = hopStretchFactor.addDataPoint(simulation.getTime(), hopsActive/hopsAll, true);
 		uiStrech.addDataPoint("hopStretchFactor", dp);
-	}
-	
-	public boolean isLinkActive(LinkState ls) {
-		return ls == LinkState.ACTIVE;
-	}
-	
-	public boolean isLinkMarked(LinkState ls) {
-		return ls == LinkState.ACTIVE || ls == LinkState.INACTIVE;
 	}
 
 	@Override

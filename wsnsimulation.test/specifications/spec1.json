@@ -13,8 +13,9 @@
 	"TransmitterTypes" : [
 		{
 			"name" : "tx1",
-			"deterministicRange" : 15.0,
-			"probabilistcRange" : 25.0
+			"deterministicRange" : 50.0,
+			"probabilistcRange" : 25.0,
+			"frequency" : 5000000000.0
 		}
 	],
 	
@@ -35,6 +36,8 @@
 		 		"amount" : 5
 		 	}
 		],
+		
+		"gateway" : "n1",
 	
 		"specified" : [
 			{

@@ -276,26 +276,38 @@ public class WSNSimulation {
 	
 	private void runExternalActors() {
 		for(ExternalActor actor : externalActors) {
+			double tic = System.currentTimeMillis();
 			if(actor.isPeriodic()) {
 				actor.actPeriodic();
+				double toc = System.currentTimeMillis();
+				System.out.println("TC algorithm took: "+(toc-tic)+"ms");
 			}else {
 				actor.actOnModel();
+				double toc = System.currentTimeMillis();
+				System.out.println("TC algorithm took: "+(toc-tic)+"ms");
 			}
 		}
 	}
 	
 	private void updateStatisticModules() {
-		statisticModules.parallelStream().forEach(s -> s.update());
+		statisticModules.parallelStream().forEach(s -> {
+			double tic = System.currentTimeMillis();
+			s.update();
+			double toc = System.currentTimeMillis();
+			System.out.println(s.getClass().getSimpleName()+" took: "+(toc-tic)+"ms");
+			});
 	}
 	
 	private void updateRoutingTable() {
+		double tic = System.currentTimeMillis();
 		for(ComplexWSNNode node : nodes.values()) {
 			node.resetRoutingTable();
 		}
 		
-		for(ComplexWSNNode node : nodes.values()) {
-			node.exploreNetwork();
-		}
+		nodes.values().parallelStream().forEach(node -> node.exploreNetwork(nodes));
+		
+		double toc = System.currentTimeMillis();
+		System.out.println("Updating routing tables took: "+(toc-tic)+"ms");
 	}
 	
 	private void simulateLinearMotion(VectorObject object) {
