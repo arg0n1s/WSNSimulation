@@ -1,0 +1,1819 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsnSimulationModel:WSNSimulationContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsnSimulationModel="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore" xsi:schemaLocation="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore java://wsnSimulationModel.WsnSimulationModelPackage" timeStep="0.01" name="spec1">
+  <networkcontainer xmi:type="wsnSimulationModel:NetworkContainer" gateway="specNode1">
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_0" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-176.34028863572075" y="1673.6035588379063"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_1" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="804.3574904537272" y="1800.7821823207714"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_2" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-566.8046759560136" y="-1577.755799228113"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_3" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1077.4059385993492" y="-1643.386734827396"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_4" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1624.30325994747" y="381.45286116571606"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_5" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1827.8246364307674" y="479.6340758236638"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_6" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="734.6144343237979" y="-156.98921187451515"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_7" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1379.4105816581741" y="-196.83132596812766"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_8" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1471.847158542656" y="-758.5716341221723"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_9" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-447.4290512285361" y="-102.10208838216067"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_10" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1451.3381188446256" y="1364.2183026828275"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_11" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1726.0915429788595" y="1173.9015505469765"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_12" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-6.67415770902312" y="-1033.2066961826754"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_13" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1672.505703744352" y="243.91070875619562"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_14" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-5.817748071741789" y="1353.8335922164665"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_15" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1450.6431279690792" y="-593.3582621939756"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_16" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1440.868936905123" y="-1827.5403195762156"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_17" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-35.997492061979756" y="-469.078930948712"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_18" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-919.8716495053172" y="-1534.0966847482118"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_19" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1974.984372694399" y="904.0430065385226"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_20" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1993.4440559401244" y="713.5085122191517"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_21" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="166.5575241488027" y="274.0774975260292"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_22" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="343.9039205564445" y="75.2224620339648"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_23" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1972.2473609539857" y="1775.8189998313342"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_24" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="413.2456243491324" y="495.14927192780806"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_25" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-650.7058295991617" y="-218.59653944751085"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_26" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-909.4283951620157" y="15.65570188031893"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_27" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-65.59171987626883" y="744.4666927578746"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_28" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1224.1136828397766" y="1114.8374389288565"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_29" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="141.31219998930783" y="283.7345751653834"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_30" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1463.7597259563486" y="-202.71642473081556"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_31" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1940.3083477517575" y="-761.7207004896679"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_32" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-455.7793000793224" y="419.921915740787"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_33" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1243.839827465572" y="-1929.9990767200225"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_34" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="583.0101005279471" y="-1112.2994272444564"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_35" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1862.6641638219135" y="-675.640387200315"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_36" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1529.2034258331287" y="1161.8549054994578"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_37" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1042.0465397667945" y="1110.641089413376"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_38" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-638.7866591227341" y="-572.0513899070716"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_39" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1939.0541449110574" y="-361.7500935035732"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_40" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1418.1411116861254" y="-1599.350800972303"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_41" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1503.2137100441666" y="-1656.6564524625353"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_42" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1630.3135178019234" y="-1086.2751836148318"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_43" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-884.098932716118" y="345.70000465593284"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_44" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="434.7089091000639" y="-1839.0735249392342"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_45" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1738.6974269401544" y="861.7153390915023"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_46" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="247.35195251299228" y="907.6600587367766"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_47" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1946.2626803411115" y="426.0038388339226"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_48" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1467.6897363328071" y="63.55521951070659"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_49" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-956.1285517527697" y="-311.11519788552096"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_50" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="654.3848057001478" y="-1241.378926329145"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_51" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1072.3171237827505" y="195.23760183419927"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_52" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1631.1549013307865" y="1254.533404928346"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_53" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-715.9709751627768" y="634.4516891083113"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_54" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-350.40020953703083" y="589.1426743990628"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_55" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="386.3328386117373" y="991.6421555321035"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_56" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1917.1154421117021" y="1925.4283646940517"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_57" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-964.0239298145507" y="-75.39577059667931"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_58" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="624.7580253398505" y="1472.257029021197"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_59" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1564.102090375105" y="-1675.7034961646266"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_60" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1174.6985881042951" y="-1932.6594071553936"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_61" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1217.5117482703627" y="-1138.3721647883613"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_62" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1442.1223608722" y="-1245.8611585147469"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_63" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1162.8955830557134" y="-1459.8641734028588"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_64" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="669.4263729628237" y="-1176.9844801070687"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_65" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="995.2631972995428" y="1710.4385107564713"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_66" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-648.4605605264142" y="889.1450443484982"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_67" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="710.6263386204537" y="193.27499824421056"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_68" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1042.2424671115014" y="-100.61502468921458"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_69" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="821.2251954087596" y="-1673.8218497249"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_70" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1401.0856421236354" y="-1061.0183790223396"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_71" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1426.0844801242354" y="1804.5024540978316"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_72" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1283.9809585124135" y="975.4722072668947"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_73" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-329.21987209826534" y="1728.316134682264"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_74" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1291.5147240480678" y="1047.8872362993661"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_75" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-219.34441164984491" y="-422.2819971104616"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_76" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1965.8978394755522" y="1888.2567849749457"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_77" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="442.5265926592683" y="-1106.8914988211525"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_78" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1650.7827872945536" y="1740.8803701188049"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_79" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="611.1591966772235" y="1893.9928347191003"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_80" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1291.9714308483162" y="1601.7445571451426"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_81" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-734.6011749687827" y="477.67049814528946"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_82" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="691.1278607054774" y="1802.270694737767"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_83" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1855.0350555728708" y="32.83632131591048"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_84" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-399.5281930043225" y="-437.8489638722085"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_85" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="618.7178688290305" y="-1994.6733710564165"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_86" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1848.9388003843505" y="-1223.2053746456893"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_87" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-79.81810402145311" y="574.1620711351661"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_88" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="34.882549515271194" y="1014.7581337626534"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_89" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1294.0311264340978" y="-766.6932966283468"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_90" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1812.4020235339797" y="795.888568679331"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_91" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="478.57900193903697" y="313.3487078490466"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_92" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="105.3766744872596" y="205.66233072483465"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_93" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1566.7416152714254" y="1990.2637493987227"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_94" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-143.36664413469884" y="1466.7709987080561"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_95" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1506.922977898447" y="1275.700967714357"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_96" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-94.49207189061235" y="-1885.7115859913742"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_97" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1371.4416225752361" y="-287.50362621391446"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_98" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-95.58028384278396" y="-1027.8388485485737"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_99" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-853.0475827255425" y="1545.52042885739"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_100" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1480.9754154267744" y="460.19919169613604"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_101" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1798.0029388363278" y="224.16209289246854"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_102" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1879.4223524681013" y="313.61707780306506"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_103" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-218.2779599065068" y="1128.901315201536"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_104" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1018.314187555422" y="1200.3874346666703"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_105" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="750.6578450567272" y="-1001.8229074144717"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_106" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="338.124075194803" y="1791.6324826615323"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_107" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="553.3325690016773" y="-1051.7248192405395"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_108" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1169.7469642069077" y="-1419.1073449101052"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_109" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1166.659805921975" y="-799.096645128714"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_110" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1754.3330187408696" y="-649.2105659156566"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_111" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-66.06514061501116" y="-679.3681570285767"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_112" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1172.4291885098405" y="-970.7573713565382"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_113" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-697.7780525007363" y="1265.1286716113013"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_114" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-666.8257489644618" y="1328.4174630157845"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_115" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-630.8209971565527" y="1900.2530679027013"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_116" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1060.5394978352638" y="-1228.1264305259124"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_117" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1481.8936719521953" y="-1447.7463598961235"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_118" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="231.10184391708844" y="-569.631254019494"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_119" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="248.624644851207" y="-1929.3017055128448"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_120" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1100.9406139209518" y="-1966.6580217649105"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_121" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1187.4239289817438" y="856.0046719661555"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_122" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="441.8704904768738" y="1417.6737776749937"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_123" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1569.5136546864974" y="-850.3081713109607"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_124" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1358.302258771219" y="-1978.2055035670005"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_125" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-218.85056084533085" y="66.39871008657428"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_126" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="484.9659870554592" y="1022.9977408512409"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_127" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1728.1885559041727" y="1524.4635998946587"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_128" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-209.7449444158076" y="627.8209396836924"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_129" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="548.9984186240586" y="254.0912946313274"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_130" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1033.8599293531397" y="1025.9755017363414"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_131" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1804.9212785112893" y="-1035.9952418690823"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_132" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1866.1711216964127" y="-1138.529607638051"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_133" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-793.5812340369669" y="1751.6459806726143"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_134" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="217.44716457103732" y="-1798.3420871126204"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_135" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-44.60995204252208" y="-1141.3971171129465"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_136" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="437.8927119747723" y="524.8660717363227"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_137" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1592.953441061792" y="-500.32993422568507"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_138" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="978.0873743358989" y="16.46038874920555"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_139" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="763.175548173977" y="-984.0688854961268"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_140" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1773.2176529448561" y="465.5137567807933"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_141" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="523.4551760830418" y="1992.1665728227035"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_142" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-793.735193551639" y="481.15771077604813"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_143" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="300.5131585116296" y="-1103.1321845441425"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_144" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-739.4470319753545" y="-21.94992259943433"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_145" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-955.8205320957263" y="-1403.1406145675896"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_146" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-383.8217396372486" y="480.6289973531998"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_147" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1750.9392850757997" y="1803.1336801746297"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_148" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1669.6902307996438" y="1519.8386359857755"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_149" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1944.8440612019074" y="-157.34521260864562"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_150" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-586.8339887368363" y="185.21002984399684"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_151" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="907.4684173002652" y="532.7361007444856"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_152" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1521.5678461463422" y="-1121.5264209609527"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_153" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-191.1259006599164" y="-542.1909305161337"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_154" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-46.06574412945497" y="1808.668402004936"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_155" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="559.7727227608175" y="398.11875763129956"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_156" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-188.23711543976037" y="1276.908958644036"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_157" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-705.3091363659912" y="-1491.222974653461"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_158" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1687.7030400158314" y="12.971732293883633"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_159" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1853.9246958878603" y="255.8206870278027"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_160" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1451.5159637677928" y="-1375.411276572449"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_161" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="8.917726952239946" y="-1068.8761821408962"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_162" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="738.0119931403906" y="670.1765865213401"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_163" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1577.7334354887755" y="325.35324099234595"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_164" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1057.4318854776998" y="-1779.3941992333914"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_165" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="783.4433256967886" y="60.28803097660193"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_166" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-136.16738347577098" y="476.9212719095999"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_167" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1676.5773514891644" y="-921.0864308387943"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_168" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="200.81751838469654" y="687.5791918608161"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_169" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-433.18544945629924" y="1461.3900667293701"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_170" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1707.4585193325884" y="77.16214395235602"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_171" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1392.2707487730856" y="362.45407382321537"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_172" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1854.3298210706082" y="-1237.4108539288"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_173" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="461.85162085564025" y="423.6871649354184"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_174" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1953.7868948359805" y="-116.05061798039696"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_175" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1405.984183860944" y="162.5397043950029"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_176" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="632.9735537878446" y="794.1720397562804"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_177" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-890.9691416181645" y="926.6811145439674"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_178" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1113.3996701808244" y="701.1944576388569"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_179" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1586.0481771882821" y="62.32494215355473"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_180" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-609.4264736483001" y="1392.0282325310814"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_181" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1334.9738912508187" y="-1298.7083391922765"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_182" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1883.0733270646347" y="531.5373831758743"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_183" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-507.2835183814618" y="1433.8950942348592"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_184" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1600.7913751271992" y="648.755791828235"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_185" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1839.047547181598" y="-1799.0838580559437"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_186" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-1138.3033970506763" y="616.5790167709347"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_187" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="327.63368454292095" y="-1206.8846950923344"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_188" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1162.4206860530458" y="-1299.42320382055"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_189" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="935.0165436102366" y="-136.40045775670956"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_190" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="-377.4710038579542" y="-209.10148362766904"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_191" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1686.2844061134665" y="497.045304302128"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_192" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="947.5072849481699" y="116.68102194535277"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_193" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1119.4303857351802" y="1987.947627993935"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_194" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="816.1373148794255" y="-1358.566332848848"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_195" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="788.4929206973397" y="92.8762828155559"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_196" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="156.08681455725446" y="704.4667963261195"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_197" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="821.6044250383316" y="-1138.1795641582585"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_198" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1749.2216983670628" y="1748.9573052951332"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="rndNode_199" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector" x="1649.1278666015373" y="-1868.7416751367607"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+    <wsnNodes xmi:type="wsnSimulationModel:WSNNode" name="specNode1" transmitterType="//@transmitterTypes.0">
+      <pose xmi:type="wsnSimulationModel:Pose">
+        <position xmi:type="wsnSimulationModel:RealVector"/>
+        <velocity xmi:type="wsnSimulationModel:RealVector"/>
+        <angularVelocity xmi:type="wsnSimulationModel:RealVector"/>
+        <orientation xmi:type="wsnSimulationModel:Quaternion" w="1.0"/>
+      </pose>
+      <battery xmi:type="wsnSimulationModel:Battery" batteryType="//@batteryTypes.0" charge="3100.0"/>
+    </wsnNodes>
+  </networkcontainer>
+  <worldcontainer xmi:type="wsnSimulationModel:WorldContainer">
+    <bounds xmi:type="wsnSimulationModel:Bounds" minX="-2000.0" minY="-2000.0" maxX="2000.0" maxY="2000.0"/>
+  </worldcontainer>
+  <transmitterTypes xmi:type="wsnSimulationModel:TransmitterType" deterministicRange="627.0" probabilisticRange="627.0" name="tx1" frequency="5.0E9"/>
+  <batteryTypes xmi:type="wsnSimulationModel:BatteryType" capacity="3100.0" name="bat1"/>
+</wsnSimulationModel:WSNSimulationContainer>
