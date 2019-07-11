@@ -358,10 +358,14 @@ public class WSNSimulation {
 	
 	private double calculateCost(VectorSimulationObject object1, VectorSimulationObject object2) {
 		double distance = calculateDistance(object1, object2);
+		
 		double loss = 20.0 * Math.log10(object1.getSimulationObjectAs(WSNNode.class).getTransmitterType().getFrequency()) + 
 				20.0 * Math.log10(distance) + 
 				20.0 * Math.log10(4.0*Math.PI / 299792458.0);
-		return loss;
+		//return loss;
+		//return 1-((127.0-loss)/127.0);
+		
+		return distance;
 	}
 	
 	private double calculateDistance(VectorSimulationObject object1, VectorSimulationObject object2) {

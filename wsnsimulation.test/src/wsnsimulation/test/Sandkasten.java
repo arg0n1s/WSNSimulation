@@ -12,29 +12,63 @@ import wsnsimulation.model.utils.ModelGenerator;
 
 public class Sandkasten {
 	public static void main(String args[]) {
-		//ModelGenerator gen = new ModelGenerator();
-		//gen.generateAndSaveModelFromFile("specifications/spec7.json", "models/spec7.xmi");
+		runSkTC();
+		//runKTC();
+	}
+	
+	public static void runSkTC(int threads) {
+		for(int i = 0; i<threads; i++) {
+			Thread thread1 = new Thread(new Runnable() {
+
+			    @Override
+			    public void run() {
+			    	runSkTC();   
+			    }
+			            
+			});
+			
+			thread1.run();
+		}
+	}
+	
+	public static void runKTC(int threads) {
+		for(int i = 0; i<threads; i++) {
+			Thread thread1 = new Thread(new Runnable() {
+
+			    @Override
+			    public void run() {
+			    	runKTC();   
+			    }
+			            
+			});
+			
+			thread1.run();
+		}
+	}
+	
+	public static void runKTC() {
 		WSNSimulation sim = new WSNSimulation();
 		sim.loadModel("models/spec7.xmi");
-		//sim.initialize();
 		ExternalActor ea = new KTCAlgorithm(1.0);
-		//ExternalActor ea = new StochasticKTCAlgorithm(0.1);
 		sim.registerExternalActor(ea);
 		sim.registerStatisticModule(new HopsToGateway());
-		sim.registerStatisticModule(new TransmissionRange());
+		//sim.registerStatisticModule(new TransmissionRange());
 		sim.registerStatisticModule(new LinkStatistics());
 		sim.registerStatisticModule(new StretchFactor());
-		//ea.setPeriodic(true, 0.5);
-		//sim.initRandomNodeVelocity(0.0, 5.0);
-		//sim.initRandomObstacleVelocity(0.0, 20.0);
-		//sim.setStochasticMotion(0.0, 35.0);
-		
 		sim.displayStatistics();
-		//sim.runUntil(5.0, false);
 		sim.runOnce();
-		System.out.println("Done..");
-		
-		//sim.printStatistics();
-		//sim.saveStatistics("output");
+	}
+	
+	public static void runSkTC() {
+		WSNSimulation sim = new WSNSimulation();
+		sim.loadModel("models/spec7.xmi");
+		ExternalActor ea = new StochasticKTCAlgorithm(1.0);
+		sim.registerExternalActor(ea);
+		sim.registerStatisticModule(new HopsToGateway());
+		//sim.registerStatisticModule(new TransmissionRange());
+		sim.registerStatisticModule(new LinkStatistics());
+		sim.registerStatisticModule(new StretchFactor());
+		sim.displayStatistics();
+		sim.runOnce();
 	}
 }

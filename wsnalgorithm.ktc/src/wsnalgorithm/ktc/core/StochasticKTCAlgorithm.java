@@ -94,7 +94,7 @@ public class StochasticKTCAlgorithm extends KTCAlgorithm {
 	
 	private double probability(double cost, double minCost, double kPrime) {
 		return (cost>=minCost) ? 
-				(1.0 - Math.pow(Math.E, -(cost/kPrime))) : 
+				(1.0 - Math.pow(Math.E, -(cost/kPrime)*1.8)) : 
 					0.0;
 	}
 }
