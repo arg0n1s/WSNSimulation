@@ -12,8 +12,8 @@ import wsnsimulation.model.utils.ModelGenerator;
 
 public class Sandkasten {
 	public static void main(String args[]) {
-		runSkTC();
-		//runKTC();
+		//runSkTC();
+		runKTC();
 	}
 	
 	public static void runSkTC(int threads) {
