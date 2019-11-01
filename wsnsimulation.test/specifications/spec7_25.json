@@ -1,0 +1,59 @@
+{
+	"SimulationParameters" : {
+		"name" : "spec1",
+		"timeStep" : 0.01,
+		"deterministic" : true,
+		"bounds" : {
+			"x" : {"max" : 2000.0, "min" : -2000.0},
+			"y" : {"max" : 2000.0, "min" : -2000.0},
+			"z" : {"max" : 0.0, "min" : 0.0}
+		}
+	},
+	
+	"TransmitterTypes" : [
+		{
+			"name" : "tx1",
+			"deterministicRange" : 627.0,
+			"probabilistcRange" : 25.0,
+			"frequency" : 5000000000.0
+		}
+	],
+	
+	"BatteryTypes" : [
+		{
+			"name" : "bat1",
+			"capacity" : 3100.0
+		}
+	],
+	
+	"Nodes" : {
+	
+		"generated" : [
+		 	{
+		 		"namePrefix" : "rndNode",
+		 		"transmitterType" : "tx1",
+		 		"batteryType" : "bat1",
+		 		"amount" : 25
+		 	}
+		],
+	
+		"specified" : [
+			{
+				"name" : "specNode1",
+				"transmitterType" : "tx1",
+				"batteryType" : "bat1",
+				"position" : {"x":0.0, "y":0.0, "z":0.0},
+				"orientation" : {"x":0.0, "y":0.0, "z":0.0, "w":1.0},
+				"velocity" : {"x":0.0, "y":0.0, "z":0.0},
+				"angularVelocity" : {"x":0.0, "y":0.0, "z":0.0}
+			}
+		],
+		
+		"gateway" : "specNode1"
+	},
+	
+	"Obstacles" : [
+		
+	]
+	
+}

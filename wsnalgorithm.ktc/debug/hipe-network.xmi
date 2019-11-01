@@ -113,12 +113,12 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="findTriangle_4_junction" inputPort="//@networknode.5/@ports/@port.0 //@networknode.5/@ports/@port.1" patternName="findTriangle_4">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portTarget="//@networknode.11" initializationCode="" constraintName="check_constraint_4" predicateCode="!n1.equals(n3)">
-        <indices>2</indices>
         <indices>1</indices>
+        <indices>2</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
-        <nodeNames>n3</nodeNames>
         <nodeNames>n1</nodeNames>
+        <nodeNames>n3</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.14"/>
       </port>
     </ports>
@@ -155,12 +155,12 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="findTriangle_16_junction" inputPort="//@networknode.5/@ports/@port.4 //@networknode.5/@ports/@port.5" patternName="findTriangle_16">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.10" initializationCode="" constraintName="check_constraint_3" predicateCode="!n2.equals(n3)">
-        <indices>1</indices>
         <indices>2</indices>
+        <indices>1</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
-        <nodeNames>n2</nodeNames>
         <nodeNames>n3</nodeNames>
+        <nodeNames>n2</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.26"/>
       </port>
     </ports>
@@ -176,16 +176,16 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="findTriangle_10_junction" inputPort="//@networknode.8/@ports/@port.0 //@networknode.9/@ports/@port.0" patternName="findTriangle_10">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.11" initializationCode="" constraintName="check_constraint_5" predicateCode="!l1.equals(l2) &amp;&amp; !n1.equals(n3)">
-        <indices>0</indices>
         <indices>4</indices>
+        <indices>0</indices>
         <indices>3</indices>
         <indices>1</indices>
-        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
+        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
-        <nodeNames>l1</nodeNames>
         <nodeNames>n3</nodeNames>
+        <nodeNames>l1</nodeNames>
         <nodeNames>l2</nodeNames>
         <nodeNames>n1</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.20"/>
@@ -205,15 +205,15 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="findTriangle_3_junction" inputPort="//@networknode.7/@ports/@port.0 //@networknode.10/@ports/@port.0" patternName="findTriangle_3">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.12" initializationCode="" constraintName="check_constraint_6" predicateCode="!l1.equals(l3) &amp;&amp; !l2.equals(l3)">
+        <indices>0</indices>
         <indices>3</indices>
         <indices>5</indices>
-        <indices>0</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
+        <nodeNames>l3</nodeNames>
         <nodeNames>l1</nodeNames>
         <nodeNames>l2</nodeNames>
-        <nodeNames>l3</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.13"/>
       </port>
     </ports>
@@ -262,12 +262,12 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="findWeightMaximal_28_junction" inputPort="//@networknode.5/@ports/@port.8 //@networknode.5/@ports/@port.9" patternName="findWeightMaximal_28">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portTarget="//@networknode.16" initializationCode="" constraintName="check_constraint_7" predicateCode="!n1.equals(n2)">
-        <indices>1</indices>
         <indices>2</indices>
+        <indices>1</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
-        <nodeNames>n1</nodeNames>
         <nodeNames>n2</nodeNames>
+        <nodeNames>n1</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.38"/>
       </port>
     </ports>
@@ -304,18 +304,18 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="findWeightMaximal_27_junction" inputPort="//@networknode.14/@ports/@port.0 //@networknode.15/@ports/@port.0" patternName="findWeightMaximal_27">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.17" initializationCode="" constraintName="check_constraint_10" predicateCode="!l1.equals(l2) &amp;&amp; !n1.equals(n3)">
-        <indices>4</indices>
-        <indices>0</indices>
-        <indices>1</indices>
         <indices>3</indices>
-        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
+        <indices>1</indices>
+        <indices>0</indices>
+        <indices>4</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
-        <nodeNames>n3</nodeNames>
-        <nodeNames>l1</nodeNames>
-        <nodeNames>n1</nodeNames>
+        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <nodeNames>l2</nodeNames>
+        <nodeNames>n1</nodeNames>
+        <nodeNames>l1</nodeNames>
+        <nodeNames>n3</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.37"/>
       </port>
     </ports>
@@ -333,53 +333,53 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="findWeightMaximal_20_junction" inputPort="//@networknode.13/@ports/@port.0 //@networknode.16/@ports/@port.0" patternName="findWeightMaximal_20">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.18" initializationCode="" constraintName="check_constraint_11" predicateCode="!l1.equals(l3) &amp;&amp; !l2.equals(l3) &amp;&amp; l3.getCost()>=l1.getCost() &amp;&amp; l3.getCost()>=l2.getCost()">
-        <indices>3</indices>
         <indices>0</indices>
+        <indices>3</indices>
         <indices>5</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
-        <nodeNames>l1</nodeNames>
         <nodeNames>l3</nodeNames>
+        <nodeNames>l1</nodeNames>
         <nodeNames>l2</nodeNames>
         <attributes xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/cost"/>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.30"/>
       </port>
       <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.28" initializationCode="" constraintName="check_constraint_21" predicateCode="!l1.equals(l3) &amp;&amp; !l2.equals(l3) &amp;&amp; l3.getCost()>=l1.getCost() &amp;&amp; l3.getCost()>=l2.getCost()">
-        <indices>3</indices>
         <indices>0</indices>
+        <indices>3</indices>
         <indices>5</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
-        <nodeNames>l1</nodeNames>
         <nodeNames>l3</nodeNames>
+        <nodeNames>l1</nodeNames>
         <nodeNames>l2</nodeNames>
         <attributes xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/cost"/>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.30"/>
       </port>
       <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.35" initializationCode="" constraintName="check_constraint_27" predicateCode="!l1.equals(l3) &amp;&amp; !l2.equals(l3) &amp;&amp; l3.getCost()>=l1.getCost() &amp;&amp; l3.getCost()>=l2.getCost()">
-        <indices>3</indices>
         <indices>0</indices>
+        <indices>3</indices>
         <indices>5</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
-        <nodeNames>l1</nodeNames>
         <nodeNames>l3</nodeNames>
+        <nodeNames>l1</nodeNames>
         <nodeNames>l2</nodeNames>
         <attributes xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/cost"/>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.30"/>
       </port>
       <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.64" initializationCode="" constraintName="check_constraint_52" predicateCode="!l1.equals(l3) &amp;&amp; !l2.equals(l3) &amp;&amp; l3.getCost()>=l1.getCost() &amp;&amp; l3.getCost()>=l2.getCost()">
-        <indices>3</indices>
         <indices>0</indices>
+        <indices>3</indices>
         <indices>5</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
-        <nodeNames>l1</nodeNames>
         <nodeNames>l3</nodeNames>
+        <nodeNames>l1</nodeNames>
         <nodeNames>l2</nodeNames>
         <attributes xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/cost"/>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.30"/>
@@ -489,12 +489,12 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="powerupIsMaximalButK_51_junction" inputPort="//@networknode.24/@ports/@port.0 //@networknode.24/@ports/@port.1" patternName="powerupIsMaximalButK_51">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.26" initializationCode="" constraintName="check_constraint_17" predicateCode="!n2.equals(n3)">
-        <indices>1</indices>
         <indices>2</indices>
+        <indices>1</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
-        <nodeNames>n2</nodeNames>
         <nodeNames>n3</nodeNames>
+        <nodeNames>n2</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.61"/>
       </port>
     </ports>
@@ -510,18 +510,18 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="powerupIsMaximalButK_45_junction" inputPort="//@networknode.23/@ports/@port.0 //@networknode.25/@ports/@port.0" patternName="powerupIsMaximalButK_45">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.27" initializationCode="" constraintName="check_constraint_19" predicateCode="!l1.equals(l2) &amp;&amp; !n1.equals(n3)">
-        <indices>1</indices>
         <indices>0</indices>
         <indices>3</indices>
         <indices>4</indices>
-        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
+        <indices>1</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
-        <nodeNames>n1</nodeNames>
+        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <nodeNames>l1</nodeNames>
         <nodeNames>l2</nodeNames>
         <nodeNames>n3</nodeNames>
+        <nodeNames>n1</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.55"/>
       </port>
     </ports>
@@ -659,18 +659,18 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="powerupNotMaximal_62_junction" inputPort="//@networknode.31/@ports/@port.0 //@networknode.32/@ports/@port.0" patternName="powerupNotMaximal_62">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.34" initializationCode="" constraintName="check_constraint_25" predicateCode="!l1.equals(l2) &amp;&amp; !n1.equals(n3)">
-        <indices>1</indices>
-        <indices>0</indices>
-        <indices>4</indices>
         <indices>3</indices>
-        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
+        <indices>4</indices>
+        <indices>0</indices>
+        <indices>1</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
-        <nodeNames>n1</nodeNames>
-        <nodeNames>l1</nodeNames>
-        <nodeNames>n3</nodeNames>
+        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <nodeNames>l2</nodeNames>
+        <nodeNames>n3</nodeNames>
+        <nodeNames>l1</nodeNames>
+        <nodeNames>n1</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.72"/>
       </port>
     </ports>
@@ -688,15 +688,15 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="powerupNotMaximal_55_junction" inputPort="//@networknode.30/@ports/@port.0 //@networknode.33/@ports/@port.0" patternName="powerupNotMaximal_55">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portTarget="//@networknode.35" initializationCode="" constraintName="check_constraint_26" predicateCode="!l1.equals(l3) &amp;&amp; !l2.equals(l3)">
+        <indices>3</indices>
         <indices>0</indices>
         <indices>5</indices>
-        <indices>3</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
+        <nodeNames>l1</nodeNames>
         <nodeNames>l3</nodeNames>
         <nodeNames>l2</nodeNames>
-        <nodeNames>l1</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.65"/>
       </port>
     </ports>
@@ -829,17 +829,17 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="repair_79_junction" inputPort="//@networknode.40/@ports/@port.0 //@networknode.42/@ports/@port.0" patternName="repair_79">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.44" initializationCode="" constraintName="check_constraint_34" predicateCode="!l1.equals(l2) &amp;&amp; !n1.equals(n3)">
+        <indices>0</indices>
         <indices>1</indices>
         <indices>3</indices>
-        <indices>0</indices>
         <indices>4</indices>
-        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
-        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
+        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
+        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
+        <nodeNames>l1</nodeNames>
         <nodeNames>n1</nodeNames>
         <nodeNames>l2</nodeNames>
-        <nodeNames>l1</nodeNames>
         <nodeNames>n3</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.89"/>
       </port>
@@ -859,14 +859,14 @@
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.45" initializationCode="" constraintName="check_constraint_35" predicateCode="!l1.equals(l3) &amp;&amp; !l2.equals(l3)">
         <indices>5</indices>
-        <indices>0</indices>
         <indices>3</indices>
+        <indices>0</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <nodeNames>l2</nodeNames>
-        <nodeNames>l3</nodeNames>
         <nodeNames>l1</nodeNames>
+        <nodeNames>l3</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.82"/>
       </port>
     </ports>
@@ -894,12 +894,12 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="repair2_90_junction" inputPort="//@networknode.37/@ports/@port.2 //@networknode.37/@ports/@port.3" patternName="repair2_90">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portTarget="//@networknode.50" initializationCode="" constraintName="check_constraint_38" predicateCode="!n1.equals(n3)">
-        <indices>2</indices>
         <indices>1</indices>
+        <indices>2</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
-        <nodeNames>n3</nodeNames>
         <nodeNames>n1</nodeNames>
+        <nodeNames>n3</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.100"/>
       </port>
     </ports>
@@ -915,12 +915,12 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="repair2_97_junction" inputPort="//@networknode.22/@ports/@port.4 //@networknode.22/@ports/@port.5" patternName="repair2_97">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portTarget="//@networknode.49" initializationCode="" constraintName="check_constraint_36" predicateCode="!n1.equals(n2)">
-        <indices>1</indices>
         <indices>2</indices>
+        <indices>1</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
-        <nodeNames>n1</nodeNames>
         <nodeNames>n2</nodeNames>
+        <nodeNames>n1</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.107"/>
       </port>
     </ports>
@@ -958,17 +958,17 @@
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.50" initializationCode="" constraintName="check_constraint_39" predicateCode="!l1.equals(l2) &amp;&amp; !n1.equals(n3)">
         <indices>3</indices>
-        <indices>1</indices>
         <indices>4</indices>
         <indices>0</indices>
+        <indices>1</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
-        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
+        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <nodeNames>l2</nodeNames>
-        <nodeNames>n1</nodeNames>
         <nodeNames>n3</nodeNames>
         <nodeNames>l1</nodeNames>
+        <nodeNames>n1</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.106"/>
       </port>
     </ports>
@@ -987,14 +987,14 @@
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.51" initializationCode="" constraintName="check_constraint_40" predicateCode="!l1.equals(l3) &amp;&amp; !l2.equals(l3)">
         <indices>0</indices>
-        <indices>3</indices>
         <indices>5</indices>
+        <indices>3</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <nodeNames>l3</nodeNames>
-        <nodeNames>l1</nodeNames>
         <nodeNames>l2</nodeNames>
+        <nodeNames>l1</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.99"/>
       </port>
     </ports>
@@ -1022,12 +1022,12 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="repair3_107_junction" inputPort="//@networknode.37/@ports/@port.4 //@networknode.37/@ports/@port.5" patternName="repair3_107">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portTarget="//@networknode.56" initializationCode="" constraintName="check_constraint_43" predicateCode="!n1.equals(n3)">
-        <indices>2</indices>
         <indices>1</indices>
+        <indices>2</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
-        <nodeNames>n3</nodeNames>
         <nodeNames>n1</nodeNames>
+        <nodeNames>n3</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.117"/>
       </port>
     </ports>
@@ -1043,12 +1043,12 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="repair3_114_junction" inputPort="//@networknode.39/@ports/@port.2 //@networknode.39/@ports/@port.3" patternName="repair3_114">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portTarget="//@networknode.55" initializationCode="" constraintName="check_constraint_41" predicateCode="!n1.equals(n2)">
-        <indices>2</indices>
         <indices>1</indices>
+        <indices>2</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
-        <nodeNames>n2</nodeNames>
         <nodeNames>n1</nodeNames>
+        <nodeNames>n2</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.124"/>
       </port>
     </ports>
@@ -1085,18 +1085,18 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="repair3_113_junction" inputPort="//@networknode.53/@ports/@port.0 //@networknode.54/@ports/@port.0" patternName="repair3_113">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.56" initializationCode="" constraintName="check_constraint_44" predicateCode="!l1.equals(l2) &amp;&amp; !n1.equals(n3)">
-        <indices>4</indices>
-        <indices>1</indices>
-        <indices>3</indices>
         <indices>0</indices>
+        <indices>1</indices>
+        <indices>4</indices>
+        <indices>3</indices>
+        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
-        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
-        <nodeNames>n3</nodeNames>
-        <nodeNames>n1</nodeNames>
-        <nodeNames>l2</nodeNames>
         <nodeNames>l1</nodeNames>
+        <nodeNames>n1</nodeNames>
+        <nodeNames>n3</nodeNames>
+        <nodeNames>l2</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.123"/>
       </port>
     </ports>
@@ -1114,15 +1114,15 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="repair3_106_junction" inputPort="//@networknode.52/@ports/@port.0 //@networknode.55/@ports/@port.0" patternName="repair3_106">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="CENTER" portTarget="//@networknode.57" initializationCode="" constraintName="check_constraint_45" predicateCode="!l1.equals(l3) &amp;&amp; !l2.equals(l3)">
-        <indices>3</indices>
         <indices>0</indices>
         <indices>5</indices>
+        <indices>3</indices>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
-        <nodeNames>l1</nodeNames>
         <nodeNames>l3</nodeNames>
         <nodeNames>l2</nodeNames>
+        <nodeNames>l1</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.116"/>
       </port>
     </ports>
@@ -1220,18 +1220,18 @@
   <networknode xmi:type="hipe.network:JunctionNode" name="shutdownIsMaximal_130_junction" inputPort="//@networknode.60/@ports/@port.0 //@networknode.61/@ports/@port.0" patternName="shutdownIsMaximal_130">
     <ports xmi:type="hipe.network:Ports">
       <port xmi:type="hipe.network:ConstraintPort" portSlot="RIGHT" portTarget="//@networknode.63" initializationCode="" constraintName="check_constraint_50" predicateCode="!l1.equals(l2) &amp;&amp; !n1.equals(n3)">
-        <indices>1</indices>
-        <indices>0</indices>
         <indices>3</indices>
+        <indices>1</indices>
         <indices>4</indices>
+        <indices>0</indices>
+        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
+        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
         <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
-        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
-        <types xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
-        <nodeNames>n1</nodeNames>
-        <nodeNames>l1</nodeNames>
         <nodeNames>l2</nodeNames>
+        <nodeNames>n1</nodeNames>
         <nodeNames>n3</nodeNames>
+        <nodeNames>l1</nodeNames>
         <pattern xmi:type="HiPEPattern:HiPEPartialPattern" href="hipe-patterns.xmi#//@patterns.140"/>
       </port>
     </ports>

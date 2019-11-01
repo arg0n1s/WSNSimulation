@@ -31,6 +31,7 @@ public class KTCAlgorithm  extends ExternalActor{
 		@Override
 		public void initialize() {	
 			app = new RulesHiPEApp();
+//			app = new RulesDemoclesApp();
 			Resource r = app.loadModel(simulation.getModel().getURI());
 			app.registerMetaModels();
 			api = app.initAPI();
