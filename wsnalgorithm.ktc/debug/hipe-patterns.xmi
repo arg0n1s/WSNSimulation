@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<HiPEPattern:HiPEPatternContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HiPEPattern="org.hipe.pattern/HiPEPattern" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xsi:schemaLocation="org.hipe.pattern/HiPEPattern java://hipe.pattern.HiPEPatternPackage http://www.eclipse.org/emf/2002/Ecore java://org.eclipse.emf.ecore.EcorePackage">
+<HiPEPattern:HiPEPatternContainer xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:HiPEPattern="platform:/resource/hipe.pattern/model/HiPEPattern" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xsi:schemaLocation="platform:/resource/hipe.pattern/model/HiPEPattern java://hipe.pattern.HiPEPatternPackage http://www.eclipse.org/emf/2002/Ecore java://org.eclipse.emf.ecore.EcorePackage">
   <patterns xmi:type="HiPEPattern:HiPEPattern" name="deleteLinks" partialPatterns="//@patterns.11">
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.11/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="DELETED"/>
     <nodes xmi:type="HiPEPattern:HiPENode" name="l" invokes="//@patterns.11/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
@@ -33,6 +29,9 @@
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.2/@nodes.2" target="//@patterns.2/@nodes.5">
       <type xmi:type="ecore:EReference" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/wsnNodes"/>
     </edges>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="name" node="//@patterns.13/@nodes.1" value="org.eclipse.emf.ecore.impl.EAttributeImpl@4ac31795 (name: name) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: true)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//SimulationObject/name"/>
+    </attributes>
     <nodes xmi:type="HiPEPattern:HiPENode" name="l1" invokes="//@patterns.13/@nodes.3">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
@@ -71,17 +70,8 @@
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.3/@nodes.2" target="//@patterns.3/@nodes.5">
       <type xmi:type="ecore:EReference" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/wsnNodes"/>
     </edges>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="cost" node="//@patterns.30/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@4e9af1a6 (name: cost) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/cost"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" node="//@patterns.30/@nodes.3" value="org.eclipse.emf.ecore.impl.EAttributeImpl@4e9af1a6 (name: cost) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/cost"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="cost" node="//@patterns.30/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@4e9af1a6 (name: cost) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/cost"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" node="//@patterns.30/@nodes.5" value="org.eclipse.emf.ecore.impl.EAttributeImpl@4e9af1a6 (name: cost) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/cost"/>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="name" node="//@patterns.30/@nodes.1" value="org.eclipse.emf.ecore.impl.EAttributeImpl@4ac31795 (name: name) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: true)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//SimulationObject/name"/>
     </attributes>
     <nodes xmi:type="HiPEPattern:HiPENode" name="l1" invokedBy="//@patterns.5/@nodes.0 //@patterns.6/@nodes.0 //@patterns.10/@nodes.0" invokes="//@patterns.30/@nodes.3">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
@@ -103,10 +93,6 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPattern" name="markUnknownLinks" partialPatterns="//@patterns.47">
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.47/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="UNKNOWN"/>
     <nodes xmi:type="HiPEPattern:HiPENode" name="l" invokes="//@patterns.47/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
@@ -130,18 +116,9 @@
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.5/@nodes.2" target="//@patterns.5/@nodes.5">
       <type xmi:type="ecore:EReference" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/wsnNodes"/>
     </edges>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.58/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="name" node="//@patterns.48/@nodes.1" value="org.eclipse.emf.ecore.impl.EAttributeImpl@4ac31795 (name: name) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: true)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//SimulationObject/name"/>
     </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.63/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.51/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="INACTIVE"/>
     <nodes xmi:type="HiPEPattern:HiPENode" name="l1" invokes="//@patterns.3/@nodes.0 //@patterns.48/@nodes.3 //@patterns.150/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
@@ -181,18 +158,9 @@
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.6/@nodes.2" target="//@patterns.6/@nodes.5">
       <type xmi:type="ecore:EReference" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/wsnNodes"/>
     </edges>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.75/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="name" node="//@patterns.151/@nodes.1" value="org.eclipse.emf.ecore.impl.EAttributeImpl@4ac31795 (name: name) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: true)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//SimulationObject/name"/>
     </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.80/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.68/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="INACTIVE"/>
     <nodes xmi:type="HiPEPattern:HiPENode" name="l1" invokes="//@patterns.3/@nodes.0 //@patterns.65/@nodes.3 //@patterns.151/@nodes.3">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
@@ -232,18 +200,9 @@
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.7/@nodes.2" target="//@patterns.7/@nodes.5">
       <type xmi:type="ecore:EReference" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/wsnNodes"/>
     </edges>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.92/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="name" node="//@patterns.82/@nodes.1" value="org.eclipse.emf.ecore.impl.EAttributeImpl@4ac31795 (name: name) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: true)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//SimulationObject/name"/>
     </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="INACTIVE"/>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.97/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="INACTIVE"/>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.85/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="DELETED"/>
     <nodes xmi:type="HiPEPattern:HiPENode" name="l1" invokes="//@patterns.82/@nodes.3">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
@@ -282,18 +241,9 @@
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.8/@nodes.2" target="//@patterns.8/@nodes.5">
       <type xmi:type="ecore:EReference" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/wsnNodes"/>
     </edges>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.109/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="name" node="//@patterns.99/@nodes.1" value="org.eclipse.emf.ecore.impl.EAttributeImpl@4ac31795 (name: name) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: true)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//SimulationObject/name"/>
     </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.114/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="INACTIVE"/>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.102/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="DELETED"/>
     <nodes xmi:type="HiPEPattern:HiPENode" name="l1" invokes="//@patterns.99/@nodes.3">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
@@ -332,18 +282,9 @@
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.9/@nodes.2" target="//@patterns.9/@nodes.5">
       <type xmi:type="ecore:EReference" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/wsnNodes"/>
     </edges>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.126/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="name" node="//@patterns.116/@nodes.1" value="org.eclipse.emf.ecore.impl.EAttributeImpl@4ac31795 (name: name) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: true)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//SimulationObject/name"/>
     </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="INACTIVE"/>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.131/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.119/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="DELETED"/>
     <nodes xmi:type="HiPEPattern:HiPENode" name="l1" invokes="//@patterns.116/@nodes.3">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
@@ -382,18 +323,9 @@
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.10/@nodes.2" target="//@patterns.10/@nodes.5">
       <type xmi:type="ecore:EReference" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/wsnNodes"/>
     </edges>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.143/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="name" node="//@patterns.133/@nodes.1" value="org.eclipse.emf.ecore.impl.EAttributeImpl@4ac31795 (name: name) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: true)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//SimulationObject/name"/>
     </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.148/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.136/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@698a748a (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
-      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
-    </attributes>
-    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
     <nodes xmi:type="HiPEPattern:HiPENode" name="l1" invokes="//@patterns.3/@nodes.0 //@patterns.133/@nodes.3 //@patterns.152/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
@@ -415,10 +347,14 @@
     <patternInvocations xmi:type="HiPEPattern:HiPEPatternInvocation" invokedPattern="//@patterns.3"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="deleteLinks_1" parentPattern="//@patterns.0">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l" attributes="//@patterns.0/@attributes.0" invokedBy="//@patterns.0/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.11/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="DELETED"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l" attributes="//@patterns.11/@attributes.0" invokedBy="//@patterns.0/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.0/@attributes.0" rightAttribute="//@patterns.0/@attributes.1"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.11/@attributes.0" rightAttribute="//@patterns.11/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findLinks_2" parentPattern="//@patterns.1">
     <nodes xmi:type="HiPEPattern:HiPENode" name="l" invokedBy="//@patterns.1/@nodes.0">
@@ -447,7 +383,7 @@
     <nodes xmi:type="HiPEPattern:HiPENode" name="l3" invokedBy="//@patterns.2/@nodes.2" invokes="//@patterns.14/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" invokedBy="//@patterns.2/@nodes.3" invokes="//@patterns.14/@nodes.1 //@patterns.20/@nodes.1">
+    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" attributes="//@patterns.2/@attributes.0" invokedBy="//@patterns.2/@nodes.3" invokes="//@patterns.14/@nodes.1 //@patterns.20/@nodes.1">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
     </nodes>
     <nodes xmi:type="HiPEPattern:HiPENode" name="n3" invokedBy="//@patterns.2/@nodes.5" invokes="//@patterns.14/@nodes.2 //@patterns.20/@nodes.4">
@@ -665,28 +601,40 @@
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.30/@nodes.5" target="//@patterns.30/@nodes.2">
       <type xmi:type="ecore:EReference" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/wsnNodes"/>
     </edges>
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l3" attributes="//@patterns.3/@attributes.0 //@patterns.3/@attributes.2" invokedBy="//@patterns.3/@nodes.2 //@patterns.150/@nodes.2 //@patterns.151/@nodes.0 //@patterns.152/@nodes.2" invokes="//@patterns.31/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="cost" node="//@patterns.30/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@6b0dfa45 (name: cost) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/cost"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" node="//@patterns.30/@nodes.3" value="org.eclipse.emf.ecore.impl.EAttributeImpl@6b0dfa45 (name: cost) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/cost"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="cost" node="//@patterns.30/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@6b0dfa45 (name: cost) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/cost"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" node="//@patterns.30/@nodes.5" value="org.eclipse.emf.ecore.impl.EAttributeImpl@6b0dfa45 (name: cost) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/cost"/>
+    </attributes>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l3" attributes="//@patterns.30/@attributes.0 //@patterns.30/@attributes.2" invokedBy="//@patterns.3/@nodes.2 //@patterns.150/@nodes.2 //@patterns.151/@nodes.0 //@patterns.152/@nodes.2" invokes="//@patterns.31/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" invokedBy="//@patterns.3/@nodes.3 //@patterns.150/@nodes.3 //@patterns.151/@nodes.1 //@patterns.152/@nodes.3" invokes="//@patterns.31/@nodes.1 //@patterns.37/@nodes.1">
+    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" attributes="//@patterns.3/@attributes.0" invokedBy="//@patterns.3/@nodes.3 //@patterns.150/@nodes.3 //@patterns.151/@nodes.1 //@patterns.152/@nodes.3" invokes="//@patterns.31/@nodes.1 //@patterns.37/@nodes.1">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
     </nodes>
     <nodes xmi:type="HiPEPattern:HiPENode" name="n3" invokedBy="//@patterns.3/@nodes.5 //@patterns.150/@nodes.5 //@patterns.151/@nodes.2 //@patterns.152/@nodes.5" invokes="//@patterns.31/@nodes.2 //@patterns.37/@nodes.4">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
     </nodes>
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l1" attributes="//@patterns.3/@attributes.1" invokedBy="//@patterns.3/@nodes.0 //@patterns.150/@nodes.0 //@patterns.151/@nodes.3 //@patterns.152/@nodes.0" invokes="//@patterns.37/@nodes.0">
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l1" attributes="//@patterns.30/@attributes.1" invokedBy="//@patterns.3/@nodes.0 //@patterns.150/@nodes.0 //@patterns.151/@nodes.3 //@patterns.152/@nodes.0" invokes="//@patterns.37/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
     <nodes xmi:type="HiPEPattern:HiPENode" name="n2" invokedBy="//@patterns.3/@nodes.4 //@patterns.150/@nodes.4 //@patterns.151/@nodes.4 //@patterns.152/@nodes.4" invokes="//@patterns.37/@nodes.2">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
     </nodes>
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l2" attributes="//@patterns.3/@attributes.3" invokedBy="//@patterns.3/@nodes.1 //@patterns.150/@nodes.1 //@patterns.151/@nodes.5 //@patterns.152/@nodes.1" invokes="//@patterns.37/@nodes.3">
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l2" attributes="//@patterns.30/@attributes.3" invokedBy="//@patterns.3/@nodes.1 //@patterns.150/@nodes.1 //@patterns.151/@nodes.5 //@patterns.152/@nodes.1" invokes="//@patterns.37/@nodes.3">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
     <nodeConstraints xmi:type="HiPEPattern:UnequalConstraint" leftNode="//@patterns.30/@nodes.3" rightNode="//@patterns.30/@nodes.0"/>
     <nodeConstraints xmi:type="HiPEPattern:UnequalConstraint" leftNode="//@patterns.30/@nodes.5" rightNode="//@patterns.30/@nodes.0"/>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" type="GreaterOrEqual" leftAttribute="//@patterns.3/@attributes.0" rightAttribute="//@patterns.3/@attributes.1"/>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" type="GreaterOrEqual" leftAttribute="//@patterns.3/@attributes.2" rightAttribute="//@patterns.3/@attributes.3"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" type="GreaterOrEqual" leftAttribute="//@patterns.30/@attributes.0" rightAttribute="//@patterns.30/@attributes.1"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" type="GreaterOrEqual" leftAttribute="//@patterns.30/@attributes.2" rightAttribute="//@patterns.30/@attributes.3"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="findWeightMaximal_21" partialPatterns="//@patterns.32 //@patterns.35" parentPattern="//@patterns.30" overlaps="//@patterns.31/@nodes.0">
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.31/@nodes.0" target="//@patterns.31/@nodes.1">
@@ -870,10 +818,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="markUnknownLinks_37" parentPattern="//@patterns.4">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l" attributes="//@patterns.4/@attributes.0" invokedBy="//@patterns.4/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.47/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="UNKNOWN"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l" attributes="//@patterns.47/@attributes.0" invokedBy="//@patterns.4/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.4/@attributes.0" rightAttribute="//@patterns.4/@attributes.1"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.47/@attributes.0" rightAttribute="//@patterns.47/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="powerupIsMaximalButK_38" partialPatterns="//@patterns.49 //@patterns.55" parentPattern="//@patterns.150" overlaps="//@patterns.48/@nodes.1 //@patterns.48/@nodes.2">
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.48/@nodes.0" target="//@patterns.48/@nodes.1">
@@ -897,7 +849,7 @@
     <nodes xmi:type="HiPEPattern:HiPENode" name="l3" invokedBy="//@patterns.5/@nodes.2 //@patterns.150/@nodes.2" invokes="//@patterns.49/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" invokedBy="//@patterns.5/@nodes.3 //@patterns.150/@nodes.3" invokes="//@patterns.49/@nodes.1 //@patterns.55/@nodes.1">
+    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" attributes="//@patterns.5/@attributes.0" invokedBy="//@patterns.5/@nodes.3 //@patterns.150/@nodes.3" invokes="//@patterns.49/@nodes.1 //@patterns.55/@nodes.1">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
     </nodes>
     <nodes xmi:type="HiPEPattern:HiPENode" name="n3" invokedBy="//@patterns.5/@nodes.5 //@patterns.150/@nodes.5" invokes="//@patterns.49/@nodes.2 //@patterns.55/@nodes.4">
@@ -945,10 +897,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="powerupIsMaximalButK_41" parentPattern="//@patterns.50 //@patterns.53">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l3" attributes="//@patterns.5/@attributes.4" invokedBy="//@patterns.50/@nodes.0 //@patterns.53/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.51/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="INACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l3" attributes="//@patterns.51/@attributes.0" invokedBy="//@patterns.50/@nodes.0 //@patterns.53/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.5/@attributes.4" rightAttribute="//@patterns.5/@attributes.5"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.51/@attributes.0" rightAttribute="//@patterns.51/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="powerupIsMaximalButK_42" parentPattern="//@patterns.50 //@patterns.57">
     <nodes xmi:type="HiPEPattern:HiPENode" name="n1" invokedBy="//@patterns.50/@nodes.1 //@patterns.57/@nodes.1">
@@ -1032,10 +988,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="powerupIsMaximalButK_48" parentPattern="//@patterns.57 //@patterns.59">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l1" attributes="//@patterns.5/@attributes.0" invokedBy="//@patterns.57/@nodes.0 //@patterns.59/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.58/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l1" attributes="//@patterns.58/@attributes.0" invokedBy="//@patterns.57/@nodes.0 //@patterns.59/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.5/@attributes.0" rightAttribute="//@patterns.5/@attributes.1"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.58/@attributes.0" rightAttribute="//@patterns.58/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="powerupIsMaximalButK_49" partialPatterns="//@patterns.58 //@patterns.60" parentPattern="//@patterns.56">
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.59/@nodes.0" target="//@patterns.59/@nodes.1">
@@ -1083,10 +1043,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="powerupIsMaximalButK_53" parentPattern="//@patterns.62 //@patterns.64">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l2" attributes="//@patterns.5/@attributes.2" invokedBy="//@patterns.62/@nodes.0 //@patterns.64/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.63/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l2" attributes="//@patterns.63/@attributes.0" invokedBy="//@patterns.62/@nodes.0 //@patterns.64/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.5/@attributes.2" rightAttribute="//@patterns.5/@attributes.3"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.63/@attributes.0" rightAttribute="//@patterns.63/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="powerupIsMaximalButK_54" partialPatterns="//@patterns.63 //@patterns.54" parentPattern="//@patterns.61">
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.64/@nodes.0" target="//@patterns.64/@nodes.1">
@@ -1169,10 +1133,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="powerupNotMaximal_58" parentPattern="//@patterns.67 //@patterns.70">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l3" attributes="//@patterns.6/@attributes.4" invokedBy="//@patterns.67/@nodes.0 //@patterns.70/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.68/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="INACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l3" attributes="//@patterns.68/@attributes.0" invokedBy="//@patterns.67/@nodes.0 //@patterns.70/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.6/@attributes.4" rightAttribute="//@patterns.6/@attributes.5"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.68/@attributes.0" rightAttribute="//@patterns.68/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="powerupNotMaximal_59" parentPattern="//@patterns.67 //@patterns.74">
     <nodes xmi:type="HiPEPattern:HiPENode" name="n1" invokedBy="//@patterns.67/@nodes.1 //@patterns.74/@nodes.1">
@@ -1256,10 +1224,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="powerupNotMaximal_65" parentPattern="//@patterns.74 //@patterns.76">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l1" attributes="//@patterns.6/@attributes.0" invokedBy="//@patterns.74/@nodes.0 //@patterns.76/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.75/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l1" attributes="//@patterns.75/@attributes.0" invokedBy="//@patterns.74/@nodes.0 //@patterns.76/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.6/@attributes.0" rightAttribute="//@patterns.6/@attributes.1"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.75/@attributes.0" rightAttribute="//@patterns.75/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="powerupNotMaximal_66" partialPatterns="//@patterns.75 //@patterns.77" parentPattern="//@patterns.73">
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.76/@nodes.0" target="//@patterns.76/@nodes.1">
@@ -1307,10 +1279,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="powerupNotMaximal_70" parentPattern="//@patterns.79 //@patterns.81">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l2" attributes="//@patterns.6/@attributes.2" invokedBy="//@patterns.79/@nodes.0 //@patterns.81/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.80/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l2" attributes="//@patterns.80/@attributes.0" invokedBy="//@patterns.79/@nodes.0 //@patterns.81/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.6/@attributes.2" rightAttribute="//@patterns.6/@attributes.3"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.80/@attributes.0" rightAttribute="//@patterns.80/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="powerupNotMaximal_71" partialPatterns="//@patterns.80 //@patterns.71" parentPattern="//@patterns.78">
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.81/@nodes.0" target="//@patterns.81/@nodes.1">
@@ -1345,7 +1321,7 @@
     <nodes xmi:type="HiPEPattern:HiPENode" name="l3" invokedBy="//@patterns.7/@nodes.2" invokes="//@patterns.83/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" invokedBy="//@patterns.7/@nodes.3" invokes="//@patterns.83/@nodes.1 //@patterns.89/@nodes.1">
+    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" attributes="//@patterns.7/@attributes.0" invokedBy="//@patterns.7/@nodes.3" invokes="//@patterns.83/@nodes.1 //@patterns.89/@nodes.1">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
     </nodes>
     <nodes xmi:type="HiPEPattern:HiPENode" name="n3" invokedBy="//@patterns.7/@nodes.5" invokes="//@patterns.83/@nodes.2 //@patterns.89/@nodes.4">
@@ -1393,10 +1369,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair_75" parentPattern="//@patterns.84 //@patterns.87">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l3" attributes="//@patterns.7/@attributes.4" invokedBy="//@patterns.84/@nodes.0 //@patterns.87/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.85/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="DELETED"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l3" attributes="//@patterns.85/@attributes.0" invokedBy="//@patterns.84/@nodes.0 //@patterns.87/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.7/@attributes.4" rightAttribute="//@patterns.7/@attributes.5"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.85/@attributes.0" rightAttribute="//@patterns.85/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair_76" parentPattern="//@patterns.84 //@patterns.91">
     <nodes xmi:type="HiPEPattern:HiPENode" name="n1" invokedBy="//@patterns.84/@nodes.1 //@patterns.91/@nodes.1">
@@ -1480,10 +1460,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair_82" parentPattern="//@patterns.91 //@patterns.93">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l1" attributes="//@patterns.7/@attributes.0" invokedBy="//@patterns.91/@nodes.0 //@patterns.93/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.92/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="INACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l1" attributes="//@patterns.92/@attributes.0" invokedBy="//@patterns.91/@nodes.0 //@patterns.93/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.7/@attributes.0" rightAttribute="//@patterns.7/@attributes.1"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.92/@attributes.0" rightAttribute="//@patterns.92/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair_83" partialPatterns="//@patterns.92 //@patterns.94" parentPattern="//@patterns.90">
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.93/@nodes.0" target="//@patterns.93/@nodes.1">
@@ -1531,10 +1515,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair_87" parentPattern="//@patterns.96 //@patterns.98">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l2" attributes="//@patterns.7/@attributes.2" invokedBy="//@patterns.96/@nodes.0 //@patterns.98/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.97/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="INACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l2" attributes="//@patterns.97/@attributes.0" invokedBy="//@patterns.96/@nodes.0 //@patterns.98/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.7/@attributes.2" rightAttribute="//@patterns.7/@attributes.3"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.97/@attributes.0" rightAttribute="//@patterns.97/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair_88" partialPatterns="//@patterns.97 //@patterns.88" parentPattern="//@patterns.95">
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.98/@nodes.0" target="//@patterns.98/@nodes.1">
@@ -1569,7 +1557,7 @@
     <nodes xmi:type="HiPEPattern:HiPENode" name="l3" invokedBy="//@patterns.8/@nodes.2" invokes="//@patterns.100/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" invokedBy="//@patterns.8/@nodes.3" invokes="//@patterns.100/@nodes.1 //@patterns.106/@nodes.1">
+    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" attributes="//@patterns.8/@attributes.0" invokedBy="//@patterns.8/@nodes.3" invokes="//@patterns.100/@nodes.1 //@patterns.106/@nodes.1">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
     </nodes>
     <nodes xmi:type="HiPEPattern:HiPENode" name="n3" invokedBy="//@patterns.8/@nodes.5" invokes="//@patterns.100/@nodes.2 //@patterns.106/@nodes.4">
@@ -1617,10 +1605,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair2_92" parentPattern="//@patterns.101 //@patterns.104">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l3" attributes="//@patterns.8/@attributes.4" invokedBy="//@patterns.101/@nodes.0 //@patterns.104/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.102/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="DELETED"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l3" attributes="//@patterns.102/@attributes.0" invokedBy="//@patterns.101/@nodes.0 //@patterns.104/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.8/@attributes.4" rightAttribute="//@patterns.8/@attributes.5"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.102/@attributes.0" rightAttribute="//@patterns.102/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair2_93" parentPattern="//@patterns.101 //@patterns.108">
     <nodes xmi:type="HiPEPattern:HiPENode" name="n1" invokedBy="//@patterns.101/@nodes.1 //@patterns.108/@nodes.1">
@@ -1704,10 +1696,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair2_99" parentPattern="//@patterns.108 //@patterns.110">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l1" attributes="//@patterns.8/@attributes.0" invokedBy="//@patterns.108/@nodes.0 //@patterns.110/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.109/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l1" attributes="//@patterns.109/@attributes.0" invokedBy="//@patterns.108/@nodes.0 //@patterns.110/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.8/@attributes.0" rightAttribute="//@patterns.8/@attributes.1"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.109/@attributes.0" rightAttribute="//@patterns.109/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair2_100" partialPatterns="//@patterns.109 //@patterns.111" parentPattern="//@patterns.107">
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.110/@nodes.0" target="//@patterns.110/@nodes.1">
@@ -1755,10 +1751,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair2_104" parentPattern="//@patterns.113 //@patterns.115">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l2" attributes="//@patterns.8/@attributes.2" invokedBy="//@patterns.113/@nodes.0 //@patterns.115/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.114/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="INACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l2" attributes="//@patterns.114/@attributes.0" invokedBy="//@patterns.113/@nodes.0 //@patterns.115/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.8/@attributes.2" rightAttribute="//@patterns.8/@attributes.3"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.114/@attributes.0" rightAttribute="//@patterns.114/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair2_105" partialPatterns="//@patterns.114 //@patterns.105" parentPattern="//@patterns.112">
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.115/@nodes.0" target="//@patterns.115/@nodes.1">
@@ -1793,7 +1793,7 @@
     <nodes xmi:type="HiPEPattern:HiPENode" name="l3" invokedBy="//@patterns.9/@nodes.2" invokes="//@patterns.117/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" invokedBy="//@patterns.9/@nodes.3" invokes="//@patterns.117/@nodes.1 //@patterns.123/@nodes.1">
+    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" attributes="//@patterns.9/@attributes.0" invokedBy="//@patterns.9/@nodes.3" invokes="//@patterns.117/@nodes.1 //@patterns.123/@nodes.1">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
     </nodes>
     <nodes xmi:type="HiPEPattern:HiPENode" name="n3" invokedBy="//@patterns.9/@nodes.5" invokes="//@patterns.117/@nodes.2 //@patterns.123/@nodes.4">
@@ -1841,10 +1841,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair3_109" parentPattern="//@patterns.118 //@patterns.121">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l3" attributes="//@patterns.9/@attributes.4" invokedBy="//@patterns.118/@nodes.0 //@patterns.121/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.119/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="DELETED"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l3" attributes="//@patterns.119/@attributes.0" invokedBy="//@patterns.118/@nodes.0 //@patterns.121/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.9/@attributes.4" rightAttribute="//@patterns.9/@attributes.5"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.119/@attributes.0" rightAttribute="//@patterns.119/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair3_110" parentPattern="//@patterns.118 //@patterns.125">
     <nodes xmi:type="HiPEPattern:HiPENode" name="n1" invokedBy="//@patterns.118/@nodes.1 //@patterns.125/@nodes.1">
@@ -1928,10 +1932,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair3_116" parentPattern="//@patterns.125 //@patterns.127">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l1" attributes="//@patterns.9/@attributes.0" invokedBy="//@patterns.125/@nodes.0 //@patterns.127/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.126/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="INACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l1" attributes="//@patterns.126/@attributes.0" invokedBy="//@patterns.125/@nodes.0 //@patterns.127/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.9/@attributes.0" rightAttribute="//@patterns.9/@attributes.1"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.126/@attributes.0" rightAttribute="//@patterns.126/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair3_117" partialPatterns="//@patterns.126 //@patterns.128" parentPattern="//@patterns.124">
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.127/@nodes.0" target="//@patterns.127/@nodes.1">
@@ -1979,10 +1987,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair3_121" parentPattern="//@patterns.130 //@patterns.132">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l2" attributes="//@patterns.9/@attributes.2" invokedBy="//@patterns.130/@nodes.0 //@patterns.132/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.131/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l2" attributes="//@patterns.131/@attributes.0" invokedBy="//@patterns.130/@nodes.0 //@patterns.132/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.9/@attributes.2" rightAttribute="//@patterns.9/@attributes.3"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.131/@attributes.0" rightAttribute="//@patterns.131/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="repair3_122" partialPatterns="//@patterns.131 //@patterns.122" parentPattern="//@patterns.129">
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.132/@nodes.0" target="//@patterns.132/@nodes.1">
@@ -2017,7 +2029,7 @@
     <nodes xmi:type="HiPEPattern:HiPENode" name="l3" invokedBy="//@patterns.10/@nodes.2 //@patterns.152/@nodes.2" invokes="//@patterns.134/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" invokedBy="//@patterns.10/@nodes.3 //@patterns.152/@nodes.3" invokes="//@patterns.134/@nodes.1 //@patterns.140/@nodes.1">
+    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" attributes="//@patterns.10/@attributes.0" invokedBy="//@patterns.10/@nodes.3 //@patterns.152/@nodes.3" invokes="//@patterns.134/@nodes.1 //@patterns.140/@nodes.1">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
     </nodes>
     <nodes xmi:type="HiPEPattern:HiPENode" name="n3" invokedBy="//@patterns.10/@nodes.5 //@patterns.152/@nodes.5" invokes="//@patterns.134/@nodes.2 //@patterns.140/@nodes.4">
@@ -2065,10 +2077,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="shutdownIsMaximal_126" parentPattern="//@patterns.135 //@patterns.138">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l3" attributes="//@patterns.10/@attributes.4" invokedBy="//@patterns.135/@nodes.0 //@patterns.138/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.136/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l3" attributes="//@patterns.136/@attributes.0" invokedBy="//@patterns.135/@nodes.0 //@patterns.138/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.10/@attributes.4" rightAttribute="//@patterns.10/@attributes.5"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.136/@attributes.0" rightAttribute="//@patterns.136/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="shutdownIsMaximal_127" parentPattern="//@patterns.135 //@patterns.142">
     <nodes xmi:type="HiPEPattern:HiPENode" name="n1" invokedBy="//@patterns.135/@nodes.1 //@patterns.142/@nodes.1">
@@ -2152,10 +2168,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="shutdownIsMaximal_133" parentPattern="//@patterns.142 //@patterns.144">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l1" attributes="//@patterns.10/@attributes.0" invokedBy="//@patterns.142/@nodes.0 //@patterns.144/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.143/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l1" attributes="//@patterns.143/@attributes.0" invokedBy="//@patterns.142/@nodes.0 //@patterns.144/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.10/@attributes.0" rightAttribute="//@patterns.10/@attributes.1"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.143/@attributes.0" rightAttribute="//@patterns.143/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="shutdownIsMaximal_134" partialPatterns="//@patterns.143 //@patterns.145" parentPattern="//@patterns.141">
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.144/@nodes.0" target="//@patterns.144/@nodes.1">
@@ -2203,10 +2223,14 @@
     </nodes>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="shutdownIsMaximal_138" parentPattern="//@patterns.147 //@patterns.149">
-    <nodes xmi:type="HiPEPattern:HiPENode" name="l2" attributes="//@patterns.10/@attributes.2" invokedBy="//@patterns.147/@nodes.0 //@patterns.149/@nodes.0">
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" name="linkState" node="//@patterns.148/@nodes.0" value="org.eclipse.emf.ecore.impl.EAttributeImpl@725349ee (name: linkState) (ordered: true, unique: true, lowerBound: 1, upperBound: 1) (changeable: true, volatile: false, transient: false, defaultValueLiteral: null, unsettable: false, derived: false) (iD: false)">
+      <eAttribute xmi:type="ecore:EAttribute" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link/linkState"/>
+    </attributes>
+    <attributes xmi:type="HiPEPattern:HiPEAttribute" value="ACTIVE"/>
+    <nodes xmi:type="HiPEPattern:HiPENode" name="l2" attributes="//@patterns.148/@attributes.0" invokedBy="//@patterns.147/@nodes.0 //@patterns.149/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.10/@attributes.2" rightAttribute="//@patterns.10/@attributes.3"/>
+    <attributeConstraints xmi:type="HiPEPattern:RelationalConstraint" leftAttribute="//@patterns.148/@attributes.0" rightAttribute="//@patterns.148/@attributes.1"/>
   </patterns>
   <patterns xmi:type="HiPEPattern:HiPEPartialPattern" name="shutdownIsMaximal_139" partialPatterns="//@patterns.148 //@patterns.139" parentPattern="//@patterns.146">
     <edges xmi:type="HiPEPattern:HiPEEdge" name="Link_wsnNodes" source="//@patterns.149/@nodes.0" target="//@patterns.149/@nodes.1">
@@ -2279,7 +2303,7 @@
     <nodes xmi:type="HiPEPattern:HiPENode" name="l3" invokedBy="//@patterns.6/@nodes.2" invokes="//@patterns.65/@nodes.0 //@patterns.30/@nodes.0">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//Link"/>
     </nodes>
-    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" invokedBy="//@patterns.6/@nodes.3" invokes="//@patterns.65/@nodes.1 //@patterns.30/@nodes.1">
+    <nodes xmi:type="HiPEPattern:HiPENode" name="n1" attributes="//@patterns.6/@attributes.0" invokedBy="//@patterns.6/@nodes.3" invokes="//@patterns.65/@nodes.1 //@patterns.30/@nodes.1">
       <type xmi:type="ecore:EClass" href="platform:resource/WSNSimulationModel/model/wsnSimulationModel.ecore#//WSNNode"/>
     </nodes>
     <nodes xmi:type="HiPEPattern:HiPENode" name="n3" invokedBy="//@patterns.6/@nodes.5" invokes="//@patterns.65/@nodes.2 //@patterns.30/@nodes.2">

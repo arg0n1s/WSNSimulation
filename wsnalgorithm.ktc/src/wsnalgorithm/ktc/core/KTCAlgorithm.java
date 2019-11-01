@@ -10,6 +10,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import wsnSimulationModel.WSNNode;
 import wsnalgorithm.ktc.rules.api.RulesAPI;
 import wsnalgorithm.ktc.rules.api.RulesApp;
+import wsnalgorithm.ktc.rules.api.RulesDemoclesApp;
 import wsnalgorithm.ktc.rules.api.RulesHiPEApp;
 import wsnalgorithm.ktc.rules.api.matches.MarkUnknownLinksMatch;
 import wsnalgorithm.ktc.rules.api.matches.PowerupIsMaximalButKMatch;
